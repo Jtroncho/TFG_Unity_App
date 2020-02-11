@@ -75,7 +75,7 @@ namespace TFG.UI
             {
                 if (currentGroup)
                 {
-                    CloseGroup(aGroup);
+                    CloseGroup(currentGroup);
                     previousGroup = CurrentGroup;
                 }
 

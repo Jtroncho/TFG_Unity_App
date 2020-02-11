@@ -74,7 +74,7 @@ namespace TFG.UI
             {
                 if (currentScreen)
                 {
-                    CloseScreen(aScreen);
+                    CloseScreen(currentScreen);
                     previousScreen = currentScreen;
                 }
 

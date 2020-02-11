@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SystemPrefabs:
-  - {fileID: 8525777075740992860, guid: c67191ac80cae4f46aff33deaefe0d26, type: 3}
+  - {fileID: 7647296535569347921, guid: 61ebbbecaab6cbf4f82c3e25acb4aeed, type: 3}
   OnGameStateGanged:
     m_PersistentCalls:
       m_Calls: []

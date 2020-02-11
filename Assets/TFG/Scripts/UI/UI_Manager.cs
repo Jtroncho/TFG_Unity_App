@@ -32,15 +32,12 @@ namespace TFG.UI
             screenGroups = GetComponentsInChildren<UI_System>(includeInactive: true);
             InitializeGroups();
 
-            currentGroup = screenGroups[0].GetComponent<UI_System>(); //First group will be the current group.
-            screenGroups[0].gameObject.SetActive(true);
-
             if (!m_UserLogged)
             {
                 if(m_LogginGroup != null)
                 {
                     SwitchGroup(m_LogginGroup);
-                    Debug.Log("Switch to " + m_LogginGroup.gameObject.name + ";/n");
+                    
                 }
             }
             else
@@ -56,6 +53,7 @@ namespace TFG.UI
         #region Helper Methods
         public void InitializeGroups()
         {
+            Debug.Log(gameObject.name + ": Initializing groups, setting all to disabled.");
             foreach (var group in screenGroups)
             {
                 group.gameObject.SetActive(false);
@@ -68,16 +66,21 @@ namespace TFG.UI
 
         public void SwitchGroup(UI_System aGroup)
         {
+            if(currentGroup)
+            {
+                Debug.Log(gameObject.name + ": Switching group " + currentGroup.gameObject.name + "--> " + aGroup.gameObject.name);
+            }
+
             if (aGroup && currentGroup != aGroup)
             {
                 if (currentGroup)
                 {
-                    currentGroup.CloseGroup();
+                    CloseGroup(aGroup);
                     previousGroup = CurrentGroup;
                 }
 
                 currentGroup = aGroup;
-                currentGroup.StartGroup();
+                StartGroup(aGroup);
 
                 if (onSwitchedGroup != null)
                 {
@@ -86,8 +89,74 @@ namespace TFG.UI
             }
         }
 
+        public void StartGroup(UI_System aGroup)
+        {
+            aGroup.gameObject.SetActive(true);
+            aGroup.transform.SetAsLastSibling();
+            aGroup.StartEvent();
+        }
+
+        public void CloseGroup(UI_System aGroup)
+        {
+            aGroup.CloseEvent();
+            aGroup.gameObject.SetActive(false);
+        }
+        /*
+        public void OpenPanel (Animator anim)
+	    {
+		    if (m_Open == anim)
+			    return;
+
+		    anim.gameObject.SetActive(true);
+		    var newPreviouslySelected = EventSystem.current.currentSelectedGameObject;
+
+		    anim.transform.SetAsLastSibling();
+
+		    CloseCurrent();
+
+		    m_PreviouslySelected = newPreviouslySelected;
+
+		    m_Open = anim;
+		    m_Open.SetBool(m_OpenParameterId, true);
+
+		    GameObject go = FindFirstEnabledSelectable(anim.gameObject);
+
+		    SetSelected(go);
+	    }
+
+        public void CloseCurrent()
+	    {
+		    if (m_Open == null)
+			    return;
+
+		    m_Open.SetBool(m_OpenParameterId, false);
+		    SetSelected(m_PreviouslySelected);
+		    StartCoroutine(DisablePanelDeleyed(m_Open));
+		    m_Open = null;
+	    }
+
+	    IEnumerator DisablePanelDeleyed(Animator anim)
+	    {
+		    bool closedStateReached = false;
+		    bool wantToClose = true;
+		    while (!closedStateReached && wantToClose)
+		    {
+			    if (!anim.IsInTransition(0))
+				    closedStateReached = anim.GetCurrentAnimatorStateInfo(0).IsName(k_ClosedStateName);
+
+			    wantToClose = !anim.GetBool(m_OpenParameterId);
+
+			    yield return new WaitForEndOfFrame();
+		    }
+
+		    if (wantToClose)
+			    anim.gameObject.SetActive(false);
+	    }
+        */
+
         public void GoToPreviousGroup()
         {
+            Debug.Log(gameObject.name + ": Switching to previous group");
             if (previousGroup)
             {
                 SwitchGroup(previousGroup);

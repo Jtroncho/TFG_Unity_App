@@ -18,9 +18,9 @@ namespace TFG.UI
         #endregion
 
         #region Helper Methods
-        public override void StartScreen()
+        public override void StartEvent()
         {
-            base.StartScreen();
+            base.StartEvent();
 
             startTime = Time.time;
             StartCoroutine(WaitForTime());

@@ -11,7 +11,7 @@ namespace TFG.UI
         public static void CreateUIGroup()
         {
             Debug.Log("Creating UI group.");
-            GameObject uiGroup = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/TFG/Prefabs/UI/UI_Group.prefab");
+            GameObject uiGroup = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/TFG/Prefabs/UI_Editor/UI_Group.prefab");
             if(uiGroup)
             {
                 GameObject createdGroup = (GameObject)Instantiate(uiGroup);

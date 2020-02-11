@@ -40,22 +40,23 @@ namespace TFG.UI
         #endregion
 
         #region Helper Methods
-        public virtual void StartScreen()
+        
+        public virtual void StartEvent()
         {
             if (onScreenStart != null)
             {
                 onScreenStart.Invoke();
             }
-            HandleAnimator("show");
+            //HandleAnimator("show");
         }
 
-        public virtual void CloseScreen()
+        public virtual void CloseEvent()
         {
             if (onScreenClose != null)
             {
                 onScreenClose.Invoke();
             }
-            HandleAnimator("hide");
+            //HandleAnimator("hide");
         }
 
         void HandleAnimator(string aTrigger)

@@ -54,18 +54,32 @@ namespace TFG.UI
         #endregion
 
         #region Helper Methods
+
+        public void StartScreen(UI_Screen aScreen)
+        {
+            aScreen.gameObject.SetActive(true);
+            aScreen.transform.SetAsLastSibling();
+            aScreen.StartEvent();
+        }
+
+        public void CloseScreen(UI_Screen aScreen)
+        {
+            aScreen.CloseEvent();
+            aScreen.gameObject.SetActive(false);
+        }
+
         public void SwitchScreens(UI_Screen aScreen)
         {
             if (aScreen && CurrentScreen != aScreen)
             {
                 if (currentScreen)
                 {
-                    currentScreen.CloseScreen();
+                    CloseScreen(aScreen);
                     previousScreen = currentScreen;
                 }
 
                 currentScreen = aScreen;
-                currentScreen.StartScreen();
+                StartScreen(aScreen);
 
                 if (onSwitchedScreen != null)
                 {
@@ -106,25 +120,25 @@ namespace TFG.UI
             yield return null;
         }
 
-        public virtual void StartGroup()
+        
+        public virtual void StartEvent()
         {
-            gameObject.SetActive(true); //May need chages.
             if (onGroupStart != null)
             {
                 onGroupStart.Invoke();
             }
-            HandleAnimator("show");
+            //HandleAnimator("show");
         }
 
-        public virtual void CloseGroup()
+        public virtual void CloseEvent()
         {
             if (onGroupClose != null)
             {
                 onGroupClose.Invoke();
             }
-            HandleAnimator("hide");
-            gameObject.SetActive(false); //May need chages.
+            //HandleAnimator("hide");
         }
+        
 
         public void InitializeScreens()
         {

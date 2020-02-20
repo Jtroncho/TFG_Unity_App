@@ -83,12 +83,12 @@ public class GameManager : Singleton<GameManager>
                 UpdateGameState(GameState.RUNNING);
             }
         }
-        Debug.Log("Load Complete.");
+        Debug.Log("<color=#" + ColorUtility.ToHtmlStringRGB(Color.green) + ">" + "Load Complete." + "</color>");
     }
 
     void OnUnloadOperationComplete(AsyncOperation ao)
     {
-        Debug.Log("Unload Complete.");
+        Debug.Log("<color=#" + ColorUtility.ToHtmlStringRGB(Color.green) + ">" + "Unload Complete." + "</color>");
     }
 
     /*
@@ -166,11 +166,11 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevel(string levelName)
     {
-        Debug.Log("Load level: " + levelName);
+        Debug.Log("Load level: " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.black) + ">" + levelName + "</color>");
         AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
         if (ao == null)
         {
-            Debug.LogError("[GameManager] Unable to load level " + levelName);
+            Debug.LogError("<color=#" + ColorUtility.ToHtmlStringRGB(Color.red) + ">" + "[GameManager] Unable to load level " + levelName + "</color>");
             return;
         }
         ao.completed += OnLoadOperationComplete;
@@ -181,11 +181,11 @@ public class GameManager : Singleton<GameManager>
 
     public void UnloadLevel(string levelName)
     {
-        Debug.Log("Unload level: " + levelName);
+        Debug.Log("Unload level: " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.black) + ">" + levelName + "</color>");
         AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
         if (ao == null)
         {
-            Debug.LogError("[GameManager] Unable to unload level " + levelName);
+            Debug.LogError("<color=#" + ColorUtility.ToHtmlStringRGB(Color.red) + ">" + "[GameManager] Unable to unload level " + levelName + "</color>");
             return;
         }
         ao.completed += OnUnloadOperationComplete;

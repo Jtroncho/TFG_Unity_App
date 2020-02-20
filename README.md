@@ -1,3 +1,20 @@
-# TFG_Unity_App
+# APRIA - BACHELLOR'S PROJECT -
 
-Project Base: https://learn.unity.com/project/swords-and-shovels-game-managers-loads-and-the-game-loop?language=en
+This project is a work in progress that started as a bachellors final project.
+
+A multiplatform app built with Unity to gamify the task of learning subjects.
+
+## Getting Started
+
+### Prerequisites
+
+For this project we will need:
+
+* [Unity](https://unity.com/) - Unity v2019.3
+* [Firebase SDK](https://firebase.google.com/docs/unity/setup) - SDK v6.10.0
+
+## References
+
+* [Swords&Shovels](https://learn.unity.com/project/swords-and-shovels-game-managers-loads-and-the-game-loop?language=en)
+* [Unity UI Demo](https://assetstore.unity.com/packages/essentials/unity-samples-ui-25468)
+

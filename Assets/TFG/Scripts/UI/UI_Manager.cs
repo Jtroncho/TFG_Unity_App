@@ -9,6 +9,7 @@ namespace TFG.UI
     {
         #region Variables
         [SerializeField] private Camera _dummyCamera;
+        //[SerializeField] private GameManager _gameManager;
 
         [Header("Initial Screen Groups")]
         [SerializeField] private UI_System m_LogginGroup;
@@ -26,10 +27,12 @@ namespace TFG.UI
         [Header("System Events")]
         public UnityEvent onSwitchedGroup = new UnityEvent();
 
-        #region MAin Methods
+        #region Main Methods
         private void Start()
         {
-            screenGroups = GetComponentsInChildren<UI_System>(includeInactive: true);
+            //screenGroups = GetComponentsInChildren<UI_System>(includeInactive: true);
+            screenGroups = transform.parent.GetComponentsInChildren<UI_System>(includeInactive: true);
+            //_gameManager = GameManager.Instance;
             InitializeGroups();
 
             if (!m_UserLogged)
@@ -101,58 +104,6 @@ namespace TFG.UI
             aGroup.CloseEvent();
             aGroup.gameObject.SetActive(false);
         }
-        /*
-        public void OpenPanel (Animator anim)
-	    {
-		    if (m_Open == anim)
-			    return;
-
-		    anim.gameObject.SetActive(true);
-		    var newPreviouslySelected = EventSystem.current.currentSelectedGameObject;
-
-		    anim.transform.SetAsLastSibling();
-
-		    CloseCurrent();
-
-		    m_PreviouslySelected = newPreviouslySelected;
-
-		    m_Open = anim;
-		    m_Open.SetBool(m_OpenParameterId, true);
-
-		    GameObject go = FindFirstEnabledSelectable(anim.gameObject);
-
-		    SetSelected(go);
-	    }
-
-        public void CloseCurrent()
-	    {
-		    if (m_Open == null)
-			    return;
-
-		    m_Open.SetBool(m_OpenParameterId, false);
-		    SetSelected(m_PreviouslySelected);
-		    StartCoroutine(DisablePanelDeleyed(m_Open));
-		    m_Open = null;
-	    }
-
-	    IEnumerator DisablePanelDeleyed(Animator anim)
-	    {
-		    bool closedStateReached = false;
-		    bool wantToClose = true;
-		    while (!closedStateReached && wantToClose)
-		    {
-			    if (!anim.IsInTransition(0))
-				    closedStateReached = anim.GetCurrentAnimatorStateInfo(0).IsName(k_ClosedStateName);
-
-			    wantToClose = !anim.GetBool(m_OpenParameterId);
-
-			    yield return new WaitForEndOfFrame();
-		    }
-
-		    if (wantToClose)
-			    anim.gameObject.SetActive(false);
-	    }
-        */
 
         public void GoToPreviousGroup()
         {
@@ -161,6 +112,11 @@ namespace TFG.UI
             {
                 SwitchGroup(previousGroup);
             }
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
         }
         #endregion
     }

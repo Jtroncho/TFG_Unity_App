@@ -27,6 +27,8 @@ namespace TFG.UI
         private UI_Screen currentScreen;
         private UI_Screen previousScreen;
 
+        //Color m_logColor = Color.black; //RGBA(0,0,0)
+
         public UI_Screen CurrentScreen { get { return currentScreen; } }
         public UI_Screen PreviousScreen { get { return previousScreen; } }
         #endregion
@@ -145,7 +147,7 @@ namespace TFG.UI
             foreach (var screen in screens)
             {
                 screen.gameObject.SetActive(true);
-                Debug.Log(screen.gameObject.name + " Screen set to Active");
+                Debug.Log("<color=#" + ColorUtility.ToHtmlStringRGB(Color.black) + ">" + screen.gameObject.name + "</color>" + " Screen set to Active");
             }
         }
 

@@ -1,10 +1,11 @@
 <dependencies>
   <packages>
     <package>com.google.firebase:firebase-analytics:17.2.0</package>
-    <package>com.google.firebase:firebase-app-unity:6.6.0</package>
-    <package>com.google.firebase:firebase-auth:19.0.0</package>
-    <package>com.google.firebase:firebase-auth-unity:6.6.0</package>
-    <package>com.google.firebase:firebase-common:19.1.0</package>
+    <package>com.google.firebase:firebase-analytics:17.2.1</package>
+    <package>com.google.firebase:firebase-app-unity:6.10.0</package>
+    <package>com.google.firebase:firebase-auth:19.2.0</package>
+    <package>com.google.firebase:firebase-auth-unity:6.10.0</package>
+    <package>com.google.firebase:firebase-common:19.3.0</package>
     <package>com.google.firebase:firebase-database:19.1.0</package>
     <package>com.google.firebase:firebase-database-unity:6.6.0</package>
   </packages>
@@ -39,21 +40,22 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-17.1.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.0.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-17.2.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-17.2.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-17.2.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-impl-17.2.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-17.2.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-17.2.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-17.2.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-17.2.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-impl-17.2.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-17.2.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.2.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-stats-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.auto.value.auto-value-annotations-1.6.5.jar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-17.2.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-app-unity-6.6.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-19.0.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-interop-18.0.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-unity-6.6.0.aar</file>
-    <file>Assets/Plugins/Android/com.google.firebase.firebase-common-19.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-analytics-17.2.1.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-app-unity-6.10.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-19.2.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-interop-19.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-auth-unity-6.10.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-common-19.3.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.firebase.firebase-components-16.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-database-19.1.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-database-collection-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.firebase.firebase-database-unity-6.6.0.aar</file>
@@ -68,7 +70,7 @@
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradleTemplateEnabled" value="False" />
     <setting name="installAndroidPackages" value="True" />
-    <setting name="packageDir" value="Assets\Plugins\Android" />
+    <setting name="packageDir" value="Assets/Plugins/Android" />
     <setting name="patchAndroidManifest" value="True" />
     <setting name="patchMainTemplateGradle" value="True" />
     <setting name="projectExportEnabled" value="False" />

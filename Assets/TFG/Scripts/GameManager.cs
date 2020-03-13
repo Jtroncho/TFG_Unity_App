@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TFG.Authentification;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject[] SystemPrefabs;
     public Events.EventGameState OnGameStateGanged;
     public Events.EventMenuState OnMenuStateGanged;
+    public Auth _userSign; //Handle sign ins and outs
 
     //keep track of instanced prefabs
     List<GameObject> _instancedSystemPrefabs;
@@ -137,7 +138,7 @@ public class GameManager : Singleton<GameManager>
         OnGameStateGanged.Invoke(_currentGameState, previousGameState);
     }
 
-    void UpdateMenuState(MenuState state)
+    public void UpdateMenuState(MenuState state)
     {
         MenuState previousMenuState = _currentMenuState;
         _currentMenuState = state;

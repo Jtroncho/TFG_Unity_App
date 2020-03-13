@@ -158,6 +158,7 @@ MonoBehaviour:
   OnMenuStateGanged:
     m_PersistentCalls:
       m_Calls: []
+  _userSign: {fileID: 0}
 --- !u!4 &1963903771
 Transform:
   m_ObjectHideFlags: 0

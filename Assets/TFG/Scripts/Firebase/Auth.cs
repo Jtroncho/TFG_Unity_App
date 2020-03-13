@@ -36,8 +36,20 @@ namespace TFG.Authentification {
       new Dictionary<string, Firebase.Auth.FirebaseUser>();
 
     #region Variables TFG
-    [SerializeField] TMP_InputField _user;
-    [SerializeField] TMP_InputField _password;
+    protected TMP_InputField _user;
+    protected TMP_InputField _password;
+
+    public TMP_InputField userInput
+    {
+        get { return _user; }
+        set { _user = value; }
+    }
+
+    public TMP_InputField passwordInput
+    {
+        get { return _password; }
+        set { _password = value; }
+    }
 
     public UnityEvent m_signedInEvent = new UnityEvent();
     public UnityEvent m_signedOutEvent = new UnityEvent();
@@ -358,6 +370,10 @@ namespace TFG.Authentification {
     void HandleSignInWithUser(Task<Firebase.Auth.FirebaseUser> task) {
       if (LogTaskCompletion(task, "Sign-in")) {
         DebugLog(String.Format("{0} signed in", task.Result.DisplayName));
+        if (m_signedInEvent != null)
+        {
+            m_signedInEvent.Invoke();
+        }
       }
     }
 
@@ -484,7 +500,7 @@ namespace TFG.Authentification {
     }
 
     // Sign out the current user.
-    protected void SignOut() {
+    public void SignOut() {
       DebugLog("Signing out.");
       auth.SignOut();
       if (m_signedOutEvent != null)

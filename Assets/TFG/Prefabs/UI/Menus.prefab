@@ -310,8 +310,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dummyCamera: {fileID: 8985769437317828993}
+  _gameManager: {fileID: 0}
   m_LogginGroup: {fileID: 107268135}
   m_MainMenuGroup: {fileID: 1152808882}
+  _user: {fileID: 3768095104067977077}
+  _password: {fileID: 3768095102494146015}
   m_UserLogged: 0
   screenGroups: []
   onSwitchedGroup:
@@ -329,8 +332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 248373272870dbc478f97a2c86390fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _user: {fileID: 3768095104067977077}
-  _password: {fileID: 3768095102494146015}
   m_signedInEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -564,7 +565,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5205779164742560663}
+      objectReference: {fileID: 7367809740008931926}
     - target: {fileID: 1743419532963510550, guid: b73e8212167cc004ca32d1f6cb7a1d21,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -578,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 1743419532963510550, guid: b73e8212167cc004ca32d1f6cb7a1d21,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SignInEmail
+      value: SignIn
       objectReference: {fileID: 0}
     - target: {fileID: 1743419532963510550, guid: b73e8212167cc004ca32d1f6cb7a1d21,
         type: 3}
@@ -739,6 +740,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 130.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756704657365649228, guid: b73e8212167cc004ca32d1f6cb7a1d21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756704657365649228, guid: b73e8212167cc004ca32d1f6cb7a1d21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7367809740008931926}
+    - target: {fileID: 3756704657365649228, guid: b73e8212167cc004ca32d1f6cb7a1d21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SignOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756704657365649228, guid: b73e8212167cc004ca32d1f6cb7a1d21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756704657365649228, guid: b73e8212167cc004ca32d1f6cb7a1d21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756704657365649228, guid: b73e8212167cc004ca32d1f6cb7a1d21,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7920753419585320777, guid: b73e8212167cc004ca32d1f6cb7a1d21,
         type: 3}

@@ -1,4 +1,4 @@
-# APRIA - BACHELLOR'S PROJECT -
+# APRIA - BACHELOR'S PROJECT -
 
 This project is a work in progress that started as a bachellors final project.
 

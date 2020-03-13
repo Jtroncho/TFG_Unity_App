@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 namespace TFG.UI
 {
@@ -9,11 +10,15 @@ namespace TFG.UI
     {
         #region Variables
         [SerializeField] private Camera _dummyCamera;
-        //[SerializeField] private GameManager _gameManager;
+        [SerializeField] private GameManager _gameManager;
 
         [Header("Initial Screen Groups")]
         [SerializeField] private UI_System m_LogginGroup;
         [SerializeField] private UI_System m_MainMenuGroup;
+
+        [SerializeField] TMP_InputField _user;
+        [SerializeField] TMP_InputField _password;
+
         public bool m_UserLogged = false; //MUST RELATE TO THE FIREBASE USER CREDENTIALS STORED.
 
         public Component[] screenGroups = new Component[0];
@@ -28,13 +33,26 @@ namespace TFG.UI
         public UnityEvent onSwitchedGroup = new UnityEvent();
 
         #region Main Methods
+
+        private void Awake()
+        {
+            _gameManager = GameManager.Instance;
+        }
+
         private void Start()
         {
-            //screenGroups = GetComponentsInChildren<UI_System>(includeInactive: true);
             screenGroups = transform.parent.GetComponentsInChildren<UI_System>(includeInactive: true);
-            //_gameManager = GameManager.Instance;
+            
+
+            _gameManager._userSign.userInput = _user;
+            _gameManager._userSign.passwordInput = _password;
+
+            _gameManager._userSign.m_signedInEvent.AddListener(delegate { _gameManager.UpdateMenuState(GameManager.MenuState.MAINMENU); });
+            _gameManager._userSign.m_signedOutEvent.AddListener(delegate { _gameManager.UpdateMenuState(GameManager.MenuState.LOGIN); });
+
             InitializeGroups();
 
+            /*
             if (!m_UserLogged)
             {
                 if(m_LogginGroup != null)
@@ -50,6 +68,7 @@ namespace TFG.UI
                     SwitchGroup(m_MainMenuGroup);
                 }
             }
+            */
         }
         #endregion
 
@@ -62,6 +81,7 @@ namespace TFG.UI
                 group.gameObject.SetActive(false);
             }
         }
+
         public void SetDummyCameraActive(bool active)
         {
             _dummyCamera.gameObject.SetActive(active);
@@ -112,6 +132,16 @@ namespace TFG.UI
             {
                 SwitchGroup(previousGroup);
             }
+        }
+
+        public void SignIn()
+        {
+            _gameManager._userSign.SigninWithEmailAsync();
+        }
+        
+        public void SignOut()
+        {
+            _gameManager._userSign.SignOut();
         }
 
         public void QuitGame()

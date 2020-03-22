@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TFG/Scenes/The Box.unity
     guid: f9160815949c0494496d25bac47a3517
+  - enabled: 1
+    path: Assets/TFG/Scenes/MainMenu.unity
+    guid: 298532d8d3820e5478d1a3fc7f66427e
+  - enabled: 1
+    path: Assets/TFG/Scenes/VoidScene.unity
+    guid: aa0730ebe59c1ee429afc80ec23bc586
   m_configObjects: {}

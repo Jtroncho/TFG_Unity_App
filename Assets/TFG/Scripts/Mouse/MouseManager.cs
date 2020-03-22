@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TFG.Events;
+using TFG.Enum;
 
 public class MouseManager : MonoBehaviour
 {
@@ -17,7 +19,7 @@ public class MouseManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.OnGameStateGanged.AddListener(HandleGameStateChanged);
+        AppEvents.stateChange.AddListener(HandleGameStateChanged);
     }
 
     void Update()
@@ -31,9 +33,9 @@ public class MouseManager : MonoBehaviour
         //Here to use another type of cursor outside pause Menu
     }
 
-    void HandleGameStateChanged(GameManager.GameState currentState, GameManager.GameState previousState)
+    void HandleGameStateChanged(AppState currentState, AppState previousState)
     {
-        _useDefaultCursor = currentState == GameManager.GameState.PAUSED;
+        _useDefaultCursor = currentState == AppState.PAUSE;
     }
 }
 

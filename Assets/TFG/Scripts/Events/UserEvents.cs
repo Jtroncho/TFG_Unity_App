@@ -1,6 +1,10 @@
 ﻿using UnityEngine.Events;
+using TFG.Enum;
 
-public static class UserEvents
+namespace TFG.Events
 {
-
+    public static class UserEvents
+    {
+        [System.Serializable] public class EventUserState : UnityEvent<UserState, UserState> { }
+    }
 }

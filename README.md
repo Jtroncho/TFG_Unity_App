@@ -13,6 +13,10 @@ For this project we will need:
 * [Unity](https://unity.com/) - Unity v2019.3
 * [Firebase SDK](https://firebase.google.com/docs/unity/setup) - SDK v6.10.0
 
+### Unity Assets
+
+* [LeanTween](https://assetstore.unity.com/packages/tools/animation/leantween-3595)
+
 ## References
 
 * [Swords&Shovels](https://learn.unity.com/project/swords-and-shovels-game-managers-loads-and-the-game-loop?language=en)

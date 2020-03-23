@@ -55,15 +55,15 @@ namespace TFG.UI
                 if (currentScreen)
                 {
                     Debug.Log(gameObject.name + ": Switching group " + currentScreen.gameObject.name + " to " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aScreen.gameObject.name + "</color>");
-                    CloseScreen(currentScreen);
+                    //CloseScreen(currentScreen);
                     previousScreen = currentScreen;
                 }
 
                 currentScreen = aScreen;
-                StartScreen(aScreen);
+                //StartScreen(aScreen); handled by animation
                 if (MenuEvents.screenChange != null)
                 {
-                    MenuEvents.screenChange.Invoke(aScreen);
+                    MenuEvents.screenChange.Invoke(previousScreen, currentScreen);
                 }
             }
         }

@@ -19,20 +19,24 @@ public class UIAnimator : MonoBehaviour
         MenuEvents.screenChange.RemoveListener(AnimateScreen);
     }
 
-    protected void AnimateGroup(UI_System aGroup)
+    protected void AnimateGroup(UI_System previousGroup, UI_System currentGroup)
     {
-        Debug.Log(aGroup.gameObject.name + ": Group Animation");
-        //aGroup.GetComponent<CanvasRenderer>().SetAlpha(0f);
-        //LeanTween.alpha(aGroup.gameObject,100f,5f);
-        //LeanTween.alphaCanvas();
-        //LeanTween.alpha(aGroup.gameObject, 0f, 0f).setOnComplete(() => LeanTween.alpha(aGroup.gameObject, 100f, 5f));
-        aGroup.gameObject.transform.localPosition = new Vector3(0,-1000);
-        LeanTween.moveLocalY(aGroup.gameObject, 0f, 4f).setEase(LeanTweenType.easeInOutQuad);
+        //Debug.Log(aGroup.gameObject.name + ": Group Animation");
+        currentGroup.gameObject.transform.localPosition = new Vector3(0,-1920,0);
+        LeanTween.moveLocalY(currentGroup.gameObject, 0f, 2f).setEase(LeanTweenType.easeInOutQuad)
+            .setOnStart(() => UI_Manager.Instance.StartGroup(currentGroup))
+            .setOnComplete(() => UI_Manager.Instance.CloseGroup(previousGroup));
     }
-    protected void AnimateScreen(UI_Screen aScreen)
+    protected void AnimateScreen(UI_Screen previousScreen, UI_Screen currentScreen)
     {
-        Debug.Log(aScreen.gameObject.name + ": Screen Animation");
+        /*Debug.Log(aScreen.gameObject.name + ": Screen Animation");
         Vector3 inputScale = aScreen.gameObject.transform.localScale;
-        LeanTween.scale(aScreen.gameObject, aScreen.gameObject.transform.localScale * 1.2f, 4f).setEase(LeanTweenType.easeOutBack).setOnComplete(() => aScreen.gameObject.transform.localScale = inputScale);
+        aScreen.gameObject.transform.localScale *= 1.2f;
+        LeanTween.scale(aScreen.gameObject, inputScale, 2f).setEase(LeanTweenType.easeOutBack);
+        */
+        currentScreen.gameObject.transform.localPosition = new Vector3(1080,0,0);
+        LeanTween.moveLocalX(currentScreen.gameObject, 0f, 2f).setEase(LeanTweenType.easeInOutQuad)
+            .setOnStart(() => currentScreen.GetComponentInParent<UI_System>().StartScreen(currentScreen))
+            .setOnComplete(() => previousScreen.GetComponentInParent<UI_System>().CloseScreen(previousScreen));
     }
 }

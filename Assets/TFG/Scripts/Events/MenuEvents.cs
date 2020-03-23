@@ -10,8 +10,8 @@ namespace TFG.Events
 
         public static StateChange stateChange = new StateChange();*/
 
-        [System.Serializable] public class GroupChange : UnityEvent<UI_System> { }
-        [System.Serializable] public class ScreenChange : UnityEvent<UI_Screen> { }
+        [System.Serializable] public class GroupChange : UnityEvent<UI_System,UI_System> { }
+        [System.Serializable] public class ScreenChange : UnityEvent<UI_Screen,UI_Screen> { }
 
         public static GroupChange groupChange = new GroupChange();
         public static ScreenChange screenChange = new ScreenChange();

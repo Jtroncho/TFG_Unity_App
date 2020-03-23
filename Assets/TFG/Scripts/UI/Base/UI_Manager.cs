@@ -56,16 +56,16 @@ namespace TFG.UI
                 if (currentGroup)
                 {
                     Debug.Log(gameObject.name + ": Switching group " + currentGroup.gameObject.name + " to " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
-                    CloseGroup(currentGroup);
+                    //CloseGroup(currentGroup);
                     previousGroup = currentGroup;
                 }
 
                 currentGroup = aGroup;
-                StartGroup(aGroup);
+                //StartGroup(aGroup); Handled by animation
 
                 if(MenuEvents.groupChange != null)
                 {
-                    MenuEvents.groupChange.Invoke(aGroup);
+                    MenuEvents.groupChange.Invoke(previousGroup, currentGroup);
                 }
             }
         }

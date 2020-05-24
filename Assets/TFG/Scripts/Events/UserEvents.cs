@@ -5,6 +5,10 @@ namespace TFG.Events
 {
     public static class UserEvents
     {
-        [System.Serializable] public class EventUserState : UnityEvent<UserState, UserState> { }
+        public class UserSignIn : UnityEvent { };
+        public class UserSignOut : UnityEvent { };
+
+        public static UserSignIn userSignIn = new UserSignIn();
+        public static UserSignOut userSignOut = new UserSignOut();
     }
 }

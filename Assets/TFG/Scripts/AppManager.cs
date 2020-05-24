@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using TFG.Authentification;
 using TFG.Enum;
 using TFG.Events;
+using TFG.Database;
 
 public class AppManager : Singleton<AppManager>
 {
@@ -12,11 +13,16 @@ public class AppManager : Singleton<AppManager>
     #region Prefab and Scene Management
     //keep track of instanced prefabs
     public GameObject[] SystemPrefabs;
-    List<GameObject> _instancedSystemPrefabs;
+    public GameObject[] DontDestroyPrefabs;
+    [SerializeField] List<GameObject> _instancedSystemPrefabs;
+    [SerializeField] List<GameObject> _instancedDontDestroyPrefabs;
     List<AsyncOperation> _loadOperations;
     #endregion
 
     string _currentLevelName = string.Empty;
+
+    public Auth UserAuthentification;
+    public RTDatabase DatabaseAccess;
 
     [SerializeField] AppState _appStartState = AppState.INIT;
     [SerializeField] AppState _currentAppState;
@@ -31,10 +37,14 @@ public class AppManager : Singleton<AppManager>
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
+        UserAuthentification = GetComponent<Auth>();
+        DatabaseAccess = GetComponent<RTDatabase>();
 
         _loadOperations = new List<AsyncOperation>();
         _instancedSystemPrefabs = new List<GameObject>();
+        _instancedDontDestroyPrefabs = new List<GameObject>();
 
+        DontDestroyOnLoadPrefabs();
         InstantiateSystemPrefabs();
 
         StartApp();
@@ -54,15 +64,27 @@ public class AppManager : Singleton<AppManager>
         }
     }
 
-    /*private void OnEnable()
+    private void OnEnable()
     {
-        //AppEvents.stateChange.AddListener();
+        AppEvents.sceneLoading.AddListener(LoadingInitScene);
     }
 
+    /*
     private void OnDisable()
     {
-        //AppEvents.stateChange.RemoveListener();
+        AppEvents.sceneLoading.RemoveListener(LoadingInitScene);
     }*/
+
+    protected override void OnDestroy()
+    {
+        for (int i = 0; i < _instancedSystemPrefabs.Count; i++)
+        {
+            Destroy(_instancedSystemPrefabs[i]);
+        }
+        _instancedSystemPrefabs.Clear();
+
+        base.OnDestroy();//do whatever singleton does
+    }
 
     #endregion
 
@@ -138,6 +160,31 @@ public class AppManager : Singleton<AppManager>
         }
     }
 
+    private void LoadingInitScene(string scene)
+    {
+        if (scene == initScene)
+        {
+            AppEvents.sceneLoaded.AddListener(UnloadBootScene);
+        }
+    }
+
+    private void UnloadBootScene()
+    {
+        UnloadScene("Boot");
+        AppEvents.sceneLoaded.RemoveListener(UnloadBootScene);
+        AppEvents.sceneLoading.RemoveListener(LoadingInitScene);
+    }
+
+    public void DontDestroyOnLoadPrefabs()
+    {
+        GameObject prefabInstance;
+        for (int i = 0; i < DontDestroyPrefabs.Length; i++)
+        {
+            prefabInstance = Instantiate(DontDestroyPrefabs[i]);
+            _instancedDontDestroyPrefabs.Add(prefabInstance);
+            DontDestroyOnLoad(prefabInstance);
+        }
+    }
     #endregion
 
     void UpdateAppState(AppState state)
@@ -149,17 +196,6 @@ public class AppManager : Singleton<AppManager>
         {
             AppEvents.stateChange.Invoke(_currentAppState, previousAppState);
         }
-    }
-
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();//do whatever singleton does
-
-        for (int i = 0; i < _instancedSystemPrefabs.Count; i++)
-        {
-            Destroy(_instancedSystemPrefabs[i]);
-        }
-        _instancedSystemPrefabs.Clear();
     }
 
     public void StartApp()

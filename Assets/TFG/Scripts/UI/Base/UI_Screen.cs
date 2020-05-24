@@ -16,17 +16,16 @@ namespace TFG.UI
         #endregion
 
         #region Main Methods
-        protected void OnEnable()
+        #endregion
+
+        #region Helper Methods
+        public void SetSelectable()
         {
-            if (m_StartSelectable)
+            if (m_StartSelectable != null)
             {
                 EventSystem.current.SetSelectedGameObject(m_StartSelectable.gameObject);
             }
         }
-
-        #endregion
-
-        #region Helper Methods
         #endregion
     }
 }

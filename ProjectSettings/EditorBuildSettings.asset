@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TFG/Scenes/Boot.unity
     guid: 689191e2f38470a4298a95bca38f151f
-  - enabled: 1
+  - enabled: 0
     path: Assets/TFG/Scenes/Login.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/TFG/Scenes/The Box.unity
     guid: f9160815949c0494496d25bac47a3517
-  - enabled: 1
+  - enabled: 0
     path: Assets/TFG/Scenes/MainMenu.unity
     guid: 298532d8d3820e5478d1a3fc7f66427e
   - enabled: 1

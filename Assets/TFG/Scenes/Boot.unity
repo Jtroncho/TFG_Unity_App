@@ -131,6 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1963903771}
   - component: {fileID: 1963903770}
+  - component: {fileID: 1963903772}
+  - component: {fileID: 1963903773}
   m_Layer: 0
   m_Name: AppManager
   m_TagString: Untagged
@@ -150,8 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22ed9487cf80eda4bb85b8dc3623fd52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SystemPrefabs:
+  SystemPrefabs: []
+  DontDestroyPrefabs:
   - {fileID: 3127882504843506345, guid: 1247320f6d75a2e4a83e377d474f3510, type: 3}
+  _instancedSystemPrefabs: []
+  _instancedDontDestroyPrefabs: []
+  UserAuthentification: {fileID: 0}
+  DatabaseAccess: {fileID: 0}
   _appStartState: 0
   _currentAppState: 0
   initScene: VoidScene
@@ -169,3 +176,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1963903772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963903769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248373272870dbc478f97a2c86390fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginError: 
+--- !u!114 &1963903773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963903769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb81413f25827e40afa67ae690a5389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

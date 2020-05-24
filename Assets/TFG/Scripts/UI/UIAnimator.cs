@@ -30,8 +30,8 @@ public class UIAnimator : MonoBehaviour
                 UI_Manager.Instance.StartGroup(currentGroup);
                 })
             .setOnComplete(() => {
-                eventSystem.enabled = true;
                 UI_Manager.Instance.CloseGroup(previousGroup);
+                eventSystem.enabled = true;
                 });
     }
     protected void AnimateScreen(UI_Screen previousScreen, UI_Screen currentScreen)
@@ -43,8 +43,9 @@ public class UIAnimator : MonoBehaviour
                 currentScreen.GetComponentInParent<UI_System>().StartScreen(currentScreen);
                 })
             .setOnComplete(() => {
-                eventSystem.enabled = true;
                 previousScreen.GetComponentInParent<UI_System>().CloseScreen(previousScreen);
+                eventSystem.enabled = true;
+                currentScreen.SetSelectable();
                 });
     }
 }

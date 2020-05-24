@@ -17,6 +17,8 @@ For this project we will need:
 
 * [LeanTween](https://assetstore.unity.com/packages/tools/animation/leantween-3595)
 
+* [Textmesh Pro](https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126)
+
 ## References
 
 * [Swords&Shovels](https://learn.unity.com/project/swords-and-shovels-game-managers-loads-and-the-game-loop?language=en)

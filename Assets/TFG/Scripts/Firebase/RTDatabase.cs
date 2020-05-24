@@ -55,7 +55,7 @@ namespace TFG.Database
         {
             Debug.Log("Initializing Firebase Database");
             //leaderBoard.Add("Firebase Top " + MaxScores.ToString() + " Scores");
-            FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://tfg-2019-20.firebaseio.com/");
+            //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://tfg-2019-20.firebaseio.com/");
             //DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 
 
@@ -285,5 +285,20 @@ namespace TFG.Database
               });
         }
         */
+
+
+        public void AddQuestionToDatabase(QuestionEntry entry)
+        {
+            // Create new entry at /user-scores/$userid/$scoreid and at
+            // /leaderboard/$scoreid simultaneously
+            string key = FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").Push().Key;
+            Dictionary<string, object> entryValues = entry.ToDictionary();
+
+            Dictionary<string, object> childUpdates = new Dictionary<string, object>();
+            childUpdates[key] = entryValues;
+
+            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").UpdateChildrenAsync(childUpdates);
+
+        }
     }
 }

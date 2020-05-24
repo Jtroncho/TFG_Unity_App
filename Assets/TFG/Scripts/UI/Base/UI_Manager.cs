@@ -18,6 +18,7 @@ namespace TFG.UI
         #region Event Variables
         [SerializeField] Button signInButton;
         [SerializeField] Button signOutButton;
+        [SerializeField] Button createQuestion;
 
         [SerializeField] UI_System _loginGroup;
         [SerializeField] UI_System _welcomeGroup;
@@ -28,8 +29,8 @@ namespace TFG.UI
 
         [SerializeField] TMP_InputField _question, _answer1, _answer2, _answer3, _answer4, _answer5;
         [SerializeField] Toggle _toggle1, _toggle2, _toggle3, _toggle4, _toggle5;
-        [SerializeField] TMP_Dropdown _dropdownShowQuestions;
-        [SerializeField] TMP_Text _loginError, _dropdownSelectedQuestion;
+        [SerializeField] TMP_Dropdown _dropdownShowQuestions, _dropdownShowThemes;
+        [SerializeField] TMP_Text _loginError, _dropdownSelectedQuestion, _dropdownSelectedTheme;
 
         Auth _auth;
         RTDatabase _database;
@@ -48,9 +49,11 @@ namespace TFG.UI
 
         #region Selecting Question
         Dictionary<string, object> _selectedQuestionValues;
-        string _selectedQuestionID;
+        string _selectedQuestionID, _selectedThemeID, _selectedThemeValues;
         List<string> _questionsIDs = new List<string>();
+        List<string> _themesIDs = new List<string>();
         List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
+        List<string> _themesValues = new List<string>();
         #endregion
 
         #endregion
@@ -74,7 +77,10 @@ namespace TFG.UI
             UserEvents.userSignIn.AddListener(SignedInAction);
             UserEvents.userSignOut.AddListener(SignedOutAction);
             DatabaseEvents.dataRetrieved.AddListener(UpdateQuestionsDropdown);
+            DatabaseEvents.dataRetrieved.AddListener(UpdateThemesDropdown);
             _dropdownShowQuestions.onValueChanged.AddListener(UpdateSelectedQuestionDropdown);
+            _dropdownShowThemes.onValueChanged.AddListener(UpdateSelectedThemeDropdown);
+            createQuestion.onClick.AddListener(AddQuestionToDB);
         }
 
         private void OnDisable()
@@ -84,7 +90,10 @@ namespace TFG.UI
             UserEvents.userSignIn.RemoveListener(SignedInAction);
             UserEvents.userSignOut.RemoveListener(SignedOutAction);
             DatabaseEvents.dataRetrieved.RemoveListener(UpdateQuestionsDropdown);
+            DatabaseEvents.dataRetrieved.RemoveListener(UpdateThemesDropdown);
             _dropdownShowQuestions.onValueChanged.RemoveListener(UpdateSelectedQuestionDropdown);
+            _dropdownShowThemes.onValueChanged.RemoveListener(UpdateSelectedThemeDropdown);
+            createQuestion.onClick.RemoveListener(AddQuestionToDB);
         }
         #endregion
 
@@ -215,19 +224,24 @@ namespace TFG.UI
             Debug.Log("Pregunta Seleccionada: " + _questionsIDs[questionIndex] + "; " + _selectedQuestionValues["texto"]);
             
             UpdateSelectedQuestionEdit();
-
         }
 
         private void UpdateSelectedQuestionEdit()
         {
             //[SerializeField] TMP_InputField _question, _answer1, _answer2, _answer3, _answer4, _answer5;
             //[SerializeField] Toggle _toggle1, _toggle2, _toggle3, _toggle4, _toggle5;
+            var themeID = _selectedQuestionValues["tema"] as string;
+            Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
+            if(_dropdownShowThemes.options.Contains(new TMP_Dropdown.OptionData(themeID)))
+            {
+                _dropdownShowThemes.value = _themesValues.IndexOf(themeID);
+            }
+
             _question.text = _selectedQuestionValues["texto"] as string;
             var answers = _selectedQuestionValues["respuestas"] as Dictionary<string, object>;
             var answer = answers["respuesta1"] as Dictionary<string, object>;
             _answer1.text = answer["texto"] as string;
             _toggle1.isOn = answer["respuesta_correcta"].ToString() == "True";
-            Debug.Log("A1 Correcta?: " + answer["respuesta_correcta"].ToString());
             answer = answers["respuesta2"] as Dictionary<string, object>;
             _answer2.text = answer["texto"] as string;
             _toggle2.isOn = answer["respuesta_correcta"].ToString() == "True";
@@ -240,8 +254,42 @@ namespace TFG.UI
             answer = answers["respuesta5"] as Dictionary<string, object>;
             _answer5.text = answer["texto"] as string;
             _toggle5.isOn = answer["respuesta_correcta"].ToString() == "True";
+            Debug.Log("A1 Correcta?: " + answer["respuesta_correcta"].ToString());
         }
 
+        private void UpdateThemesDropdown(string retrieval)
+        {
+            if (retrieval.Equals("temas"))
+            {
+                _dropdownShowThemes.options.Clear();
+                _themesIDs.Clear();
+                _themesValues.Clear();
+                foreach (var themeDictionary in _database.temas)
+                {
+                    var theme = themeDictionary.Value as string;
+                    _themesValues.Add(theme);
+                    _dropdownShowThemes.options.Add(new TMP_Dropdown.OptionData(theme));
+                    _themesIDs.Add(themeDictionary.Key.ToString());
+                    Debug.Log("Tema para Dropdown: " + theme);
+                }
+                //UpdateSelectedThemeDropdown(0);
+                Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowQuestions.options.Count);
+            }
+            Debug.Log("Temas Dropdown Invoked");
+        }
+
+        private void UpdateSelectedThemeDropdown(int themeIndex)
+        {
+            _selectedThemeID = _themesIDs[themeIndex];
+            _selectedThemeValues = _themesValues[themeIndex];
+            Debug.Log("Tema Seleccionado: " + _questionsIDs[themeIndex] + "; " + _selectedThemeValues);
+        }
+
+        public void AddQuestionToDB()
+        {
+            QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn); 
+            _database.AddQuestionToDatabase(newEntry);
+        }
         #endregion
     }
 }

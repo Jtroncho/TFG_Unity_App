@@ -739,6 +739,13 @@ namespace TFG.Authentification
         {
             SignOut();
         }
+
+        public void TFGRegisterEmail(TMP_InputField user, TMP_InputField pass)
+        {
+            _user = user;
+            _password = pass;
+            CreateUserWithEmailAsync();
+        }
         #endregion
         #endregion
     }

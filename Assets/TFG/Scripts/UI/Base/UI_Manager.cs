@@ -19,13 +19,14 @@ namespace TFG.UI
         [SerializeField] Button signInButton;
         [SerializeField] Button signOutButton;
         [SerializeField] Button createQuestion;
+        [SerializeField] Button registerButton;
 
         [SerializeField] UI_System _loginGroup;
         [SerializeField] UI_System _welcomeGroup;
         #endregion
 
         #region Firebase Used Variables
-        [SerializeField] TMP_InputField _user, _pass;
+        [SerializeField] TMP_InputField _user, _pass, _userRegister, _passRegister;
 
         [SerializeField] TMP_InputField _question, _answer1, _answer2, _answer3, _answer4, _answer5;
         [SerializeField] Toggle _toggle1, _toggle2, _toggle3, _toggle4, _toggle5;
@@ -81,6 +82,7 @@ namespace TFG.UI
             _dropdownShowQuestions.onValueChanged.AddListener(UpdateSelectedQuestionDropdown);
             _dropdownShowThemes.onValueChanged.AddListener(UpdateSelectedThemeDropdown);
             createQuestion.onClick.AddListener(AddQuestionToDB);
+            registerButton.onClick.AddListener(RegisterAction);
         }
 
         private void OnDisable()
@@ -94,6 +96,7 @@ namespace TFG.UI
             _dropdownShowQuestions.onValueChanged.RemoveListener(UpdateSelectedQuestionDropdown);
             _dropdownShowThemes.onValueChanged.RemoveListener(UpdateSelectedThemeDropdown);
             createQuestion.onClick.RemoveListener(AddQuestionToDB);
+            registerButton.onClick.RemoveListener(RegisterAction);
         }
         #endregion
 
@@ -173,6 +176,10 @@ namespace TFG.UI
         {
             _auth.TFGSignInEmail(_user, _pass);
             _loginError.text = _auth.loginError;
+        }
+        private void RegisterAction()
+        {
+            _auth.TFGRegisterEmail(_userRegister, _passRegister);
         }
 
         private void SignedInAction()

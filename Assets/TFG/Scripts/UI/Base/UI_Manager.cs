@@ -280,7 +280,7 @@ namespace TFG.UI
                     Debug.Log("Tema para Dropdown: " + theme);
                 }
                 //UpdateSelectedThemeDropdown(0);
-                Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowQuestions.options.Count);
+                Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
             }
             Debug.Log("Temas Dropdown Invoked");
         }

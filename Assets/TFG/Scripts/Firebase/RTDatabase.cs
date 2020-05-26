@@ -300,5 +300,15 @@ namespace TFG.Database
             FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").UpdateChildrenAsync(childUpdates);
 
         }
+
+        public void ModifyQuestionToDatabase(QuestionEntry entry, string key)
+        {
+            Dictionary<string, object> entryValues = entry.ToDictionary();
+
+            Dictionary<string, object> childUpdates = new Dictionary<string, object>();
+            childUpdates[key] = entryValues;
+
+            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").UpdateChildrenAsync(childUpdates);
+        }
     }
 }

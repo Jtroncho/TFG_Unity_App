@@ -18,7 +18,7 @@ namespace TFG.UI
         #region Event Variables
         [SerializeField] Button signInButton;
         [SerializeField] Button signOutButton;
-        [SerializeField] Button createQuestion;
+        [SerializeField] Button createQuestion, modifyQuestion;
         [SerializeField] Button registerButton;
 
         [SerializeField] UI_System _loginGroup;
@@ -83,6 +83,7 @@ namespace TFG.UI
             _dropdownShowThemes.onValueChanged.AddListener(UpdateSelectedThemeDropdown);
             createQuestion.onClick.AddListener(AddQuestionToDB);
             registerButton.onClick.AddListener(RegisterAction);
+            modifyQuestion.onClick.AddListener(ModifyQuestion);
         }
 
         private void OnDisable()
@@ -97,6 +98,7 @@ namespace TFG.UI
             _dropdownShowThemes.onValueChanged.RemoveListener(UpdateSelectedThemeDropdown);
             createQuestion.onClick.RemoveListener(AddQuestionToDB);
             registerButton.onClick.RemoveListener(RegisterAction);
+            modifyQuestion.onClick.RemoveListener(ModifyQuestion);
         }
         #endregion
 
@@ -215,7 +217,10 @@ namespace TFG.UI
                     _dropdownShowQuestions.options.Add(new TMP_Dropdown.OptionData(qText));
                     _questionsIDs.Add(questionDictionary.Key.ToString());
                 }
-                UpdateSelectedQuestionDropdown(0);
+                if(_selectedQuestionID.Equals(""))
+                {
+                    UpdateSelectedQuestionDropdown(0);
+                }
                 Debug.Log("Questions Dropdown Updated, n of Questions: " + _dropdownShowQuestions.options.Count);
             }
             Debug.Log("Questions Dropdown Invoked");
@@ -280,7 +285,7 @@ namespace TFG.UI
                     Debug.Log("Tema para Dropdown: " + theme);
                 }
                 //UpdateSelectedThemeDropdown(0);
-                Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowQuestions.options.Count);
+                Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
             }
             Debug.Log("Temas Dropdown Invoked");
         }
@@ -296,6 +301,13 @@ namespace TFG.UI
         {
             QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn); 
             _database.AddQuestionToDatabase(newEntry);
+        }
+
+        public void ModifyQuestion()
+        {
+            QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn);
+
+            _database.ModifyQuestionToDatabase(newEntry, _selectedQuestionID);
         }
         #endregion
     }

@@ -50,7 +50,7 @@ namespace TFG.UI
 
         #region Selecting Question
         Dictionary<string, object> _selectedQuestionValues;
-        string _selectedQuestionID, _selectedThemeID, _selectedThemeValues;
+        string _selectedQuestionID = "", _selectedThemeID = "", _selectedThemeValues = "";
         List<string> _questionsIDs = new List<string>();
         List<string> _themesIDs = new List<string>();
         List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
@@ -217,7 +217,7 @@ namespace TFG.UI
                     _dropdownShowQuestions.options.Add(new TMP_Dropdown.OptionData(qText));
                     _questionsIDs.Add(questionDictionary.Key.ToString());
                 }
-                if(_selectedQuestionID.Equals(""))
+                if (_selectedQuestionID.Equals(""))
                 {
                     UpdateSelectedQuestionDropdown(0);
                 }
@@ -300,7 +300,10 @@ namespace TFG.UI
         public void AddQuestionToDB()
         {
             QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn); 
-            _database.AddQuestionToDatabase(newEntry);
+            string key = _database.AddQuestionToDatabase(newEntry);
+
+            _selectedQuestionID = key;
+            //_selectedQuestionValues = _questionsValues[_questionsIDs.IndexOf(key)];
         }
 
         public void ModifyQuestion()
@@ -309,7 +312,7 @@ namespace TFG.UI
 
             _database.ModifyQuestionToDatabase(newEntry, _selectedQuestionID);
         }
-        #endregion
+#endregion
     }
 }
 

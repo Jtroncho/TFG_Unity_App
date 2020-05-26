@@ -287,7 +287,7 @@ namespace TFG.Database
         */
 
 
-        public void AddQuestionToDatabase(QuestionEntry entry)
+        public string AddQuestionToDatabase(QuestionEntry entry)
         {
             // Create new entry at /user-scores/$userid/$scoreid and at
             // /leaderboard/$scoreid simultaneously
@@ -299,6 +299,7 @@ namespace TFG.Database
 
             FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").UpdateChildrenAsync(childUpdates);
 
+            return key;
         }
 
         public void ModifyQuestionToDatabase(QuestionEntry entry, string key)

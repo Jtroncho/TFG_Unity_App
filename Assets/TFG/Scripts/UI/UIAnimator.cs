@@ -33,9 +33,12 @@ public class UIAnimator : MonoBehaviour
                 UI_Manager.Instance.CloseGroup(previousGroup);
                 eventSystem.enabled = true;
                 });
+
+        LeanTween.moveLocalY(previousGroup.gameObject, 1920f, 1f);
     }
     protected void AnimateScreen(UI_Screen previousScreen, UI_Screen currentScreen)
     {
+        //previousScreen.gameObject.transform.localPosition = new Vector3(1080, 0, 0);
         currentScreen.gameObject.transform.localPosition = new Vector3(1080,0,0);
         LeanTween.moveLocalX(currentScreen.gameObject, 0f, 2f).setEase(LeanTweenType.easeInOutQuad)
             .setOnStart(() => {
@@ -47,5 +50,6 @@ public class UIAnimator : MonoBehaviour
                 eventSystem.enabled = true;
                 currentScreen.SetSelectable();
                 });
+        LeanTween.moveLocalX(previousScreen.gameObject, -1080, 2f).setEase(LeanTweenType.easeInOutQuad);
     }
 }

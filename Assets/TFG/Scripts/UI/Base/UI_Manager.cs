@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TFG.Authentification;
 using TFG.Database;
+using TFG.Games;
 
 namespace TFG.UI
 {
@@ -23,6 +24,13 @@ namespace TFG.UI
 
         [SerializeField] UI_System _loginGroup;
         [SerializeField] UI_System _welcomeGroup;
+        #endregion
+
+        #region GameScreen Stuff
+        [SerializeField] Button startGame_1, stopGame_1;
+        [SerializeField] public Button Answer_1, Answer_2, Answer_3, Answer_4, Answer_5;
+        [SerializeField] public TMP_Text questionNumber, gameQuestion;
+        GameManager_Streak _streakGame;
         #endregion
 
         #region Firebase Used Variables
@@ -51,9 +59,9 @@ namespace TFG.UI
         #region Selecting Question
         Dictionary<string, object> _selectedQuestionValues;
         string _selectedQuestionID = "", _selectedThemeID = "", _selectedThemeValues = "";
-        List<string> _questionsIDs = new List<string>();
-        List<string> _themesIDs = new List<string>();
-        List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
+        public List<string> _questionsIDs = new List<string>();
+        public List<string> _themesIDs = new List<string>();
+        public List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
         List<string> _themesValues = new List<string>();
         #endregion
 
@@ -65,6 +73,8 @@ namespace TFG.UI
             _auth = AppManager.Instance.UserAuthentification;
             _database = AppManager.Instance.DatabaseAccess;
             groups = GetComponentsInChildren<UI_System>(includeInactive: true);
+            _streakGame = GetComponent<GameManager_Streak>();
+            //_streakGame.enabled = false;
             InitializeGroups();
             StartGrup();
         }
@@ -83,7 +93,9 @@ namespace TFG.UI
             _dropdownShowThemes.onValueChanged.AddListener(UpdateSelectedThemeDropdown);
             createQuestion.onClick.AddListener(AddQuestionToDB);
             registerButton.onClick.AddListener(RegisterAction);
-            modifyQuestion.onClick.AddListener(ModifyQuestion);
+            modifyQuestion.onClick.AddListener(ModifyQuestionDB);
+            startGame_1.onClick.AddListener(StartGame_1);
+            stopGame_1.onClick.AddListener(StopGame_1);
         }
 
         private void OnDisable()
@@ -98,7 +110,9 @@ namespace TFG.UI
             _dropdownShowThemes.onValueChanged.RemoveListener(UpdateSelectedThemeDropdown);
             createQuestion.onClick.RemoveListener(AddQuestionToDB);
             registerButton.onClick.RemoveListener(RegisterAction);
-            modifyQuestion.onClick.RemoveListener(ModifyQuestion);
+            modifyQuestion.onClick.RemoveListener(ModifyQuestionDB);
+            startGame_1.onClick.RemoveListener(StartGame_1);
+            stopGame_1.onClick.RemoveListener(StopGame_1);
         }
         #endregion
 
@@ -266,7 +280,6 @@ namespace TFG.UI
             answer = answers["respuesta5"] as Dictionary<string, object>;
             _answer5.text = answer["texto"] as string;
             _toggle5.isOn = answer["respuesta_correcta"].ToString() == "True";
-            Debug.Log("A1 Correcta?: " + answer["respuesta_correcta"].ToString());
         }
 
         private void UpdateThemesDropdown(string retrieval)
@@ -306,13 +319,23 @@ namespace TFG.UI
             //_selectedQuestionValues = _questionsValues[_questionsIDs.IndexOf(key)];
         }
 
-        public void ModifyQuestion()
+        public void ModifyQuestionDB()
         {
             QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn);
 
             _database.ModifyQuestionToDatabase(newEntry, _selectedQuestionID);
         }
-#endregion
+
+        void StartGame_1()
+        {
+            _streakGame.enabled = true;
+        }
+
+        void StopGame_1()
+        {
+            _streakGame.enabled = false;
+        }
+        #endregion
     }
 }
 

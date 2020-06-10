@@ -33,7 +33,7 @@ namespace TFG.Authentification
 {
     public class Auth : Singleton<Auth>
     {
-        protected Firebase.Auth.FirebaseAuth auth;
+        public Firebase.Auth.FirebaseAuth auth;
         protected Firebase.Auth.FirebaseAuth otherAuth;
         protected Dictionary<string, Firebase.Auth.FirebaseUser> userByAuth =
           new Dictionary<string, Firebase.Auth.FirebaseUser>();
@@ -42,7 +42,7 @@ namespace TFG.Authentification
         protected TMP_InputField _user;
         protected TMP_InputField _password;
         public string loginError;
-        public string userID;
+        //public string userID;
         #endregion
 
         private string logText = "";
@@ -259,7 +259,7 @@ namespace TFG.Authentification
                 if (signedIn)
                 {
                     DebugLog("Signed in " + user.UserId);
-                    userID = user.UserId;
+                    //userID = user.UserId;
                     displayName = user.DisplayName ?? "";
                     DisplayDetailedUserInfo(user, 1);
                     if (UserEvents.userSignIn != null)

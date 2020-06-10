@@ -19,8 +19,11 @@ For this project we will need:
 
 * [Textmesh Pro](https://assetstore.unity.com/packages/essentials/beta-projects/textmesh-pro-84126)
 
+* [Button Sprites](https://assetstore.unity.com/packages/2d/gui/icons/simple-button-set-01-153979)
+
 ## References
 
 * [Swords&Shovels](https://learn.unity.com/project/swords-and-shovels-game-managers-loads-and-the-game-loop?language=en)
 * [Unity UI Demo](https://assetstore.unity.com/packages/essentials/unity-samples-ui-25468)
+
 

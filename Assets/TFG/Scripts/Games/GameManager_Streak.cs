@@ -16,7 +16,7 @@ namespace TFG.Games
         RTDatabase _database;
         bool isCorrect_1, isCorrect_2, isCorrect_3, isCorrect_4, isCorrect_5;
 
-        private void Start()
+        private void Awake()
         {
             _uiManager = UI_Manager.Instance.GetComponent<UI_Manager>();
             _database = AppManager.Instance.DatabaseAccess;

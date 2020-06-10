@@ -18,12 +18,13 @@ namespace TFG.Games
 
         private void Start()
         {
-            _uiManager = UI_Manager.Instance;
+            _uiManager = UI_Manager.Instance.GetComponent<UI_Manager>();
             _database = AppManager.Instance.DatabaseAccess;
         }
 
         void OnEnable()
         {
+            Debug.Log("Game Enabling");
             _questionsAnswered = 0;
             _questionsACorrect = 0;
             _questionsAIncorrect = 0;
@@ -34,11 +35,14 @@ namespace TFG.Games
             _uiManager.Answer_4.onClick.AddListener(answerPressed);
             _uiManager.Answer_5.onClick.AddListener(answerPressed);
 
+            Debug.Log("Game Enabled");
+
             loadQuestion();
         }
 
         void loadQuestion()
         {
+            Debug.Log("Loading Game Question");
             int randomQuestion = Random.Range(0, _uiManager._questionsIDs.Count);
 
             _uiManager.questionNumber.text = _questionsAnswered.ToString();
@@ -70,11 +74,13 @@ namespace TFG.Games
 
         private void OnDisable()
         {
+            Debug.Log("Game About To Disable");
             _uiManager.Answer_1.onClick.RemoveListener(answerPressed);
             _uiManager.Answer_2.onClick.RemoveListener(answerPressed);
             _uiManager.Answer_3.onClick.RemoveListener(answerPressed);
             _uiManager.Answer_4.onClick.RemoveListener(answerPressed);
             _uiManager.Answer_5.onClick.RemoveListener(answerPressed);
+            Debug.Log("Game Disabled");
         }
     }
 }

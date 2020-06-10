@@ -8,6 +8,7 @@ using TFG.UI;
 public class UIAnimator : MonoBehaviour
 {
     [SerializeField] EventSystem eventSystem;
+    int xPos = 2000, yPos = 3000;
 
     void OnEnable()
     {
@@ -23,7 +24,7 @@ public class UIAnimator : MonoBehaviour
 
     protected void AnimateGroup(UI_System previousGroup, UI_System currentGroup)
     {
-        currentGroup.gameObject.transform.localPosition = new Vector3(0,-2000,0);
+        currentGroup.gameObject.transform.localPosition = new Vector3(0,-yPos, 0);
         LeanTween.moveLocalY(currentGroup.gameObject, 0f, 1f).setEase(LeanTweenType.easeInOutQuad)
             .setOnStart(() => {
                 eventSystem.enabled = false;
@@ -34,12 +35,12 @@ public class UIAnimator : MonoBehaviour
                 eventSystem.enabled = true;
                 });
 
-        LeanTween.moveLocalY(previousGroup.gameObject, 2000f, 1f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.moveLocalY(previousGroup.gameObject, yPos, 1f).setEase(LeanTweenType.easeInOutQuad);
     }
     protected void AnimateScreen(UI_Screen previousScreen, UI_Screen currentScreen)
     {
         //previousScreen.gameObject.transform.localPosition = new Vector3(1080, 0, 0);
-        currentScreen.gameObject.transform.localPosition = new Vector3(1300,0,0);
+        currentScreen.gameObject.transform.localPosition = new Vector3(xPos, 0,0);
         LeanTween.moveLocalX(currentScreen.gameObject, 0f, 1f).setEase(LeanTweenType.easeInOutQuad)
             .setOnStart(() => {
                 eventSystem.enabled = false;
@@ -50,6 +51,6 @@ public class UIAnimator : MonoBehaviour
                 eventSystem.enabled = true;
                 currentScreen.SetSelectable();
                 });
-        LeanTween.moveLocalX(previousScreen.gameObject, -1300, 1f).setEase(LeanTweenType.easeInOutQuad);
+        LeanTween.moveLocalX(previousScreen.gameObject, -xPos, 1f).setEase(LeanTweenType.easeInOutQuad);
     }
 }

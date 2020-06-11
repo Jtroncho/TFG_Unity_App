@@ -14,7 +14,8 @@ namespace TFG.Games
         int _questionsAnswered, _questionsACorrect, _questionsAIncorrect;
         UI_Manager _uiManager;
         RTDatabase _database;
-        bool isCorrect_1, isCorrect_2, isCorrect_3, isCorrect_4, isCorrect_5;
+        //bool isCorrect_1, isCorrect_2, isCorrect_3, isCorrect_4, isCorrect_5;
+        bool[] isCorrect = new bool [5];
 
         private void Awake()
         {
@@ -29,11 +30,11 @@ namespace TFG.Games
             _questionsACorrect = 0;
             _questionsAIncorrect = 0;
 
-            _uiManager.Answer_1.onClick.AddListener(answerPressed);
-            _uiManager.Answer_2.onClick.AddListener(answerPressed);
-            _uiManager.Answer_3.onClick.AddListener(answerPressed);
-            _uiManager.Answer_4.onClick.AddListener(answerPressed);
-            _uiManager.Answer_5.onClick.AddListener(answerPressed);
+            _uiManager.Answer_1.onClick.AddListener(() => answerPressed(0));
+            _uiManager.Answer_2.onClick.AddListener(() => answerPressed(1));
+            _uiManager.Answer_3.onClick.AddListener(() => answerPressed(2));
+            _uiManager.Answer_4.onClick.AddListener(() => answerPressed(3));
+            _uiManager.Answer_5.onClick.AddListener(() => answerPressed(4));
 
             Debug.Log("Game Enabled");
 
@@ -46,40 +47,55 @@ namespace TFG.Games
             int randomQuestion = Random.Range(0, _uiManager._questionsIDs.Count);
 
             _uiManager.questionNumber.text = _questionsAnswered.ToString();
+            _uiManager.questionsCorrect.text = _questionsACorrect.ToString();
+            _uiManager.questionsIncorrect.text = _questionsAIncorrect.ToString();
             _uiManager.gameQuestion.text = _uiManager._questionsValues[randomQuestion]["texto"] as string;
 
             var answers = _uiManager._questionsValues[randomQuestion]["respuestas"] as Dictionary<string, object>;
             var answer = answers["respuesta1"] as Dictionary<string, object>;
             _uiManager.Answer_1.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            isCorrect_1 = answer["respuesta_correcta"].ToString() == "True";
+            //isCorrect_1 = answer["respuesta_correcta"].ToString() == "True";
+            isCorrect[0] = answer["respuesta_correcta"].ToString() == "True";
             answer = answers["respuesta2"] as Dictionary<string, object>;
             _uiManager.Answer_2.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            isCorrect_2 = answer["respuesta_correcta"].ToString() == "True";
+            //isCorrect_2 = answer["respuesta_correcta"].ToString() == "True";
+            isCorrect[1] = answer["respuesta_correcta"].ToString() == "True";
             answer = answers["respuesta3"] as Dictionary<string, object>;
             _uiManager.Answer_3.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            isCorrect_3 = answer["respuesta_correcta"].ToString() == "True";
+            //isCorrect_3 = answer["respuesta_correcta"].ToString() == "True";
+            isCorrect[2] = answer["respuesta_correcta"].ToString() == "True";
             answer = answers["respuesta4"] as Dictionary<string, object>;
             _uiManager.Answer_4.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            isCorrect_4 = answer["respuesta_correcta"].ToString() == "True";
+            //isCorrect_4 = answer["respuesta_correcta"].ToString() == "True";
+            isCorrect[3] = answer["respuesta_correcta"].ToString() == "True";
             answer = answers["respuesta5"] as Dictionary<string, object>;
             _uiManager.Answer_5.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            isCorrect_5 = answer["respuesta_correcta"].ToString() == "True";
+            //isCorrect_5 = answer["respuesta_correcta"].ToString() == "True";
+            isCorrect[4] = answer["respuesta_correcta"].ToString() == "True";
         }
 
-        void answerPressed()
+        void answerPressed(int isResponseCorrect) //(bool isAnswerCorrect)
         {
             _questionsAnswered += 1;
+            if(isCorrect[isResponseCorrect])
+            {
+                _questionsACorrect += 1;
+            }
+            else
+            {
+                _questionsAIncorrect += 1;
+            }
             loadQuestion();
         }
 
         private void OnDisable()
         {
             Debug.Log("Game About To Disable");
-            _uiManager.Answer_1.onClick.RemoveListener(answerPressed);
-            _uiManager.Answer_2.onClick.RemoveListener(answerPressed);
-            _uiManager.Answer_3.onClick.RemoveListener(answerPressed);
-            _uiManager.Answer_4.onClick.RemoveListener(answerPressed);
-            _uiManager.Answer_5.onClick.RemoveListener(answerPressed);
+            _uiManager.Answer_1.onClick.RemoveAllListeners();
+            _uiManager.Answer_2.onClick.RemoveAllListeners();
+            _uiManager.Answer_3.onClick.RemoveAllListeners();
+            _uiManager.Answer_4.onClick.RemoveAllListeners();
+            _uiManager.Answer_5.onClick.RemoveAllListeners();
             Debug.Log("Game Disabled");
         }
     }

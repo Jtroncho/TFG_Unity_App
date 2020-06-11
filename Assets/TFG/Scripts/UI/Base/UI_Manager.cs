@@ -29,7 +29,7 @@ namespace TFG.UI
         #region GameScreen Stuff
         [SerializeField] Button startGame_1, stopGame_1;
         [SerializeField] public Button Answer_1, Answer_2, Answer_3, Answer_4, Answer_5;
-        [SerializeField] public TMP_Text questionNumber, gameQuestion;
+        [SerializeField] public TMP_Text questionNumber, gameQuestion, questionsCorrect, questionsIncorrect;
         GameManager_Streak _streakGame;
         #endregion
 

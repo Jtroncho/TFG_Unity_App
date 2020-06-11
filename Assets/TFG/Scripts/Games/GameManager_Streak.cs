@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TFG.UI;
 using TFG.Database;
+using TFG.Authentification;
 using TMPro;
 
 namespace TFG.Games
@@ -11,24 +12,41 @@ namespace TFG.Games
     public class GameManager_Streak : MonoBehaviour
     {
         // Start is called before the first frame update
-        int _questionsAnswered, _questionsACorrect, _questionsAIncorrect;
+        int _questionsAnswered, _questionsACorrect, _questionsAIncorrect, _score, _basicScore = 50, _streak;
+        float _streakIncrements;
         UI_Manager _uiManager;
         RTDatabase _database;
+        Auth _auth;
         //bool isCorrect_1, isCorrect_2, isCorrect_3, isCorrect_4, isCorrect_5;
         bool[] isCorrect = new bool [5];
+        bool _lastQuestion;
+        [SerializeField] LeaderboardEntry userScore = new LeaderboardEntry();
 
         private void Awake()
         {
             _uiManager = UI_Manager.Instance.GetComponent<UI_Manager>();
             _database = AppManager.Instance.DatabaseAccess;
+            _auth = AppManager.Instance.UserAuthentification;
+        }
+
+        private void Start()
+        {
+            userScore.uid = _auth._userID;
+            userScore.email = _auth._userEmail;
         }
 
         void OnEnable()
         {
             Debug.Log("Game Enabling");
+
             _questionsAnswered = 0;
             _questionsACorrect = 0;
             _questionsAIncorrect = 0;
+            _score = 0;
+            _streakIncrements = 1f;
+            _lastQuestion = false;
+            _streak = 0;
+            userScore.score = 0;
 
             _uiManager.Answer_1.onClick.AddListener(() => answerPressed(0));
             _uiManager.Answer_2.onClick.AddListener(() => answerPressed(1));
@@ -50,6 +68,8 @@ namespace TFG.Games
             _uiManager.questionsCorrect.text = _questionsACorrect.ToString();
             _uiManager.questionsIncorrect.text = _questionsAIncorrect.ToString();
             _uiManager.gameQuestion.text = _uiManager._questionsValues[randomQuestion]["texto"] as string;
+            _uiManager.gameScore.text = _score.ToString();
+            _uiManager.gameStreak.text = _streak.ToString();
 
             var answers = _uiManager._questionsValues[randomQuestion]["respuestas"] as Dictionary<string, object>;
             var answer = answers["respuesta1"] as Dictionary<string, object>;
@@ -72,25 +92,44 @@ namespace TFG.Games
             _uiManager.Answer_5.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
             //isCorrect_5 = answer["respuesta_correcta"].ToString() == "True";
             isCorrect[4] = answer["respuesta_correcta"].ToString() == "True";
+
+            userScore.score = _score;
         }
 
         void answerPressed(int isResponseCorrect) //(bool isAnswerCorrect)
         {
             _questionsAnswered += 1;
-            if(isCorrect[isResponseCorrect])
+            if (_lastQuestion)
+            {
+                _streak += 1;
+                _streakIncrements += 0.25f;
+            }
+            else
+            {
+                _streak = 0;
+                _streakIncrements = 1f;
+            }
+
+            if (isCorrect[isResponseCorrect])
             {
                 _questionsACorrect += 1;
+                _score += (int)((float)(_basicScore * 4) * _streakIncrements);
+                _lastQuestion = true;
             }
             else
             {
                 _questionsAIncorrect += 1;
+                _score -= _basicScore;
+                _lastQuestion = false;
             }
+
             loadQuestion();
         }
 
         private void OnDisable()
         {
             Debug.Log("Game About To Disable");
+            _database.AddScore(userScore);
             _uiManager.Answer_1.onClick.RemoveAllListeners();
             _uiManager.Answer_2.onClick.RemoveAllListeners();
             _uiManager.Answer_3.onClick.RemoveAllListeners();

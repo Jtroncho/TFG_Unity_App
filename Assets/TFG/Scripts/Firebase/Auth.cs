@@ -42,7 +42,7 @@ namespace TFG.Authentification
         protected TMP_InputField _user;
         protected TMP_InputField _password;
         public string loginError;
-        //public string userID;
+        public string _userEmail, _userID;
         #endregion
 
         private string logText = "";
@@ -259,7 +259,8 @@ namespace TFG.Authentification
                 if (signedIn)
                 {
                     DebugLog("Signed in " + user.UserId);
-                    //userID = user.UserId;
+                    _userEmail = user.Email;
+                    _userID = user.UserId;
                     displayName = user.DisplayName ?? "";
                     DisplayDetailedUserInfo(user, 1);
                     if (UserEvents.userSignIn != null)

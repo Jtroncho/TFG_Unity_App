@@ -21,6 +21,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TFG.Events;
+using TFG.Authentification;
 
 
 // Handler for UI buttons on the scene.  Also performs some
@@ -33,16 +34,19 @@ namespace TFG.Database
     // startup.
     public class RTDatabase : Singleton<RTDatabase>
     {
-
+        Auth _auth;
         ArrayList leaderBoard = new ArrayList();
         public IEnumerable<DataSnapshot> questions;
         public IEnumerable<DataSnapshot> temas;
+        public IEnumerable<DataSnapshot> puntuaciones;
         Vector2 scrollPosition = Vector2.zero;
         private Vector2 controlsScrollViewVector = Vector2.zero;
+        long pastScore = 0;
 
-        private const int MaxScores = 5;
+        //private const int MaxScores = 5;
         private string logText = "";
-        private string email = "";
+        //private string email = "";
+        private LeaderboardEntry userScore = new LeaderboardEntry();
 
         const int kMaxLogSize = 16382;
         DependencyStatus dependencyStatus = DependencyStatus.UnavailableOther;
@@ -58,6 +62,7 @@ namespace TFG.Database
             //FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://tfg-2019-20.firebaseio.com/");
             //DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 
+            _auth = AppManager.Instance.UserAuthentification;
 
             FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
                 dependencyStatus = task.Result;
@@ -88,7 +93,12 @@ namespace TFG.Database
               .ValueChanged += HandledChangedQuestions;
             FirebaseDatabase.DefaultInstance
               .GetReference("temas")
-              .ValueChanged += HandledChangedThemes;
+              .ValueChanged
+                += HandledChangedThemes;
+            FirebaseDatabase.DefaultInstance
+              .GetReference("puntuaciones")
+              .OrderByChild("score").ValueChanged += HandledChangedScores;
+              
         }
 
         private void OnDisable()
@@ -99,6 +109,10 @@ namespace TFG.Database
             FirebaseDatabase.DefaultInstance
               .GetReference("temas")
               .ValueChanged -= HandledChangedThemes;
+            FirebaseDatabase.DefaultInstance
+              .GetReference("puntuaciones")
+              .OrderByChild("score").ValueChanged -= HandledChangedScores;
+              
         }
         /*protected void StartListener()
         {
@@ -162,6 +176,59 @@ namespace TFG.Database
             }
         }
 
+        
+        void HandledChangedScores(object sender, ValueChangedEventArgs args)
+        {
+            string dataFetch = "puntuaciones";
+            bool wrongData = false;
+
+            if (args.DatabaseError != null)
+            {
+                Debug.LogError(args.DatabaseError.Message);
+                return;
+            }
+            Debug.Log("Received values for puntuaciones.");
+            if (args.Snapshot != null && args.Snapshot.ChildrenCount > 0)
+            {
+                foreach (var childSnapshot in args.Snapshot.Children)
+                {
+                    if (childSnapshot == null
+                      || childSnapshot.Value == null)
+                    {
+                        Debug.LogError("Bad data in sample.  Did you forget to call SetEditorDatabaseUrl with your project id?");
+                        wrongData = true;
+                        break;
+                    }
+                    else
+                    {
+                        if(childSnapshot.Key == _auth._userID)
+                        {
+                            var sDict = childSnapshot.Value as Dictionary<string, object>;
+                            pastScore = (long)sDict["score"];
+                        }
+                        //var sDict = childSnapshot.Value as Dictionary<string, object>;
+                        //var eText = sDict["email"] as string;
+                        //long prueba = (long)sDict["score"];
+                        //Debug.Log("Puntuacion: " + childSnapshot.Key + ", " + prueba.ToString() + "; " + eText + ";");
+
+                    }
+                }
+                if (!wrongData)
+                {
+                    puntuaciones = args.Snapshot.Children;
+                }
+            }
+            else
+            {
+                Debug.Log("Nothing Received from Database");
+            }
+            if (DatabaseEvents.dataRetrieved != null)
+            {
+                DatabaseEvents.dataRetrieved.Invoke(dataFetch);
+            }
+        }
+        
+
         void HandledChangedThemes(object sender, ValueChangedEventArgs args)
         {
             string dataFetch = "temas";
@@ -212,11 +279,13 @@ namespace TFG.Database
         /*
         TransactionResult AddScoreTransaction(MutableData mutableData)
         {
-            List<object> leaders = mutableData.Value as List<object>;
+            
+            //List<object> leaders = mutableData.Value as List<object>;
+            Dictionary<string, int> leaders = mutableData.Value as Dictionary<string, int>;
 
             if (leaders == null)
             {
-                leaders = new List<object>();
+                leaders = new Dictionary<string, int>();
             }
             else if (mutableData.ChildrenCount >= MaxScores)
             {
@@ -243,31 +312,91 @@ namespace TFG.Database
                 // Otherwise, we remove the current lowest to be replaced with the new score.
                 leaders.Remove(minVal);
             }
-
             // Now we add the new score as a new entry that contains the email address and score.
-            Dictionary<string, object> newScoreMap = new Dictionary<string, object>();
-            newScoreMap["score"] = score;
-            newScoreMap["email"] = email;
-            leaders.Add(newScoreMap);
-
+            
+            if(!leaders.ContainsKey(userScore.uid)) // !mutableData.HasChild(userScore.uid))
+            {
+                leaders[userScore.uid] = userScore.score;
+            }
+            else
+            {
+                leaders[userScore.uid] = leaders[userScore.uid] + userScore.score;
+            }
             // You must set the Value to indicate data at that location has changed.
-            mutableData.Value = leaders;
+            //leaders.Add(newScoreMap);
+            //mutableData.Value = leaders;
+            //return TransactionResult.Success(mutableData);
+
+            //Dictionary<string, object> scores = mutableData; // as Dictionary<string, object>;
+            mutableData.Value = leaders as object;
             return TransactionResult.Success(mutableData);
+        }*/
+
+        /*
+
+        private void AddScoreToLeaders(string email,
+                           long score,
+                           DatabaseReference leaderBoardRef)
+        {
+
+            leaderBoardRef.RunTransaction(mutableData => {
+                List<object> leaders = mutableData.Value as List<object>
+        
+                if (leaders == null)
+                {
+                    leaders = new List<object>();
+                }
+                else if (mutableData.ChildrenCount >= MaxScores)
+                {
+                    long minScore = long.MaxValue;
+                    object minVal = null;
+                    foreach (var child in leaders)
+                    {
+                        if (!(child is Dictionary<string, object>)) continue;
+                        long childScore = (long)
+                                    ((Dictionary<string, object>)child)["score"];
+                        if (childScore < minScore)
+                        {
+                            minScore = childScore;
+                            minVal = child;
+                        }
+                    }
+                    if (minScore > score)
+                    {
+                        // The new score is lower than the existing 5 scores, abort.
+                        return TransactionResult.Abort();
+                    }
+
+                    // Remove the lowest score.
+                    leaders.Remove(minVal);
+                }
+
+                // Add the new high score.
+                Dictionary<string, object> newScoreMap =
+                                 new Dictionary<string, object>();
+                newScoreMap["score"] = score;
+                newScoreMap["email"] = email;
+                leaders.Add(newScoreMap);
+                mutableData.Value = leaders;
+                return TransactionResult.Success(mutableData);
+            });
         }
         */
 
+
         /*
-        public void AddScore()
+        public void AddScore(LeaderboardEntry scoreEntry)
         {
-            if (score == 0 || string.IsNullOrEmpty(email))
+            if (scoreEntry.score == 0 || string.IsNullOrEmpty(scoreEntry.uid))
             {
                 DebugLog("invalid score or email.");
                 return;
             }
             DebugLog(String.Format("Attempting to add score {0} {1}",
-              email, score.ToString()));
+              scoreEntry.uid, scoreEntry.score.ToString()));
+            userScore = scoreEntry;
 
-            DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("Leaders");
+            DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("puntuaciones");
 
             DebugLog("Running Transaction...");
             // Use a transaction to ensure that we do not encounter issues with
@@ -285,7 +414,6 @@ namespace TFG.Database
               });
         }
         */
-
 
         public string AddQuestionToDatabase(QuestionEntry entry)
         {
@@ -311,5 +439,72 @@ namespace TFG.Database
 
             FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").UpdateChildrenAsync(childUpdates);
         }
+
+        public void AddScore(LeaderboardEntry scoreEntry)
+        {
+            /*var usuarios = puntuaciones as Dictionary<string, object>;
+            if (usuarios != null && usuarios.ContainsKey(scoreEntry.uid))
+            {
+                DebugLog("Treying to check past score");
+                var checkScore = usuarios[scoreEntry.uid] as Dictionary<string, object>;
+                pastScore = (long)checkScore["score"];
+            }*/
+
+            scoreEntry.score += pastScore;
+            Dictionary<string, object> entryValues = scoreEntry.ToDictionary();
+
+            Dictionary<string, object> childUpdates = new Dictionary<string, object>();
+            childUpdates[scoreEntry.uid] = entryValues;
+
+            FirebaseDatabase.DefaultInstance.RootReference.Child("puntuaciones").UpdateChildrenAsync(childUpdates);
+        }
+        /*
+        public void RetrieveScores()
+        {
+            string dataFetch = "puntuaciones";
+            FirebaseDatabase.DefaultInstance
+              .GetReference(dataFetch)
+              .GetValueAsync().ContinueWith(task => {
+                  if (task.IsFaulted)
+                  {
+                      // Handle the error...
+                      Debug.Log("No Scores Received from Database");
+                  }
+                  else if (task.IsCompleted)
+                  {
+                      bool wrongData = false;
+                      DataSnapshot snapshot = task.Result;
+                      foreach (var childSnapshot in snapshot.Children)
+                      {
+                          if (childSnapshot == null
+                            || childSnapshot.Value == null)
+                          {
+                              Debug.LogError("Bad data in sample.  Did you forget to call SetEditorDatabaseUrl with your project id?");
+                              wrongData = true;
+                              break;
+                          }
+                          else
+                          {
+                              var sDict = childSnapshot.Value as Dictionary<string, object>;
+                              var eText = sDict["email"] as string;
+                              long prueba = (long)sDict["score"];
+                              Debug.Log("Puntuacion: " + childSnapshot.Key + ", " + prueba.ToString() + "; " + eText + ";");
+                          }
+                      }
+                      if (!wrongData)
+                      {
+
+                          puntuaciones = snapshot.Children;
+                      }
+                      
+                      Debug.Log("Scores Received from Database");
+                      if (DatabaseEvents.dataRetrieved != null)
+                      {
+                          DatabaseEvents.dataRetrieved.Invoke(dataFetch);
+                      }
+                  }
+              });
+        }
+        */
     }
 }

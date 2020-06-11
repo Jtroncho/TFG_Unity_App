@@ -21,16 +21,18 @@ namespace TFG.UI
         [SerializeField] Button signOutButton;
         [SerializeField] Button createQuestion, modifyQuestion;
         [SerializeField] Button registerButton;
+        //[SerializeField] Button showScores;
 
         [SerializeField] UI_System _loginGroup;
         [SerializeField] UI_System _welcomeGroup;
         #endregion
 
-        #region GameScreen Stuff
+        #region Game Stuff
         [SerializeField] Button startGame_1, stopGame_1;
         [SerializeField] public Button Answer_1, Answer_2, Answer_3, Answer_4, Answer_5;
-        [SerializeField] public TMP_Text questionNumber, gameQuestion, questionsCorrect, questionsIncorrect;
+        [SerializeField] public TMP_Text questionNumber, gameQuestion, questionsCorrect, questionsIncorrect, gameScore, gameStreak;
         GameManager_Streak _streakGame;
+        //UnityAction AddScoreAction;
         #endregion
 
         #region Firebase Used Variables
@@ -65,6 +67,12 @@ namespace TFG.UI
         List<string> _themesValues = new List<string>();
         #endregion
 
+        #region showScores
+        List<string> _scoreIDs = new List<string>();
+        List<int> _scoreValues = new List<int>();
+        [SerializeField] public TMP_Text tScores;
+        #endregion
+
         #endregion
 
         #region Main Methods
@@ -74,6 +82,9 @@ namespace TFG.UI
             _database = AppManager.Instance.DatabaseAccess;
             groups = GetComponentsInChildren<UI_System>(includeInactive: true);
             _streakGame = GetComponent<GameManager_Streak>();
+
+            //AddScoreAction += AddScoreToDB(sco);
+
             //_streakGame.enabled = false;
             InitializeGroups();
             StartGrup();
@@ -96,6 +107,7 @@ namespace TFG.UI
             modifyQuestion.onClick.AddListener(ModifyQuestionDB);
             startGame_1.onClick.AddListener(StartGame_1);
             stopGame_1.onClick.AddListener(StopGame_1);
+            DatabaseEvents.dataRetrieved.AddListener(UpdateScores);
         }
 
         private void OnDisable()
@@ -113,6 +125,7 @@ namespace TFG.UI
             modifyQuestion.onClick.RemoveListener(ModifyQuestionDB);
             startGame_1.onClick.RemoveListener(StartGame_1);
             stopGame_1.onClick.RemoveListener(StopGame_1);
+            DatabaseEvents.dataRetrieved.RemoveListener(UpdateScores);
         }
         #endregion
 
@@ -237,7 +250,7 @@ namespace TFG.UI
                 }
                 Debug.Log("Questions Dropdown Updated, n of Questions: " + _dropdownShowQuestions.options.Count);
             }
-            Debug.Log("Questions Dropdown Invoked");
+            //Debug.Log("Questions Dropdown Invoked");
         }
 
         private void UpdateSelectedQuestionDropdown(int questionIndex)
@@ -257,7 +270,7 @@ namespace TFG.UI
             //[SerializeField] TMP_InputField _question, _answer1, _answer2, _answer3, _answer4, _answer5;
             //[SerializeField] Toggle _toggle1, _toggle2, _toggle3, _toggle4, _toggle5;
             var themeID = _selectedQuestionValues["tema"] as string;
-            Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
+            //Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
             if(_dropdownShowThemes.options.Contains(new TMP_Dropdown.OptionData(themeID)))
             {
                 _dropdownShowThemes.value = _themesValues.IndexOf(themeID);
@@ -295,19 +308,19 @@ namespace TFG.UI
                     _themesValues.Add(theme);
                     _dropdownShowThemes.options.Add(new TMP_Dropdown.OptionData(theme));
                     _themesIDs.Add(themeDictionary.Key.ToString());
-                    Debug.Log("Tema para Dropdown: " + theme);
+                    //Debug.Log("Tema para Dropdown: " + theme);
                 }
                 //UpdateSelectedThemeDropdown(0);
-                Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
+                //Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
             }
-            Debug.Log("Temas Dropdown Invoked");
+            //Debug.Log("Temas Dropdown Invoked");
         }
 
         private void UpdateSelectedThemeDropdown(int themeIndex)
         {
             _selectedThemeID = _themesIDs[themeIndex];
             _selectedThemeValues = _themesValues[themeIndex];
-            Debug.Log("Tema Seleccionado: " + _questionsIDs[themeIndex] + "; " + _selectedThemeValues);
+            //Debug.Log("Tema Seleccionado: " + _questionsIDs[themeIndex] + "; " + _selectedThemeValues);
         }
 
         public void AddQuestionToDB()
@@ -334,6 +347,48 @@ namespace TFG.UI
         void StopGame_1()
         {
             _streakGame.enabled = false;
+        }
+        /*
+        public void RetrieveScoresFromDB()
+        {
+            _database.RetrieveScores();
+        }*/
+
+        void UpdateScores(string retrieval)
+        {
+            //tScores.text = "";
+            if (retrieval.Equals("puntuaciones"))
+            {
+                List<string> reverseQuery = new List<string>();
+                string queryLine = "";
+
+                Debug.Log("Actualizando tabla de Puntuaciones");
+                tScores.text = "Puntuaciones: \n";
+
+                foreach (var scoreDict in _database.puntuaciones)
+                {
+                    var values = scoreDict.Value as Dictionary<string, object>;
+                    var sText = values["email"] as string;
+                    queryLine = sText;
+                    queryLine += " ______________ ";
+                    long scoreShow = (long)values["score"];
+                    queryLine += scoreShow.ToString() + "\n";
+                    reverseQuery.Add(queryLine);
+                }
+                reverseQuery.Reverse();
+                foreach (var line in reverseQuery)
+                {
+                    tScores.text += line;
+                }
+
+                /*
+                foreach (var scoreDict in _database.puntuaciones)
+                {
+                    var values = scoreDict.Value as Dictionary<string, object>;
+                    var sText = values["email"] as string;
+                    Debug.Log(sText);
+                }*/
+            }
         }
         #endregion
     }

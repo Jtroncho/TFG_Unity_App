@@ -370,7 +370,7 @@ namespace TFG.UI
                     var values = scoreDict.Value as Dictionary<string, object>;
                     var sText = values["email"] as string;
                     queryLine = sText;
-                    queryLine += " ______________ ";
+                    queryLine += " : ";
                     long scoreShow = (long)values["score"];
                     queryLine += scoreShow.ToString() + "\n";
                     reverseQuery.Add(queryLine);

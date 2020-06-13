@@ -21,6 +21,10 @@ For this project we will need:
 
 * [Button Sprites](https://assetstore.unity.com/packages/2d/gui/icons/simple-button-set-01-153979)
 
+## Builds
+
+Builds for Android can be found under *Builds*.
+
 ## References
 
 * [Swords&Shovels](https://learn.unity.com/project/swords-and-shovels-game-managers-loads-and-the-game-loop?language=en)

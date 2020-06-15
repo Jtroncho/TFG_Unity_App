@@ -42,7 +42,7 @@ namespace TFG.Authentification
         protected TMP_InputField _user;
         protected TMP_InputField _password;
         public string loginError;
-        public string _userEmail, _userID;
+        public string _userEmail, _userID, _userRole;
         #endregion
 
         private string logText = "";

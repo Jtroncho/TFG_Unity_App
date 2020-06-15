@@ -54,7 +54,7 @@ namespace TFG.UI
             {
                 if (currentScreen)
                 {
-                    Debug.Log(gameObject.name + ": Switching group " + currentScreen.gameObject.name + " to " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aScreen.gameObject.name + "</color>");
+                    //Debug.Log(gameObject.name + ": Switching group " + currentScreen.gameObject.name + " to " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aScreen.gameObject.name + "</color>");
                     //CloseScreen(currentScreen);
                     previousScreen = currentScreen;
                 }
@@ -78,7 +78,7 @@ namespace TFG.UI
 
         public void InitializeScreens()
         {
-            Debug.Log(gameObject.name + ": Initializing screens, setting all to disabled.");
+            //Debug.Log(gameObject.name + ": Initializing screens, setting all to disabled.");
             foreach (var screen in screens)
             {
                 screen.gameObject.SetActive(false);
@@ -90,7 +90,7 @@ namespace TFG.UI
             if (!m_StartScreen && screens.Length > 0)
             {
                 m_StartScreen = screens[0];
-                Debug.Log("Start Group now is: " + m_StartScreen.gameObject.name);
+                //Debug.Log("Start Group now is: " + m_StartScreen.gameObject.name);
             }
             currentScreen = m_StartScreen;
             StartScreen(m_StartScreen);

@@ -19,7 +19,7 @@ namespace TFG.UI
         #region Event Variables
         [SerializeField] Button signInButton;
         [SerializeField] Button signOutButton;
-        [SerializeField] Button createQuestion, modifyQuestion;
+        [SerializeField] Button createQuestion, modifyQuestion, deleteQuestion;
         [SerializeField] Button registerButton;
         //[SerializeField] Button showScores;
 
@@ -108,6 +108,7 @@ namespace TFG.UI
             startGame_1.onClick.AddListener(StartGame_1);
             stopGame_1.onClick.AddListener(StopGame_1);
             DatabaseEvents.dataRetrieved.AddListener(UpdateScores);
+            deleteQuestion.onClick.AddListener(DeleteQuestionDB);
         }
 
         private void OnDisable()
@@ -126,6 +127,7 @@ namespace TFG.UI
             startGame_1.onClick.RemoveListener(StartGame_1);
             stopGame_1.onClick.RemoveListener(StopGame_1);
             DatabaseEvents.dataRetrieved.RemoveListener(UpdateScores);
+            deleteQuestion.onClick.RemoveListener(DeleteQuestionDB);
         }
         #endregion
 
@@ -138,7 +140,7 @@ namespace TFG.UI
         #region Group Management
         public void InitializeGroups()
         {
-            Debug.Log(gameObject.name + ": Initializing groups, setting all to disabled.");
+            //Debug.Log(gameObject.name + ": Initializing groups, setting all to disabled.");
             foreach (var group in groups)
             {
                 group.gameObject.SetActive(false);
@@ -151,7 +153,7 @@ namespace TFG.UI
             {
                 if (currentGroup)
                 {
-                    Debug.Log(gameObject.name + ": Switching group " + currentGroup.gameObject.name + " to " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
+                    //Debug.Log(gameObject.name + ": Switching group " + currentGroup.gameObject.name + " to " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
                     //CloseGroup(currentGroup);
                     previousGroup = currentGroup;
                 }
@@ -168,20 +170,20 @@ namespace TFG.UI
 
         public void StartGroup(UI_System aGroup)
         {
-            Debug.Log(gameObject.name + ": Starting group " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
+            //Debug.Log(gameObject.name + ": Starting group " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
             aGroup.gameObject.SetActive(true);
             aGroup.transform.SetAsLastSibling();
         }
 
         public void CloseGroup(UI_System aGroup)
         {
-            Debug.Log(gameObject.name + ": Closing group " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
+            //Debug.Log(gameObject.name + ": Closing group " + "<color=#" + ColorUtility.ToHtmlStringRGB(Color.yellow) + ">" + aGroup.gameObject.name + "</color>");
             aGroup.gameObject.SetActive(false);
         }
 
         public void GoToPreviousGroup()
         {
-            Debug.Log(gameObject.name + ": Switching to previous group");
+            //Debug.Log(gameObject.name + ": Switching to previous group");
             if (previousGroup)
             {
                 SwitchGroup(previousGroup);
@@ -193,7 +195,7 @@ namespace TFG.UI
             if (!m_StartGroup && groups.Length > 0)
             {
                 m_StartGroup = groups[0];
-                Debug.Log("Start Group now is: " + m_StartGroup.gameObject.name);
+                //Debug.Log("Start Group now is: " + m_StartGroup.gameObject.name);
             }
             currentGroup = m_StartGroup;
             StartGroup(m_StartGroup);
@@ -240,7 +242,7 @@ namespace TFG.UI
                     _questionsValues.Add(question);
                     var qText = question["texto"] as string;
                     //var qText = question["texto"];
-                    //Debug.Log("Question: " + qText + ";");
+                    ////Debug.Log("Question: " + qText + ";");
                     _dropdownShowQuestions.options.Add(new TMP_Dropdown.OptionData(qText));
                     _questionsIDs.Add(questionDictionary.Key.ToString());
                 }
@@ -248,9 +250,9 @@ namespace TFG.UI
                 {
                     UpdateSelectedQuestionDropdown(0);
                 }
-                Debug.Log("Questions Dropdown Updated, n of Questions: " + _dropdownShowQuestions.options.Count);
+                //Debug.Log("Questions Dropdown Updated, n of Questions: " + _dropdownShowQuestions.options.Count);
             }
-            //Debug.Log("Questions Dropdown Invoked");
+            ////Debug.Log("Questions Dropdown Invoked");
         }
 
         private void UpdateSelectedQuestionDropdown(int questionIndex)
@@ -260,7 +262,7 @@ namespace TFG.UI
             //_selectedQuestion = questions[_questionsIDs[questionIndex]] as Dictionary<string, object>;
             _selectedQuestionID = _questionsIDs[questionIndex];
             _selectedQuestionValues = _questionsValues[questionIndex];
-            Debug.Log("Pregunta Seleccionada: " + _questionsIDs[questionIndex] + "; " + _selectedQuestionValues["texto"]);
+            //Debug.Log("Pregunta Seleccionada: " + _questionsIDs[questionIndex] + "; " + _selectedQuestionValues["texto"]);
             
             UpdateSelectedQuestionEdit();
         }
@@ -270,7 +272,7 @@ namespace TFG.UI
             //[SerializeField] TMP_InputField _question, _answer1, _answer2, _answer3, _answer4, _answer5;
             //[SerializeField] Toggle _toggle1, _toggle2, _toggle3, _toggle4, _toggle5;
             var themeID = _selectedQuestionValues["tema"] as string;
-            //Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
+            ////Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
             if(_dropdownShowThemes.options.Contains(new TMP_Dropdown.OptionData(themeID)))
             {
                 _dropdownShowThemes.value = _themesValues.IndexOf(themeID);
@@ -308,19 +310,19 @@ namespace TFG.UI
                     _themesValues.Add(theme);
                     _dropdownShowThemes.options.Add(new TMP_Dropdown.OptionData(theme));
                     _themesIDs.Add(themeDictionary.Key.ToString());
-                    //Debug.Log("Tema para Dropdown: " + theme);
+                    ////Debug.Log("Tema para Dropdown: " + theme);
                 }
                 //UpdateSelectedThemeDropdown(0);
-                //Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
+                ////Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
             }
-            //Debug.Log("Temas Dropdown Invoked");
+            ////Debug.Log("Temas Dropdown Invoked");
         }
 
         private void UpdateSelectedThemeDropdown(int themeIndex)
         {
             _selectedThemeID = _themesIDs[themeIndex];
             _selectedThemeValues = _themesValues[themeIndex];
-            //Debug.Log("Tema Seleccionado: " + _questionsIDs[themeIndex] + "; " + _selectedThemeValues);
+            ////Debug.Log("Tema Seleccionado: " + _questionsIDs[themeIndex] + "; " + _selectedThemeValues);
         }
 
         public void AddQuestionToDB()
@@ -337,6 +339,11 @@ namespace TFG.UI
             QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn);
 
             _database.ModifyQuestionToDatabase(newEntry, _selectedQuestionID);
+        }
+
+        public void DeleteQuestionDB()
+        {
+            _database.DeleteQuestionToDatabase(_selectedQuestionID);
         }
 
         void StartGame_1()
@@ -362,7 +369,7 @@ namespace TFG.UI
                 List<string> reverseQuery = new List<string>();
                 string queryLine = "";
 
-                Debug.Log("Actualizando tabla de Puntuaciones");
+                //Debug.Log("Actualizando tabla de Puntuaciones");
                 tScores.text = "Puntuaciones: \n";
 
                 foreach (var scoreDict in _database.puntuaciones)
@@ -386,7 +393,7 @@ namespace TFG.UI
                 {
                     var values = scoreDict.Value as Dictionary<string, object>;
                     var sText = values["email"] as string;
-                    Debug.Log(sText);
+                    //Debug.Log(sText);
                 }*/
             }
         }

@@ -81,7 +81,7 @@ namespace TFG.Database
         // Initialize the Firebase database:
         protected virtual void InitializeFirebase()
         {
-            FirebaseApp app = FirebaseApp.DefaultInstance;
+            //FirebaseApp app = FirebaseApp.DefaultInstance;
             //StartListener();
             isFirebaseInitialized = true;
         }
@@ -98,7 +98,8 @@ namespace TFG.Database
             FirebaseDatabase.DefaultInstance
               .GetReference("puntuaciones")
               .OrderByChild("score").ValueChanged += HandledChangedScores;
-              
+
+            UserEvents.userSignIn.AddListener(HandleChangedRoles);
         }
 
         private void OnDisable()
@@ -113,6 +114,7 @@ namespace TFG.Database
               .GetReference("puntuaciones")
               .OrderByChild("score").ValueChanged -= HandledChangedScores;
               
+            UserEvents.userSignIn.RemoveListener(HandleChangedRoles);
         }
         /*protected void StartListener()
         {
@@ -272,6 +274,33 @@ namespace TFG.Database
 
         }
 
+        void HandleChangedRoles()
+        {
+            FirebaseDatabase.DefaultInstance
+              .GetReference("roles/" + _auth._userID)
+              .GetValueAsync().ContinueWith(task => {
+                  if (task.IsFaulted)
+                  {
+                      // Handle the error...
+                      Debug.Log("Cant Access roles");
+                  }
+                  else if (task.IsCompleted)
+                  {
+                      DataSnapshot snapshot = task.Result;
+                      // Do something with snapshot...
+                      if(snapshot.Value != null)
+                      {
+                          _auth._userRole = snapshot.Value as string;
+                      }
+                      else
+                      {
+                          _auth._userRole = "alumno";
+                      }
+                      Debug.Log("Valor de rol: " + _auth._userRole);
+                  }
+              });
+
+        }
 
         // A realtime database transaction receives MutableData which can be modified
         // and returns a TransactionResult which is either TransactionResult.Success(data) with
@@ -506,5 +535,11 @@ namespace TFG.Database
               });
         }
         */
+
+        public void DeleteQuestionToDatabase(string key)
+        {
+            //FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key).Dele;
+            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").Child(key).RemoveValueAsync();
+        }
     }
 }

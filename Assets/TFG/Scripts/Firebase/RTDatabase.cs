@@ -39,6 +39,10 @@ namespace TFG.Database
         public IEnumerable<DataSnapshot> questions;
         public IEnumerable<DataSnapshot> temas;
         public IEnumerable<DataSnapshot> puntuaciones;
+
+        public Dictionary<string, long> questionStats;
+        public List<string> questionCercanas = new List<string>();
+
         Vector2 scrollPosition = Vector2.zero;
         private Vector2 controlsScrollViewVector = Vector2.zero;
         long pastScore = 0;
@@ -290,16 +294,16 @@ namespace TFG.Database
                       // Do something with snapshot...
                       if(snapshot.Value != null)
                       {
-                          _auth._userRole = snapshot.Value as string;
+                          string readRole = snapshot.Value as string;
+                          _auth._userRole = readRole;
+                          Debug.Log("Valor de rol Leido: " + readRole);
+                          if (UserEvents.userRoleChanged != null)
+                          {
+                              UserEvents.userRoleChanged.Invoke(_auth._userRole);
+                          }
                       }
-                      else
-                      {
-                          _auth._userRole = "alumno";
-                      }
-                      Debug.Log("Valor de rol: " + _auth._userRole);
                   }
               });
-
         }
 
         // A realtime database transaction receives MutableData which can be modified
@@ -487,6 +491,7 @@ namespace TFG.Database
 
             FirebaseDatabase.DefaultInstance.RootReference.Child("puntuaciones").UpdateChildrenAsync(childUpdates);
         }
+
         /*
         public void RetrieveScores()
         {
@@ -540,6 +545,68 @@ namespace TFG.Database
         {
             //FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key).Dele;
             FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas").Child(key).RemoveValueAsync();
+        }
+
+        public void GetQuestionStatistics(string key)
+        {
+            FirebaseDatabase.DefaultInstance
+              .GetReference("stats/" + key)
+              .GetValueAsync().ContinueWith(task => {
+                  if (task.IsFaulted)
+                  {
+                      // Handle the error...
+                      Debug.Log("Cant Access roles");
+                  }
+                  else if (task.IsCompleted)
+                  {
+                      DataSnapshot snapshot = task.Result;
+                      // Do something with snapshot...
+                      if (snapshot.Value != null)
+                      {
+                          var sDict = snapshot.Value as Dictionary<string, object>;
+                          questionStats["correcta"] = (long)sDict["correcta"];
+                          questionStats["incorrecta"] = (long)sDict["incorrecta"];
+                      }
+                      else
+                      {
+                          questionStats["correcta"] = 0;
+                          questionStats["incorrecta"] = 0;
+                      }
+                  }
+              });
+        }
+
+        public void GetQuestionCercanas(string key)
+        {
+            FirebaseDatabase.DefaultInstance
+              .GetReference("preguntas/" + key + "/cercanas")
+              .GetValueAsync().ContinueWith(task => {
+                  if (task.IsFaulted)
+                  {
+                      // Handle the error...
+                      Debug.Log("Cant Access cercanas");
+                  }
+                  else if (task.IsCompleted)
+                  {
+                      DataSnapshot snapshot = task.Result;
+                      // Do something with snapshot...
+                      questionCercanas.Clear();
+                      if (snapshot.Value != null)
+                      {
+                          var sDict = snapshot.Value as Dictionary<string, string>;
+                          foreach (var cercana in sDict.Values)
+                          {
+                              questionCercanas.Add(cercana);
+                              Debug.Log("Cercana " + cercana);
+                          }
+                          Debug.Log("Recividas Cercanas");
+                      }
+                      if(DatabaseEvents.cercanasRetrieved != null)
+                      {
+                          DatabaseEvents.cercanasRetrieved.Invoke();
+                      }
+                  }
+              });
         }
     }
 }

@@ -19,8 +19,11 @@ namespace TFG.UI
         #region Event Variables
         [SerializeField] Button signInButton;
         [SerializeField] Button signOutButton;
-        [SerializeField] Button createQuestion, modifyQuestion, deleteQuestion;
+        [SerializeField] Button createQuestion;
+        [SerializeField] Button modifyQuestion;
+        [SerializeField] Button deleteQuestion;
         [SerializeField] Button registerButton;
+        [SerializeField] GameObject profesorButtons;
         //[SerializeField] Button showScores;
 
         [SerializeField] UI_System _loginGroup;
@@ -62,9 +65,11 @@ namespace TFG.UI
         Dictionary<string, object> _selectedQuestionValues;
         string _selectedQuestionID = "", _selectedThemeID = "", _selectedThemeValues = "";
         public List<string> _questionsIDs = new List<string>();
+        //public List<string> _questionsCercanas = new List<string>();
         public List<string> _themesIDs = new List<string>();
         public List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
         List<string> _themesValues = new List<string>();
+        [SerializeField] TMP_Text actionText;
         #endregion
 
         #region showScores
@@ -109,6 +114,7 @@ namespace TFG.UI
             stopGame_1.onClick.AddListener(StopGame_1);
             DatabaseEvents.dataRetrieved.AddListener(UpdateScores);
             deleteQuestion.onClick.AddListener(DeleteQuestionDB);
+            UserEvents.userRoleChanged.AddListener(ShowButtonsForRole);
         }
 
         private void OnDisable()
@@ -128,6 +134,7 @@ namespace TFG.UI
             stopGame_1.onClick.RemoveListener(StopGame_1);
             DatabaseEvents.dataRetrieved.RemoveListener(UpdateScores);
             deleteQuestion.onClick.RemoveListener(DeleteQuestionDB);
+            UserEvents.userRoleChanged.RemoveListener(ShowButtonsForRole);
         }
         #endregion
 
@@ -240,6 +247,7 @@ namespace TFG.UI
                 {
                     var question = questionDictionary.Value as Dictionary<string, object>;
                     _questionsValues.Add(question);
+                    //_questionsCercanas.Add();
                     var qText = question["texto"] as string;
                     //var qText = question["texto"];
                     ////Debug.Log("Question: " + qText + ";");
@@ -275,7 +283,10 @@ namespace TFG.UI
             ////Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
             if(_dropdownShowThemes.options.Contains(new TMP_Dropdown.OptionData(themeID)))
             {
-                _dropdownShowThemes.value = _themesValues.IndexOf(themeID);
+                int index = _themesValues.IndexOf(themeID);
+                _dropdownShowThemes.value = index;
+                _selectedThemeID = _themesIDs[index];
+                _selectedThemeValues = _themesValues[index];
             }
 
             _question.text = _selectedQuestionValues["texto"] as string;
@@ -295,6 +306,9 @@ namespace TFG.UI
             answer = answers["respuesta5"] as Dictionary<string, object>;
             _answer5.text = answer["texto"] as string;
             _toggle5.isOn = answer["respuesta_correcta"].ToString() == "True";
+
+            actionText.text = "";
+            Debug.Log("Action text cleared.");
         }
 
         private void UpdateThemesDropdown(string retrieval)
@@ -331,6 +345,7 @@ namespace TFG.UI
             string key = _database.AddQuestionToDatabase(newEntry);
 
             _selectedQuestionID = key;
+            actionText.text = "Created";
             //_selectedQuestionValues = _questionsValues[_questionsIDs.IndexOf(key)];
         }
 
@@ -339,11 +354,13 @@ namespace TFG.UI
             QuestionEntry newEntry = new QuestionEntry(_selectedThemeValues, _question.text, _answer1.text, _answer2.text, _answer3.text, _answer4.text, _answer5.text, _toggle1.isOn, _toggle2.isOn, _toggle3.isOn, _toggle4.isOn, _toggle5.isOn);
 
             _database.ModifyQuestionToDatabase(newEntry, _selectedQuestionID);
+            actionText.text = "Modified";
         }
 
         public void DeleteQuestionDB()
         {
             _database.DeleteQuestionToDatabase(_selectedQuestionID);
+            actionText.text = "Deleted";
         }
 
         void StartGame_1()
@@ -397,6 +414,33 @@ namespace TFG.UI
                 }*/
             }
         }
+
+        public void ShowButtonsForRole(string role)
+        {
+            if (role.Equals("profesor"))
+            {
+                Debug.Log("Mostrar botones para rol: profesor");
+                MenuEvents.screenChange.AddListener(ShowButtonsOnEnable);
+            }
+        }
+
+        public void ShowButtonsOnEnable(UI_Screen previous, UI_Screen current)
+        {
+            if(current.name.Equals("Questions"))
+            {
+                //Debug.Log("Buttons To be Enabled");
+                deleteQuestion.gameObject.SetActive(true);
+                //Debug.Log("Delete");
+                modifyQuestion.gameObject.SetActive(true);
+                //Debug.Log("Modify");
+                createQuestion.gameObject.SetActive(true);
+                //Debug.Log("Create");
+                Debug.Log("Buttons Enabled");
+                MenuEvents.screenChange.RemoveListener(ShowButtonsOnEnable);
+            }
+        }
+
+
         #endregion
     }
 }

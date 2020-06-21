@@ -189,6 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loginError: 
+  _userEmail: 
+  _userID: 
+  _userRole: 
 --- !u!114 &1963903773
 MonoBehaviour:
   m_ObjectHideFlags: 0

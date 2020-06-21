@@ -81,6 +81,8 @@ namespace TFG.Authentification
         // add them if possible.
         public virtual void Start()
         {
+            _userRole = "alumno";
+
             Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
             {
                 dependencyStatus = task.Result;

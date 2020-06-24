@@ -62,14 +62,16 @@ for i, (key, value) in enumerate(data["preguntas"].items()):
     
     closests = intersection(question_hist, hist)
     
-    data["preguntas"][key]["cercanas"] = np.array([*data["preguntas"].keys()])[closests[:6]].tolist()
+    #data["preguntas"][key]["cercanas"] = np.array([*data["preguntas"].keys()])[closests[:6]].tolist()
+    data["preguntas"][key]["cercanas"] = dict(enumerate(np.array([*data["preguntas"].keys()])[closests[:6]])) #.tolist()
     if key in data["preguntas"][key]["cercanas"]:
         data["preguntas"][key]["cercanas"].remove(key)
-
+    """
     print(key, data["preguntas"][key]["cercanas"])
     print(data["preguntas"][key]["texto"])
     print(data["preguntas"][[*data["preguntas"][key]["cercanas"]][0]]["texto"])
     print("------------------------------------------")
+    """
 
-with codecs.open('DatabaesModified.json', 'w', encoding='utf-8') as fileDos:
+with codecs.open('DatabaseModified.json', 'w', encoding='utf-8') as fileDos:
 	json.dump(data, fileDos, indent=4, ensure_ascii=False)

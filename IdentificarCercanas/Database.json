@@ -1,6 +1,7 @@
 {
   "preguntas" : {
     "-LuYIvkKVu_uyO-XUYsh" : {
+      "cercanas" : [ "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "dificultad" : 3,
       "respuestas" : {
         "respuesta1" : {
@@ -24,10 +25,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 2
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "Durante la ejecución de un autómata… "
     },
     "-LuYKEj3uDOqrnzy6SAL" : {
+      "cercanas" : [ "-LuYKEj3uDOqrnzy6SAL", "-LxfZ0OWpv1OZvYA_vW8", "-LxNLaejyeHW_FctXRKa", "-Lv_CO-ttbGSuzTxyYgt", "-LxfYmYpr4rl_TWua159", "-LvVwh3rRZv2QMeeBY1Z" ],
       "dificultad" : 1,
       "respuestas" : {
         "respuesta1" : {
@@ -55,6 +61,7 @@
       "texto" : "Cuando se utiliza un autómata finito para implementar un escáner, ¿Cuál es el máximo número de caracteres puede leer de más al leer un símbolo?"
     },
     "-LuYKg_Hl4vP44jJMIz-" : {
+      "cercanas" : [ "-LuYKg_Hl4vP44jJMIz-", "-LvVw8lT1YxJKiJpGcB1", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "dificultad" : 2,
       "respuestas" : {
         "respuesta1" : {
@@ -82,6 +89,7 @@
       "texto" : "¿Qué expresiones regulares se necesitan para poder crear un scanner basado en un autómata?"
     },
     "-LuYLS8JtKhWI68PaDfF" : {
+      "cercanas" : [ "-LuYLS8JtKhWI68PaDfF", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "dificultad" : 2,
       "respuestas" : {
         "respuesta1" : {
@@ -109,6 +117,7 @@
       "texto" : "¿Qué recursividades admiten las gramáticas LL(1)?"
     },
     "-LuljJhNY7z-yJlOQCAW" : {
+      "cercanas" : [ "-LvWK1HcCfWgMq_Xn6BH", "-LuljJhNY7z-yJlOQCAW", "-LvVxFU9mEwfq8ysyAAV", "-LxfZOTWtdhxwmqxPmnl", "-Lv_EB4NDANftvaOAw57", "-LvWL03wBmW6Mw9jWwMi" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -131,10 +140,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuáles son las transiciones del autómata determinista de ab*(c|d)+ y su conjunto de estados finales?"
     },
     "-Luljbx0RpbCJCUJjjWv" : {
+      "cercanas" : [ "-Luljbx0RpbCJCUJjjWv", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "dificultad" : 1,
       "respuestas" : {
         "respuesta1" : {
@@ -158,10 +172,15 @@
           "texto" : "Ninguna de las anteriores."
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Las gramáticas que especifican las sintaxis de los lenguajes de programación son:"
     },
     "-LulqLBenaVds0N_3LAU" : {
+      "cercanas" : [ "-LulqLBenaVds0N_3LAU", "-Lv_GnKryN0eyRa_Y8_Q", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "dificultad" : 2,
       "respuestas" : {
         "respuesta1" : {
@@ -189,6 +208,7 @@
       "texto" : "¿Qué símbolo hace que la gramática que contenga la regla <instrucción>::= if <expresión> then <instrucción> [else <instrucción>] no sea LL(1)? (el símbolo pertenece a los primeros de dos ramas de la misma bifurcación)."
     },
     "-LulrTQ0dWldVhtMYKNw" : {
+      "cercanas" : [ "-LulrTQ0dWldVhtMYKNw", "-Lv_kJct9dhpSOK2d5-6", "-LxkppNe26Q2S5zEdmGy", "-LxgsmZJoidqVAfS7-Vo", "-Lxkpddr85syF8fNdLt6", "-LxgrpQ-cu_0O2yu8a5j" ],
       "dificultad" : 1,
       "img" : "img/1574942136539_Capture.PNG",
       "respuestas" : {
@@ -217,6 +237,7 @@
       "texto" : "¿Cuál de las siguientes opciones SI es una entrada en la Tabla de Símbolos de LOOS?"
     },
     "-LultAVndHJLhbn2cZWS" : {
+      "cercanas" : [ "-LultAVndHJLhbn2cZWS", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "dificultad" : 3,
       "respuestas" : {
         "respuesta1" : {
@@ -244,6 +265,7 @@
       "texto" : "¿Qué verificaciones semánticas se hace en una declaración? "
     },
     "-Lultde8_TuaEATc887X" : {
+      "cercanas" : [ "-Lultde8_TuaEATc887X", "-LxNAdU3qwKxfbuZGYxw", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "dificultad" : 2,
       "respuestas" : {
         "respuesta1" : {
@@ -271,6 +293,7 @@
       "texto" : "Al finalizar la compilación de una definición de una función, ¿qué queda en la tabla de símbolos?"
     },
     "-LvVuoBdPzJf24wbIOHg" : {
+      "cercanas" : [ "-LvVuoBdPzJf24wbIOHg", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -298,6 +321,7 @@
       "texto" : "¿Qué operadores se pueden utilizar en las expresiones regulares?"
     },
     "-LvVvauBLyFEfrUNsubl" : {
+      "cercanas" : [ "-LvVvauBLyFEfrUNsubl", "-Lv_CO-ttbGSuzTxyYgt", "-LxfYmYpr4rl_TWua159", "-Lv_ksMXQtPAk8HgjEGf", "-LvVwh3rRZv2QMeeBY1Z", "-LvWKP74g5_36EyYv9zQ" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -324,6 +348,7 @@
       "texto" : "Un autómata finito determinista acepta una secuencia de caracteres cuando"
     },
     "-LvVvxDVeBAmLvduyPQK" : {
+      "cercanas" : [ "-LvVvxDVeBAmLvduyPQK", "-Lv_DJj8N0G0Z8SkmyOz", "-Lv_DFddlU3rlktozf4G", "-Lv_De_8iGQEaPq9gJLG", "-Lxf_-CO8EdW3AghdR9i", "-Lv_k0JyWFHh8m3TZGzP" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -350,6 +375,7 @@
       "texto" : "El algoritmo que obtiene el autómata que acepta el lenguaje generado por una expresión regular realiza los siguientes paso"
     },
     "-LvVw8lT1YxJKiJpGcB1" : {
+      "cercanas" : [ "-LvVw8lT1YxJKiJpGcB1", "-LuYKg_Hl4vP44jJMIz-", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -376,6 +402,7 @@
       "texto" : "¿Qué expresiones regulares se necesitan para crea un scanner?"
     },
     "-LvVwPkCEZjTBPFvNKcL" : {
+      "cercanas" : [ "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -398,10 +425,15 @@
           "texto" : "Ninguna de las anteriores."
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 2
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "Un scanner"
     },
     "-LvVwh3rRZv2QMeeBY1Z" : {
+      "cercanas" : [ "-LvVwh3rRZv2QMeeBY1Z", "-LxfYmYpr4rl_TWua159", "-Lv_ksMXQtPAk8HgjEGf", "-Lv_CO-ttbGSuzTxyYgt", "-LvWKP74g5_36EyYv9zQ", "-LvVvauBLyFEfrUNsubl" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -424,10 +456,15 @@
           "texto" : "Sólo cuando llega al final del fichero y no hay más caracteres que leer."
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "El autómata utilizado para implementar un scanner finaliza la lectura de caracteres "
     },
     "-LvVxFU9mEwfq8ysyAAV" : {
+      "cercanas" : [ "-LvVxFU9mEwfq8ysyAAV", "-LxfZOTWtdhxwmqxPmnl", "-LvWK1HcCfWgMq_Xn6BH", "-LuljJhNY7z-yJlOQCAW", "-Lv_EB4NDANftvaOAw57", "-LvWL03wBmW6Mw9jWwMi" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -454,6 +491,7 @@
       "texto" : "¿Cuáles son las transiciones del autómata determinista de a*b(c|d)+ y su conjunto de estados finales?"
     },
     "-LvVxwN7K1TC3mg7A6sy" : {
+      "cercanas" : [ "-LvVxwN7K1TC3mg7A6sy", "-Lv_FC0SYymGe50-Z3_L", "-LxfZbPbT4yPGeee5GRr", "-Lv_In4EaX-9AbJKxy1P", "-Lv_ksMXQtPAk8HgjEGf", "-LvWKP74g5_36EyYv9zQ" ],
       "img" : "img/1575732364932_aaaaaa.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -481,6 +519,7 @@
       "texto" : " Dado el autómata de un scanner que lee los símbolos igual (“=”), implica (“==>”) y que usa el espacio (“_”) para separarlos, ¿Cuántas llamadas hay que hacer al scanner para leer =_===>_==>?"
     },
     "-LvVyGjHKhL3cmc0hvfo" : {
+      "cercanas" : [ "-LvVyGjHKhL3cmc0hvfo", "-LvWKe8IpILQN28J98ov", "-LxfZj4KdffcN8IFXcnj", "-Lv_kUihPLj-yUTk0wru", "-Lv_kf9PAWEDbuCi79Jc", "-Lv_IwnxqoTb6YOdYR2i" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -507,6 +546,7 @@
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata determinista que lee como separador el espacio y como símbolos identificador (l(l|d)*), la palabra clave SWITCH y el final de secuencia (#)? ¿Cuántos estados serán finales?  "
     },
     "-LvVyTeFItFnm-QDGVhh" : {
+      "cercanas" : [ "-LvVyTeFItFnm-QDGVhh", "-LxQkQyh6oOf5ykzTjge", "-LvVybkRzmJ5EgISn4L7", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -533,6 +573,7 @@
       "texto" : "¿De que tipo son las gramáticas para definir la sintaxis de un lenguaje de programación?"
     },
     "-LvVybkRzmJ5EgISn4L7" : {
+      "cercanas" : [ "-LvVybkRzmJ5EgISn4L7", "-LvVyTeFItFnm-QDGVhh", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -559,6 +600,7 @@
       "texto" : "11.- ¿Cuáles son las etapas de análisis de un lenguaje de programación?"
     },
     "-LvVynznjjKlYlI29lMJ" : {
+      "cercanas" : [ "-LvVynznjjKlYlI29lMJ", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -585,6 +627,7 @@
       "texto" : "¿Cuáles son las condiciones necesarias, pero no suficientes, para que una gramática escrita en BNF sea LL(1)?"
     },
     "-LvVz1-eo01CV42QAz9X" : {
+      "cercanas" : [ "-LvVz1-eo01CV42QAz9X", "-Lv_mBZh_c5s59Pu9eQH", "-Lv_De_8iGQEaPq9gJLG", "-Lv_DJj8N0G0Z8SkmyOz", "-Lv_DFddlU3rlktozf4G", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -611,6 +654,7 @@
       "texto" : "Tenemos que escribir una gramática BNF para un lenguaje de expresiones formadas por operadores asociativos por la izquierda y con 5 niveles de prioridad. ¿Cuántas reglas necesitaremos si queremos que el árbol sintáctico generado al analizar una expresión muestre la prioridad de las operaciones?"
     },
     "-LvVzI02fG9V2wbrd6lX" : {
+      "cercanas" : [ "-LvVzI02fG9V2wbrd6lX", "-Lv_DJj8N0G0Z8SkmyOz", "-Lv_DFddlU3rlktozf4G", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -637,6 +681,7 @@
       "texto" : "¿Qué pasos se han de seguir para comprobar que una gramática es LL(1)?"
     },
     "-LvVzSoO9-9xhdOTYQQj" : {
+      "cercanas" : [ "-LvVzSoO9-9xhdOTYQQj", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -663,6 +708,7 @@
       "texto" : "¿Cuándo una gramática es ambigua?"
     },
     "-LvVzkLfZm3joWt34rfM" : {
+      "cercanas" : [ "-Lv_NHRO-HQAUN2PZ0rL", "-Lv_FxaIj9wEfsFv4l1N", "-LxfaA5Bvnm3J1YbQIA1", "-LvVzkLfZm3joWt34rfM", "-LxgojiM5RCwwOg4A9rw", "-Lv_HyDm8L_zp7LSPsPy" ],
       "img" : "img/1575732839977_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -686,10 +732,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 3
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Dada la gramática siguiente, ¿Cuáles son los símbolos terminales y no terminales?"
     },
     "-LvW-1CRLxNLi_geyTii" : {
+      "cercanas" : [ "-Lv_GRiOXsRK66u4B881", "-Lv_GbLL-ZNnuTkQiPHn", "-LvW-1CRLxNLi_geyTii", "-Lxgq3A_Joo9ACCN5EAF", "-LxfRFRXjaMoXOY2DbcX", "-LxHufv3x-4VZhm4YpMD" ],
       "img" : "img/1575732913115_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -713,10 +764,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 2
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Cuántas producciones diferentes surgen al transformar las siguientes reglas BNF de la gramática expuesta a continuación?"
     },
     "-LvW-eZiLttpdxJDs-JF" : {
+      "cercanas" : [ "-LvW-eZiLttpdxJDs-JF", "-Lv_HfARG6r4C5exEWep", "-Lv_lyCWsk0tGRyj8Xtg", "-Lv_GnKryN0eyRa_Y8_Q", "-LxgojiM5RCwwOg4A9rw", "-Lv_mBZh_c5s59Pu9eQH" ],
       "img" : "img/1575733078449_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -744,6 +800,7 @@
       "texto" : "¿Cuáles son los primeros de los símbolos no terminales de la siguiente gramática? "
     },
     "-LvW0Dn3ysH2JYwBNKGj" : {
+      "cercanas" : [ "-LvW0Dn3ysH2JYwBNKGj", "-LxI0BjXTmK-LqVfnKrM", "-Lv_HyDm8L_zp7LSPsPy", "-Lv_mBZh_c5s59Pu9eQH", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1575733226821_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -771,6 +828,7 @@
       "texto" : "Respecto a las siguientes producciones..\n¿Cuántas veces tendremos que añadir los siguientes del no terminal que está a la izquierda de la producción para calcular los símbolos siguientes de todos los símbolos no terminales que aparecen en las producciones (considerar una única iteración del algoritmo)?"
     },
     "-LvW0bmWh45txa2ynwgb" : {
+      "cercanas" : [ "-LvW0bmWh45txa2ynwgb", "-Lv_jS4CgA0dybSpCspn", "-LxgmnyLUcF0Q1dxXhfm", "-Lv_mMzzvLCAg_BqrGXQ", "-Lxl-ehtU7Mylo14MRBO", "-Lxl-QWoDA3iEhqETVXB" ],
       "img" : "img/1575733329186_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -798,6 +856,7 @@
       "texto" : "Dada la siguiente gramática de expresiones, queremos añadir la declaración de variables con la posibilidad de realizar tanto una inicialización de variable con tipo de datos, como automática. Ejemplo: Var a: integer; Var b:integer = 10; Var c = 10; ¿Cuál sería la ampliación correcta de la gramática? "
     },
     "-LvW9ay-RuVRfuWOXqe5" : {
+      "cercanas" : [ "-LvW9ay-RuVRfuWOXqe5", "-Lv_lyCWsk0tGRyj8Xtg", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -824,6 +883,7 @@
       "texto" : "¿Dónde se guarda el significado de los símbolos terminales?"
     },
     "-LvW9mh2r4fN5_0bAeib" : {
+      "cercanas" : [ "-LvW9mh2r4fN5_0bAeib", "-LxIAK9KlA4Zxe7BTppg", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -850,6 +910,7 @@
       "texto" : "¿Qué se ha de añadir a una gramática para implementar el análisis semántico?"
     },
     "-LvWA0U2utJNr-0f1gyB" : {
+      "cercanas" : [ "-LvWA0U2utJNr-0f1gyB", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -876,6 +937,7 @@
       "texto" : "¿Cómo se representa el tipo de datos array de n dimensiones?"
     },
     "-LvWAEP1iToPGC-LZZuW" : {
+      "cercanas" : [ "-LvWAEP1iToPGC-LZZuW", "-LvWAP9-X3tbbEtM4Grf", "-LxN9I0-05sL0nWhOFO1", "-LxgsU3KB7tkwz2H1IVJ", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -902,6 +964,7 @@
       "texto" : "¿Cuáles son las principales acciones que realiza el análisis semántico de declaraciones?"
     },
     "-LvWAP9-X3tbbEtM4Grf" : {
+      "cercanas" : [ "-LvWAP9-X3tbbEtM4Grf", "-LvWAEP1iToPGC-LZZuW", "-LxN9I0-05sL0nWhOFO1", "-LxgsU3KB7tkwz2H1IVJ", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -928,6 +991,7 @@
       "texto" : "¿Cuáles son las principales acciones que realiza el análisis semántico de expresiones?"
     },
     "-LvWAloBsPFrcARS3vbo" : {
+      "cercanas" : [ "-LvWAloBsPFrcARS3vbo", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -954,6 +1018,7 @@
       "texto" : "¿Qué acciones semánticas se han de hacer para seleccionar la sobrecarga concreta de un método que se ha de aplicar en una llamada?"
     },
     "-LvWB4rVu4E0GriC8FR7" : {
+      "cercanas" : [ "-LvWB4rVu4E0GriC8FR7", "-Lxgocacujsb9-AVgCGr", "-LxfOQvi8ff60HBdveLe", "-LvWBwnFIssO5y2Y2I4G", "-LuYIvkKVu_uyO-XUYsh", "-Lxgo1_5eIP-CQQt8EXw" ],
       "img" : "img/1575736073827_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -981,6 +1046,7 @@
       "texto" : "Qué comprobaciones semánticas se tendrían que hacer en la regla BNF siguiente?"
     },
     "-LvWBQibq1W4HaIQnNyB" : {
+      "cercanas" : [ "-LvWBQibq1W4HaIQnNyB", "-LxN90hgJyixncWNCSjy", "-LxfXozOkRl2lvJWEvyx", "-LxQkZ2bMp9x2Ky2N4R3", "-LxQr6Eu_xKKGwmQMS4D", "-LxIAUwbNXEZgkKiQy4p" ],
       "img" : "img/1575736163383_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1008,6 +1074,7 @@
       "texto" : "¿Cuántas entradas de cada tipo contiene la pila de la tabla de símbolos de LOOS impresa en el punto indicado?"
     },
     "-LvWBfztOZXl_SmJcyCI" : {
+      "cercanas" : [ "-LvWBfztOZXl_SmJcyCI", "-LxNDAfSu51FL71BE3q9", "-LxgruXv7Kt5fmDlwXgR", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1034,6 +1101,7 @@
       "texto" : "¿Cuantas comprobaciones relacionados con tipos de datos (comparaciones y cálculos de tipos) hace el compilador de LOOS en la expresión ((20+5)*3.0) / 4.0?"
     },
     "-LvWBwnFIssO5y2Y2I4G" : {
+      "cercanas" : [ "-LvWBwnFIssO5y2Y2I4G", "-Lxgocacujsb9-AVgCGr", "-LvWB4rVu4E0GriC8FR7", "-LxfOQvi8ff60HBdveLe", "-LuYIvkKVu_uyO-XUYsh", "-Lxgo1_5eIP-CQQt8EXw" ],
       "img" : "img/1575736298847_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1057,10 +1125,15 @@
           "texto" : "Ninguna de las anteriores."
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SEMÁNTICO",
       "texto" : "Qué comprobaciones semánticas ha de hacer LOOS en la regla <ElementClasse> en la parte de la creación de campos de los objetos?"
     },
     "-LvWJVdOuqwzZ4DF25je" : {
+      "cercanas" : [ "-LvWJVdOuqwzZ4DF25je", "-Lv_CDwh3FIjkvSOCQ9B", "-LxfZ9AJE8jtehOGEZa0", "-LuYIvkKVu_uyO-XUYsh", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1087,6 +1160,7 @@
       "texto" : "Un autómata finito determinista esta formado por los siguientes elementos"
     },
     "-LvWJlkaXQ2Bv7zk2l5T" : {
+      "cercanas" : [ "-LvWJlkaXQ2Bv7zk2l5T", "-Lv_FSvyo5mGAtnXNXRP", "-LxQVWU_7ua4bdOs--EF", "-Lv_In4EaX-9AbJKxy1P", "-LxfZbPbT4yPGeee5GRr", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1113,6 +1187,7 @@
       "texto" : "El ultimo carácter que forma parte del símbolo leído por el autómata de un scanner cumple que"
     },
     "-LvWK1HcCfWgMq_Xn6BH" : {
+      "cercanas" : [ "-LvWK1HcCfWgMq_Xn6BH", "-LuljJhNY7z-yJlOQCAW", "-LvVxFU9mEwfq8ysyAAV", "-LxfZOTWtdhxwmqxPmnl", "-Lv_EB4NDANftvaOAw57", "-LvWL03wBmW6Mw9jWwMi" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1135,10 +1210,15 @@
           "texto" : "Ninguna de las anteriores."
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuáles son las transiciones del autómata determinista de ab*(c|d)+ y su conjunto de estados finales?"
     },
     "-LvWKP74g5_36EyYv9zQ" : {
+      "cercanas" : [ "-LvWKP74g5_36EyYv9zQ", "-Lv_ksMXQtPAk8HgjEGf", "-Lv_FC0SYymGe50-Z3_L", "-Lv_In4EaX-9AbJKxy1P", "-LxfZbPbT4yPGeee5GRr", "-LvVxwN7K1TC3mg7A6sy" ],
       "img" : "img/1575738516116_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1166,6 +1246,7 @@
       "texto" : "Dado el autómata de un scanner que lee el símbolo comparación de igualdad (==) y el símbolo final de secuencia (#), ¿Cuántas llamadas hay que hacer al scanner para leer =====> y que caracteres lee en cada llamada hasta que para por error?"
     },
     "-LvWKe8IpILQN28J98ov" : {
+      "cercanas" : [ "-LvWKe8IpILQN28J98ov", "-LxfZj4KdffcN8IFXcnj", "-Lv_kf9PAWEDbuCi79Jc", "-Lv_IwnxqoTb6YOdYR2i", "-Lv_kUihPLj-yUTk0wru", "-Lv_FL93wSUIanUwLjwb" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1188,10 +1269,15 @@
           "texto" : "Ninguna de las anteriores."
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata determinista que lee como separador el espacio y como símbolos identificador (l(l|d)*) y las palabra clave DO y DOWNTO ? ¿Cuántos estados serán finales?  "
     },
     "-LvWKnGyIhUiy_YywCId" : {
+      "cercanas" : [ "-LvWKnGyIhUiy_YywCId", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1218,6 +1304,7 @@
       "texto" : "Al construir el autómata finito de un scanner"
     },
     "-LvWL03wBmW6Mw9jWwMi" : {
+      "cercanas" : [ "-LvWL03wBmW6Mw9jWwMi", "-LvVxFU9mEwfq8ysyAAV", "-LxfZOTWtdhxwmqxPmnl", "-LuljJhNY7z-yJlOQCAW", "-LvWK1HcCfWgMq_Xn6BH", "-Lv_EB4NDANftvaOAw57" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1240,10 +1327,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 2,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cómo es el conjunto de estados de un autómata finito determinista equivalente a un autómata no determinista (paso de AFND a AFD)? "
     },
     "-LvWLAk92XqUCL0sXQRC" : {
+      "cercanas" : [ "-LvWLAk92XqUCL0sXQRC", "-Lv_JD4_C5M3HaeJHssT", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1270,6 +1362,7 @@
       "texto" : "¿Qué representa la expresión regular a+b*?"
     },
     "-LvWLOJ1CJ4BW1xMbh4x" : {
+      "cercanas" : [ "-LvWLOJ1CJ4BW1xMbh4x", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1296,6 +1389,7 @@
       "texto" : "El análisis sintáctico:"
     },
     "-LvWL_8zRuLU8UZ3w5BB" : {
+      "cercanas" : [ "-LvWL_8zRuLU8UZ3w5BB", "-LxHpQGxxf607NJTSGGv", "-LxNMyyQpGgGV3pwJ9Mr", "-Lv_JD4_C5M3HaeJHssT", "-Lxgn6sTzzftlVmKaM05", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1322,6 +1416,7 @@
       "texto" : "¿Cómo se puede representar la asociatividad por la derecha de un operador (<>) en BNF?"
     },
     "-Lv_CDwh3FIjkvSOCQ9B" : {
+      "cercanas" : [ "-Lv_CDwh3FIjkvSOCQ9B", "-LxfZ9AJE8jtehOGEZa0", "-LvWJVdOuqwzZ4DF25je", "-LuYIvkKVu_uyO-XUYsh", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1348,6 +1443,7 @@
       "texto" : "¿Cuál es la diferencia entre un autómata finito determinista y un autómata finito no determinista?"
     },
     "-Lv_CO-ttbGSuzTxyYgt" : {
+      "cercanas" : [ "-Lv_CO-ttbGSuzTxyYgt", "-LvVvauBLyFEfrUNsubl", "-LxfYmYpr4rl_TWua159", "-Lv_ksMXQtPAk8HgjEGf", "-LvVwh3rRZv2QMeeBY1Z", "-LvWKP74g5_36EyYv9zQ" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1374,6 +1470,7 @@
       "texto" : "Un autómata finito acepta una secuencia de caracteres si:"
     },
     "-Lv_DFddlU3rlktozf4G" : {
+      "cercanas" : [ "-Lv_DJj8N0G0Z8SkmyOz", "-Lv_DFddlU3rlktozf4G", "-Lv_De_8iGQEaPq9gJLG", "-LvVvxDVeBAmLvduyPQK", "-Lv_IAx9EcL6Zd8QpDZz", "-Lv_k0JyWFHh8m3TZGzP" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1400,6 +1497,7 @@
       "texto" : "¿Qué pasos se han de seguir para crea un programa a partir de expresiones regulares que nos diga si una secuencia de caracteres pertenece al lenguaje generado por la expresión regular?"
     },
     "-Lv_DJj8N0G0Z8SkmyOz" : {
+      "cercanas" : [ "-Lv_DJj8N0G0Z8SkmyOz", "-Lv_DFddlU3rlktozf4G", "-Lv_De_8iGQEaPq9gJLG", "-LvVvxDVeBAmLvduyPQK", "-Lv_IAx9EcL6Zd8QpDZz", "-Lv_k0JyWFHh8m3TZGzP" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1426,6 +1524,7 @@
       "texto" : "¿Qué pasos se han de seguir para crea un programa a partir de expresiones regulares que nos diga si una secuencia de caracteres pertenece al lenguaje generado por la expresión regular?"
     },
     "-Lv_De_8iGQEaPq9gJLG" : {
+      "cercanas" : [ "-Lv_De_8iGQEaPq9gJLG", "-Lv_DFddlU3rlktozf4G", "-Lv_DJj8N0G0Z8SkmyOz", "-LvVvxDVeBAmLvduyPQK", "-Lv_IAx9EcL6Zd8QpDZz", "-LvVz1-eo01CV42QAz9X" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1452,6 +1551,7 @@
       "texto" : "Qué pasos se han de seguir para crea un programa a partir de expresiones regulares que nos diga si una secuencia de caracteres pertenece al lenguaje generado por la expresión regular?"
     },
     "-Lv_EB4NDANftvaOAw57" : {
+      "cercanas" : [ "-Lv_EB4NDANftvaOAw57", "-LxfZOTWtdhxwmqxPmnl", "-LvWK1HcCfWgMq_Xn6BH", "-LuljJhNY7z-yJlOQCAW", "-LvVxFU9mEwfq8ysyAAV", "-LvWL03wBmW6Mw9jWwMi" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1474,10 +1574,15 @@
           "texto" : "Ninguna de las anteriores."
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 2
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuáles son las transiciones del autómata determinista de ac*(b|c)+ y su conjunto de estados finales?"
     },
     "-Lv_FC0SYymGe50-Z3_L" : {
+      "cercanas" : [ "-Lv_FC0SYymGe50-Z3_L", "-LxfZbPbT4yPGeee5GRr", "-LvWKP74g5_36EyYv9zQ", "-Lv_ksMXQtPAk8HgjEGf", "-Lv_In4EaX-9AbJKxy1P", "-LvVxwN7K1TC3mg7A6sy" ],
       "img" : "img/1575804259438_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1505,6 +1610,7 @@
       "texto" : "Dado el autómata de un scanner que lee el símbolo igual (=), el símbolo implica (==>) y el final de secuencia (#), ¿Cuántas llamadas hay que hacer al scanner para leer =># y que caracteres lee en cada llamada?"
     },
     "-Lv_FL93wSUIanUwLjwb" : {
+      "cercanas" : [ "-Lv_FL93wSUIanUwLjwb", "-LxfZj4KdffcN8IFXcnj", "-LvWKe8IpILQN28J98ov", "-Lv_kf9PAWEDbuCi79Jc", "-Lv_IwnxqoTb6YOdYR2i", "-Lv_kUihPLj-yUTk0wru" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1531,6 +1637,7 @@
       "texto" : "Cuál es el número mínimo de estados necesarios para implementar un autómata determinista que lee como separador el espacio y como símbolos identificador (l(l|d)*) y la palabra clave WHILE ? ¿Cuántos estados serán finales?  "
     },
     "-Lv_FSvyo5mGAtnXNXRP" : {
+      "cercanas" : [ "-Lv_FSvyo5mGAtnXNXRP", "-LxQVWU_7ua4bdOs--EF", "-Lv_In4EaX-9AbJKxy1P", "-LxfZbPbT4yPGeee5GRr", "-LvWJlkaXQ2Bv7zk2l5T", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1557,6 +1664,7 @@
       "texto" : "¿Cómo sabemos que un scanner implementado con un autómata ha leído un símbolo completo? "
     },
     "-Lv_Fd6Qeqvi2HP-is94" : {
+      "cercanas" : [ "-Lv_Fd6Qeqvi2HP-is94", "-Lxf_65vJB_6J0EyxWkL", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1583,6 +1691,7 @@
       "texto" : "En un autómata finito no determinista, una flecha de un estado A a uno B etiquetada con λ significa que"
     },
     "-Lv_FxaIj9wEfsFv4l1N" : {
+      "cercanas" : [ "-Lv_NHRO-HQAUN2PZ0rL", "-Lv_FxaIj9wEfsFv4l1N", "-LxfaA5Bvnm3J1YbQIA1", "-LvVzkLfZm3joWt34rfM", "-LxgojiM5RCwwOg4A9rw", "-Lv_HyDm8L_zp7LSPsPy" ],
       "img" : "img/1575804458401_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1606,10 +1715,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Dada la gramática siguiente, ¿Cuáles son los símbolos terminales y no terminales?"
     },
     "-Lv_G4DqSqybI4T2gtzL" : {
+      "cercanas" : [ "-Lv_G4DqSqybI4T2gtzL", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1636,6 +1750,7 @@
       "texto" : "¿En que afecta a un compilador que la gramática utilizada para analizar un programa sea libre del contexto?"
     },
     "-Lv_GRiOXsRK66u4B881" : {
+      "cercanas" : [ "-Lv_GRiOXsRK66u4B881", "-Lv_GbLL-ZNnuTkQiPHn", "-LvW-1CRLxNLi_geyTii", "-Lxgq3A_Joo9ACCN5EAF", "-LxfRFRXjaMoXOY2DbcX", "-LxHufv3x-4VZhm4YpMD" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1658,10 +1773,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Cuántas producciones diferentes surgen al transformar las siguientes reglas BNF de la gramática expuesta a continuación?"
     },
     "-Lv_GbLL-ZNnuTkQiPHn" : {
+      "cercanas" : [ "-Lv_GRiOXsRK66u4B881", "-Lv_GbLL-ZNnuTkQiPHn", "-LvW-1CRLxNLi_geyTii", "-Lxgq3A_Joo9ACCN5EAF", "-LxfRFRXjaMoXOY2DbcX", "-LxHufv3x-4VZhm4YpMD" ],
       "img" : "img/1575804629413_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1685,10 +1805,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Cuántas producciones diferentes surgen al transformar las siguientes reglas BNF de la gramática expuesta a continuación?"
     },
     "-Lv_GnKryN0eyRa_Y8_Q" : {
+      "cercanas" : [ "-Lv_GnKryN0eyRa_Y8_Q", "-Lv_HyDm8L_zp7LSPsPy", "-LvW-eZiLttpdxJDs-JF", "-LvVzkLfZm3joWt34rfM", "-Lv_mBZh_c5s59Pu9eQH", "-LxfaA5Bvnm3J1YbQIA1" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1711,10 +1836,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Cómo afecta al cálculo de los primeros de los símbolos no terminales que un símbolo sea anulable?"
     },
     "-Lv_HfARG6r4C5exEWep" : {
+      "cercanas" : [ "-Lv_HfARG6r4C5exEWep", "-LvW-eZiLttpdxJDs-JF", "-LxfauNjfPfEtzOHpQQ_", "-Lv_lyCWsk0tGRyj8Xtg", "-Lv_j63AcGFWaPzwa5Co", "-LuYIvkKVu_uyO-XUYsh" ],
       "img" : "img/1575804907242_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1746,6 +1876,7 @@
       "texto" : "¿Cuáles son los primeros de los no terminales de la siguiente gramática? "
     },
     "-Lv_HppsHpR3vU1xZzeB" : {
+      "cercanas" : [ "-Lv_HppsHpR3vU1xZzeB", "-Lv_jcov-lEjs8ZbMspJ", "-LxHpQGxxf607NJTSGGv", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1772,6 +1903,7 @@
       "texto" : "La asociatividad por la izquierda --- (a+b)+c --- se expresa en BNF co"
     },
     "-Lv_HyDm8L_zp7LSPsPy" : {
+      "cercanas" : [ "-Lv_HyDm8L_zp7LSPsPy", "-Lv_GnKryN0eyRa_Y8_Q", "-Lv_FxaIj9wEfsFv4l1N", "-LvVzkLfZm3joWt34rfM", "-Lv_mBZh_c5s59Pu9eQH", "-LxfaA5Bvnm3J1YbQIA1" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -1794,10 +1926,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Para qué se utiliza el conjunto de símbolos primeros de los no terminales en el cálculo de los símbolos siguientes de los símbolos no terminales?"
     },
     "-Lv_IAx9EcL6Zd8QpDZz" : {
+      "cercanas" : [ "-Lv_IAx9EcL6Zd8QpDZz", "-Lv_k0JyWFHh8m3TZGzP", "-LxgojiM5RCwwOg4A9rw", "-Lv_GnKryN0eyRa_Y8_Q", "-Lv_FxaIj9wEfsFv4l1N", "-Lv_NHRO-HQAUN2PZ0rL" ],
       "img" : "img/1575805041500_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1825,6 +1962,7 @@
       "texto" : "Dada la siguiente gramática: ...¿Cuántos símbolos no terminales aparecen en el árbol sintáctico generado para la siguiente expresión\n  (-x+x)*x?\n"
     },
     "-Lv_Iaem0WiVMDFfytBE" : {
+      "cercanas" : [ "-Lv_Iaem0WiVMDFfytBE", "-LvVwh3rRZv2QMeeBY1Z", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1851,6 +1989,7 @@
       "texto" : "Cuándo un autómata que se utiliza para implementar un scanner finaliza su ejecución?"
     },
     "-Lv_In4EaX-9AbJKxy1P" : {
+      "cercanas" : [ "-Lv_In4EaX-9AbJKxy1P", "-Lv_FC0SYymGe50-Z3_L", "-LxfZbPbT4yPGeee5GRr", "-Lv_ksMXQtPAk8HgjEGf", "-LvWKP74g5_36EyYv9zQ", "-LvVxwN7K1TC3mg7A6sy" ],
       "img" : "img/1575805201760_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1878,6 +2017,7 @@
       "texto" : "Dado el autómata de un scanner que lee el símbolo do y el símbolo downto, ¿Cuántas llamadas hay que hacer al scanner para leer dodownto# y que caracteres lee en cada llamada?"
     },
     "-Lv_IwnxqoTb6YOdYR2i" : {
+      "cercanas" : [ "-Lv_IwnxqoTb6YOdYR2i", "-Lv_kUihPLj-yUTk0wru", "-LvWKe8IpILQN28J98ov", "-Lv_kf9PAWEDbuCi79Jc", "-LxfZj4KdffcN8IFXcnj", "-Lv_FL93wSUIanUwLjwb" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1904,6 +2044,7 @@
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata determinista que lee como separador el espacio y como símbolos identificador (l(l|d)*) y la palabra clave for ? ¿Cuántos estados serán finales?  "
     },
     "-Lv_JD4_C5M3HaeJHssT" : {
+      "cercanas" : [ "-Lv_JD4_C5M3HaeJHssT", "-LvWL_8zRuLU8UZ3w5BB", "-LvWLAk92XqUCL0sXQRC", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -1930,6 +2071,7 @@
       "texto" : "¿Cómo es la expresión regular para representar los comentarios en C /* … */? (V cualquier carácter de entrada)"
     },
     "-Lv_NHRO-HQAUN2PZ0rL" : {
+      "cercanas" : [ "-Lv_NHRO-HQAUN2PZ0rL", "-Lv_FxaIj9wEfsFv4l1N", "-LxfaA5Bvnm3J1YbQIA1", "-LvVzkLfZm3joWt34rfM", "-LxgojiM5RCwwOg4A9rw", "-Lv_HyDm8L_zp7LSPsPy" ],
       "img" : "img/1575806378794_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1957,6 +2099,7 @@
       "texto" : "Dada la gramática siguiente, ¿Cuáles son los símbolos terminales y no terminales?"
     },
     "-Lv_j63AcGFWaPzwa5Co" : {
+      "cercanas" : [ "-LxfauNjfPfEtzOHpQQ_", "-Lv_j63AcGFWaPzwa5Co", "-LvW-eZiLttpdxJDs-JF", "-Lv_HfARG6r4C5exEWep", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1575812361525_Capture0.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -1984,6 +2127,7 @@
       "texto" : "¿Cuáles son los primeros de las reglas BNF de la siguiente gramática?"
     },
     "-Lv_jS4CgA0dybSpCspn" : {
+      "cercanas" : [ "-Lv_jS4CgA0dybSpCspn", "-LxgmnyLUcF0Q1dxXhfm", "-LvW0bmWh45txa2ynwgb", "-Lxl-ehtU7Mylo14MRBO", "-Lxl-QWoDA3iEhqETVXB", "-Lxl-BN2nlcVyR_HMTJB" ],
       "img" : "img/1575812451705_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -2007,10 +2151,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Dada la siguiente gramática de expresiones, queremos añadir el operador potencia **. Ejemplo: a*b**c+d ¿Cuál sería la ampliación correcta de la gramática? "
     },
     "-Lv_jcov-lEjs8ZbMspJ" : {
+      "cercanas" : [ "-Lv_jcov-lEjs8ZbMspJ", "-Lv_HppsHpR3vU1xZzeB", "-LxHpQGxxf607NJTSGGv", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2037,6 +2186,7 @@
       "texto" : "La asociatividad por la izquierda --- ((a+b)+c) --- se expresa en BNF con"
     },
     "-Lv_k0JyWFHh8m3TZGzP" : {
+      "cercanas" : [ "-Lv_k0JyWFHh8m3TZGzP", "-Lv_IAx9EcL6Zd8QpDZz", "-LxgojiM5RCwwOg4A9rw", "-Lv_GnKryN0eyRa_Y8_Q", "-Lv_FxaIj9wEfsFv4l1N", "-Lv_NHRO-HQAUN2PZ0rL" ],
       "img" : "img/1575812600171_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -2064,6 +2214,7 @@
       "texto" : "Dada la siguiente gramática....¿Cuántos símbolos no terminales aparecen en el árbol sintáctico generado para la siguiente expresión (-x+x)*x ?"
     },
     "-Lv_kJct9dhpSOK2d5-6" : {
+      "cercanas" : [ "-Lv_kJct9dhpSOK2d5-6", "-Lxkpddr85syF8fNdLt6", "-LxkppNe26Q2S5zEdmGy", "-LulrTQ0dWldVhtMYKNw", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2086,10 +2237,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuál de las siguientes afirmaciones sobre autómatas es cierta?"
     },
     "-Lv_kUihPLj-yUTk0wru" : {
+      "cercanas" : [ "-Lv_kUihPLj-yUTk0wru", "-Lv_kf9PAWEDbuCi79Jc", "-LvWKe8IpILQN28J98ov", "-Lv_IwnxqoTb6YOdYR2i", "-LxfZj4KdffcN8IFXcnj", "-Lv_FL93wSUIanUwLjwb" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2116,6 +2272,7 @@
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata finito determinista que lee como separador el espacio y como símbolos el identificador (l(l|d)*) y la palabra clave ELSE ? ¿Cuántos estados serán finales?"
     },
     "-Lv_kf9PAWEDbuCi79Jc" : {
+      "cercanas" : [ "-Lv_kUihPLj-yUTk0wru", "-Lv_kf9PAWEDbuCi79Jc", "-LvWKe8IpILQN28J98ov", "-Lv_IwnxqoTb6YOdYR2i", "-LxfZj4KdffcN8IFXcnj", "-Lv_FL93wSUIanUwLjwb" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2138,10 +2295,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata finito determinista que lee como separador el espacio y como símbolos el identificador (l(l|d)*) y la palabra clave ELSE ? ¿Cuántos estados serán finales?"
     },
     "-Lv_ksMXQtPAk8HgjEGf" : {
+      "cercanas" : [ "-LvWKP74g5_36EyYv9zQ", "-Lv_ksMXQtPAk8HgjEGf", "-Lv_FC0SYymGe50-Z3_L", "-Lv_In4EaX-9AbJKxy1P", "-LxfZbPbT4yPGeee5GRr", "-LvVxwN7K1TC3mg7A6sy" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2168,6 +2330,7 @@
       "texto" : "Dado el autómata de un scanner que lee el símbolo comparación de igualdad (==) y el símbolo final de secuencia (#), ¿Cuántas llamadas hay que hacer al scanner para leer ====# y que caracteres lee en cada llamada hasta que para por error?"
     },
     "-Lv_lI89JExoCMbSs2JP" : {
+      "cercanas" : [ "-Lv_lI89JExoCMbSs2JP", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2190,10 +2353,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Por qué nos parece correcta la línea de código en lenguaje c:  a=b+c; ? "
     },
     "-Lv_lN79vN32fuQ10e_u" : {
+      "cercanas" : [ "-Lv_lN79vN32fuQ10e_u", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2220,6 +2388,7 @@
       "texto" : "¿Cuántas producciones se generan a partir de la siguiente regla BNF? En este caso, desarrollad la transformación de BNF a producciones de manera completa.\n   \tRule <A>::= <B> [(+|-) <A> ]\n"
     },
     "-Lv_lyCWsk0tGRyj8Xtg" : {
+      "cercanas" : [ "-Lv_lyCWsk0tGRyj8Xtg", "-LvW-eZiLttpdxJDs-JF", "-LvW9ay-RuVRfuWOXqe5", "-Lv_HfARG6r4C5exEWep", "-Lxgqtr0X-ZdCFKEdDAE", "-LxQgxX4KGirTRsmYYHs" ],
       "img" : "img/1575813111694_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -2247,6 +2416,7 @@
       "texto" : "Dada la siguiente gramática, ¿cuáles son los primeros de los símbolos no terminales?"
     },
     "-Lv_mBZh_c5s59Pu9eQH" : {
+      "cercanas" : [ "-Lv_mBZh_c5s59Pu9eQH", "-Lv_HyDm8L_zp7LSPsPy", "-Lv_GnKryN0eyRa_Y8_Q", "-LvW0Dn3ysH2JYwBNKGj", "-LvW-eZiLttpdxJDs-JF", "-LvVzkLfZm3joWt34rfM" ],
       "img" : "img/1575813170527_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -2270,10 +2440,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "7.- Dadas la siguientes producciones de una gramática, ¿es la gramática que la ha generado LL(1)? En el caso de no serlo, indicar los símbolos no terminales que provocan este hecho."
     },
     "-Lv_mMzzvLCAg_BqrGXQ" : {
+      "cercanas" : [ "-Lv_mMzzvLCAg_BqrGXQ", "-LvW0bmWh45txa2ynwgb", "-LxgmnyLUcF0Q1dxXhfm", "-Lxh5omTTMtcoavvxt1_", "-Lxgq3A_Joo9ACCN5EAF", "-LxgnWHKFpIip_1r16bE" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2300,6 +2475,7 @@
       "texto" : "8.- Dada la siguiente gramática de declaración de variables, queremos añadir la posibilidad de declarar variables tomando como tipo de datos el de la expresión con que se inicializa la variable (variable auto). \n<DecVar>::= Var identificador “:” <tipus> “;”\n"
     },
     "-LxHonOmw7zHbScipR2o" : {
+      "cercanas" : [ "-LxHonOmw7zHbScipR2o", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2326,6 +2502,7 @@
       "texto" : "El análisis sintáctico"
     },
     "-LxHpQGxxf607NJTSGGv" : {
+      "cercanas" : [ "-LxHpQGxxf607NJTSGGv", "-LvWL_8zRuLU8UZ3w5BB", "-LxQkGjvnuGckODJfFgv", "-LxI0BjXTmK-LqVfnKrM", "-Lv_HppsHpR3vU1xZzeB", "-LxNMyyQpGgGV3pwJ9Mr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2352,6 +2529,7 @@
       "texto" : "¿ En BNF cómo se puede representar la asociatividad por la derecha de un operador (<>) ?"
     },
     "-LxHufv3x-4VZhm4YpMD" : {
+      "cercanas" : [ "-LxHufv3x-4VZhm4YpMD", "-Lv_GRiOXsRK66u4B881", "-Lv_GbLL-ZNnuTkQiPHn", "-LvW-1CRLxNLi_geyTii", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2378,6 +2556,7 @@
       "texto" : "Una gramática expresada en forma de producciones es LL(1) si y solo sí"
     },
     "-LxHvlpZ5594cokV--H4" : {
+      "cercanas" : [ "-LxHvlpZ5594cokV--H4", "-LxHw2qFVi_03PLZNjHS", "-Lxgn6sTzzftlVmKaM05", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2404,6 +2583,7 @@
       "texto" : "¿Cuál es la complejidad del analizador sintáctico dirigido por tabla?"
     },
     "-LxHw2qFVi_03PLZNjHS" : {
+      "cercanas" : [ "-LxHvlpZ5594cokV--H4", "-LxHw2qFVi_03PLZNjHS", "-Lxgn6sTzzftlVmKaM05", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2430,6 +2610,7 @@
       "texto" : "¿Cuál es la complejidad del analizador sintáctico dirigido por tabla?"
     },
     "-LxI00GFICG7V67Pf_2F" : {
+      "cercanas" : [ "-LxI00GFICG7V67Pf_2F", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2456,6 +2637,7 @@
       "texto" : "¿Cómo se implementa el analizador sintáctico de { expBNF } ?"
     },
     "-LxI0BjXTmK-LqVfnKrM" : {
+      "cercanas" : [ "-LxI0BjXTmK-LqVfnKrM", "-LxQkGjvnuGckODJfFgv", "-LvW0Dn3ysH2JYwBNKGj", "-LxHpQGxxf607NJTSGGv", "-Lv_HyDm8L_zp7LSPsPy", "-Lv_mBZh_c5s59Pu9eQH" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2482,6 +2664,7 @@
       "texto" : "¿Cuál de las siguientes secuencias de símbolos puede ser generada la expresión BNF a (a|b) {c} d ?"
     },
     "-LxIAK9KlA4Zxe7BTppg" : {
+      "cercanas" : [ "-LxIAK9KlA4Zxe7BTppg", "-LvW9mh2r4fN5_0bAeib", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2508,6 +2691,7 @@
       "texto" : "¿Qué hace el analizador semántico?"
     },
     "-LxIAUwbNXEZgkKiQy4p" : {
+      "cercanas" : [ "-LxIAUwbNXEZgkKiQy4p", "-LxQkZ2bMp9x2Ky2N4R3", "-LxfXozOkRl2lvJWEvyx", "-LxQr6Eu_xKKGwmQMS4D", "-LvWBQibq1W4HaIQnNyB", "-LxN90hgJyixncWNCSjy" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2534,6 +2718,7 @@
       "texto" : "La estructura de una tabla de símbolos de un lenguaje de programación orientado a objeto es"
     },
     "-LxN8WjeXEcJJCRV8ysZ" : {
+      "cercanas" : [ "-LxN8WjeXEcJJCRV8ysZ", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2560,6 +2745,7 @@
       "texto" : "¿Qué hace el analizador semántico en las declaraciones? "
     },
     "-LxN90hgJyixncWNCSjy" : {
+      "cercanas" : [ "-LxN90hgJyixncWNCSjy", "-LvWBQibq1W4HaIQnNyB", "-LxgowQw92q9JM_WisPa", "-LxfXozOkRl2lvJWEvyx", "-LxQkZ2bMp9x2Ky2N4R3", "-LxQr6Eu_xKKGwmQMS4D" ],
       "img" : "img/1577732018420_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -2587,6 +2773,7 @@
       "texto" : "¿Qué tipos de entradas diferentes (y cuántas de cada tipo) contiene la tabla de símbolos de LOOS impresa en el punto indicado?"
     },
     "-LxN9I0-05sL0nWhOFO1" : {
+      "cercanas" : [ "-LxN9I0-05sL0nWhOFO1", "-LvWAEP1iToPGC-LZZuW", "-LvWAP9-X3tbbEtM4Grf", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2613,6 +2800,7 @@
       "texto" : "En la operación suma (<terme>+<terme>), el analizador semántico de LOOS realiza las siguientes acciones"
     },
     "-LxNAdU3qwKxfbuZGYxw" : {
+      "cercanas" : [ "-LxNAdU3qwKxfbuZGYxw", "-Lultde8_TuaEATc887X", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2635,10 +2823,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SEMÁNTICO",
       "texto" : "El compilador de LOOS está analizando el cuerpo de un método de una clase. ¿Cómo será la búsqueda en la tabla de símbolos?"
     },
     "-LxNDAfSu51FL71BE3q9" : {
+      "cercanas" : [ "-LxNDAfSu51FL71BE3q9", "-LvWBfztOZXl_SmJcyCI", "-LxgruXv7Kt5fmDlwXgR", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2665,6 +2858,7 @@
       "texto" : "¿Cuantas comprobaciones relacionados con tipos de datos (comparaciones de tipos) hace el compilador de LOOS en la expresión a = (20+5)*3.0 + 4.0?"
     },
     "-LxNHnGBJ0Vl2hGOD4cG" : {
+      "cercanas" : [ "-LxNHnGBJ0Vl2hGOD4cG", "-LxkpjP7Qkp10YKh31f5", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2691,6 +2885,7 @@
       "texto" : "Durante la ejecución de un programa LOOS podemos encontrar en la memoria de la máquina virtual …"
     },
     "-LxNIq_P06Ze5N8PY9UU" : {
+      "cercanas" : [ "-LxNIq_P06Ze5N8PY9UU", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2717,6 +2912,7 @@
       "texto" : "La memoria en que se ejecuta un programa LOOS se divide en"
     },
     "-LxNJom6-YAdj10tc9u5" : {
+      "cercanas" : [ "-LxNJom6-YAdj10tc9u5", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2743,6 +2939,7 @@
       "texto" : "Durante la compilación de un programa en LOOS el compilador genera"
     },
     "-LxNKAqE4NttInwENLR3" : {
+      "cercanas" : [ "-LxNKAqE4NttInwENLR3", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2769,6 +2966,7 @@
       "texto" : "Cuando se declara una variable (Var …) en LOOS su dirección se genera a partir de"
     },
     "-LxNKeI84bTHoN1IQmxi" : {
+      "cercanas" : [ "-LxNKeI84bTHoN1IQmxi", "-Lxh5omTTMtcoavvxt1_", "-LxkrPXLx3BLHfeO-N_s", "-LxNLRFvElgGnfYH5V0h", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2795,6 +2993,7 @@
       "texto" : "¿Cuánta memoria ocupan un struct y una unión alineadas?"
     },
     "-LxNLRFvElgGnfYH5V0h" : {
+      "cercanas" : [ "-LxNLRFvElgGnfYH5V0h", "-LxkrPXLx3BLHfeO-N_s", "-LxNKeI84bTHoN1IQmxi", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE" ],
       "img" : "img/1577735275645_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -2822,6 +3021,7 @@
       "texto" : "¿Cuántos bytes ocupa la siguiente estructura struct a? Tenemos definidas la estructura a y la unión b como se ve a continuación"
     },
     "-LxNLaejyeHW_FctXRKa" : {
+      "cercanas" : [ "-LxNLaejyeHW_FctXRKa", "-LxkrVf-0GLVbc8buO1f", "-LxRKwtSFnoye8QXMFbU", "-LuYKEj3uDOqrnzy6SAL", "-Lxh6sZO2n1KxrxOdCkz", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2848,6 +3048,7 @@
       "texto" : "¿Cuál es el número máximo de elementos que llegaremos a tener en la pila al evaluar la expresión 10*2 + 3*4*5 + 20/3.2 en LOOS?"
     },
     "-LxNMyyQpGgGV3pwJ9Mr" : {
+      "cercanas" : [ "-LxNMyyQpGgGV3pwJ9Mr", "-LvWL_8zRuLU8UZ3w5BB", "-LxHpQGxxf607NJTSGGv", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2874,6 +3075,7 @@
       "texto" : "Cuando se accede a una variable/parámetro/campo en LOOS su dirección se puede representar como"
     },
     "-LxNNRoqzIFyI_5ZbNEV" : {
+      "cercanas" : [ "-LxNNRoqzIFyI_5ZbNEV", "-LxgmnyLUcF0Q1dxXhfm", "-Lxh77saoTHGZVOPK0-k", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2900,6 +3102,7 @@
       "texto" : "¿Cuál es el mínimo de operaciones que habrá que hacer para acceder a un elemento de un array de n dimensiones de tamaño fijo, cuyos índices son rangos (valor mínimo del índice a valor máximo del índice)?  "
     },
     "-LxNNnSrKFdSJUZGPWW1" : {
+      "cercanas" : [ "-LxNNnSrKFdSJUZGPWW1", "-LxRIs38j555BUKsAqs5", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2926,6 +3129,7 @@
       "texto" : "¿Qué contiene un objeto de una clase en su representación en memoria? "
     },
     "-LxNNxldCLroGS_Plp2n" : {
+      "cercanas" : [ "-LxNNxldCLroGS_Plp2n", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -2952,6 +3156,7 @@
       "texto" : "¿Cuántas direcciones se pueden utilizar para referirse a un objeto de una clase?"
     },
     "-LxNSuvtEqmMAphadz1K" : {
+      "cercanas" : [ "-LxNSuvtEqmMAphadz1K", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -2978,6 +3183,7 @@
       "texto" : "La pila de ejecución en LOOS se utiliza para guardar"
     },
     "-LxNTCzCCGK2kruygxzA" : {
+      "cercanas" : [ "-LxNTCzCCGK2kruygxzA", "-LxkqnZr9R5iusn16AB7", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3004,6 +3210,7 @@
       "texto" : "El enlace dinámico de un bloque de activación de una función F apunta a"
     },
     "-LxNTiWWZH16gUwTKSrR" : {
+      "cercanas" : [ "-LxNTiWWZH16gUwTKSrR", "-Lxh7FXt12uT4cdEyFWX", "-Lxh9iojXAHVibDNLoA3", "-LxkL54k2e18rMK4rk-0", "-Lxh77saoTHGZVOPK0-k", "-LxkauCjvh1-TU5FM3aV" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3030,6 +3237,7 @@
       "texto" : "El contenido del bloque de activación de un método de una clase que es una función que retorna un real es"
     },
     "-LxNULZLUmt9J9HJ50zk" : {
+      "cercanas" : [ "-LxNULZLUmt9J9HJ50zk", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3056,6 +3264,7 @@
       "texto" : "¿Qué supone la dualidad valor-dirección para la generación de código?"
     },
     "-LxNUteePp1p7Sqpd8WI" : {
+      "cercanas" : [ "-LxNUteePp1p7Sqpd8WI", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3082,6 +3291,7 @@
       "texto" : "¿Que instrucciones genera directamente if <expresión> then <instrucción> else <instrucción> en LOOS (no considerar las instrucciones generadas por <expresión> e <instrucción>)?  "
     },
     "-LxNWPamfDbJDXaZ_qyc" : {
+      "cercanas" : [ "-LxNWPamfDbJDXaZ_qyc", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3104,6 +3314,7 @@
       "texto" : "Cuando en la regla <factor> aparece el identificador de una variable global, sin leer nada más, se genera"
     },
     "-LxQVWU_7ua4bdOs--EF" : {
+      "cercanas" : [ "-LxQVWU_7ua4bdOs--EF", "-Lv_FSvyo5mGAtnXNXRP", "-Lv_In4EaX-9AbJKxy1P", "-LxfZbPbT4yPGeee5GRr", "-LvWJlkaXQ2Bv7zk2l5T", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3126,10 +3337,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "Hemos implementado un scanner con un autómata, ¿Cuántos caracteres se tienen que leer para qué el scanner decida que símbolo ha leído?"
     },
     "-LxQVikGGHerAvgL1DrV" : {
+      "cercanas" : [ "-LxQVikGGHerAvgL1DrV", "-Lv_IwnxqoTb6YOdYR2i", "-Lv_kUihPLj-yUTk0wru", "-LvWKe8IpILQN28J98ov", "-LxfZj4KdffcN8IFXcnj", "-Lv_kf9PAWEDbuCi79Jc" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3156,6 +3372,7 @@
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata determinista que lee como separador el espacio y como símbolo los números enteros (incluido negativos) en lenguaje C en base decimal con uno o más dígitos (10,20,-4,etc) y hexadecimal con uno o más dígitos (0xff,-0x010A,etc.)"
     },
     "-LxQge5EmYTM37609ugQ" : {
+      "cercanas" : [ "-LxQge5EmYTM37609ugQ", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3182,6 +3399,7 @@
       "texto" : "¿Para qué se utilizan las transiciones con lambda (λ)?"
     },
     "-LxQgxX4KGirTRsmYYHs" : {
+      "cercanas" : [ "-LxQgxX4KGirTRsmYYHs", "-Lv_lyCWsk0tGRyj8Xtg", "-LxgnIrjElP0yBaG6Vws", "-LxQk3X3eh1d83HcJCrR", "-LxQr6Eu_xKKGwmQMS4D", "-Lxgo1_5eIP-CQQt8EXw" ],
       "img" : "img/1577791509223_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3209,6 +3427,7 @@
       "texto" : "Dada la siguiente gramática, ¿cuántas producciones resultan del paso de reglas BNF a producciones?"
     },
     "-LxQk3X3eh1d83HcJCrR" : {
+      "cercanas" : [ "-LxQk3X3eh1d83HcJCrR", "-LxgnIrjElP0yBaG6Vws", "-LxQgxX4KGirTRsmYYHs", "-LxQkZ2bMp9x2Ky2N4R3", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3235,6 +3454,7 @@
       "texto" : "Un analizador descendente de una gramática representada con producciones toma la decisión de que producción aplicar en el siguiente paso de derivación a partir de"
     },
     "-LxQkGjvnuGckODJfFgv" : {
+      "cercanas" : [ "-LxQkGjvnuGckODJfFgv", "-LxfOQvi8ff60HBdveLe", "-LxI0BjXTmK-LqVfnKrM", "-Lxgocacujsb9-AVgCGr", "-LxHpQGxxf607NJTSGGv", "-Lxh6iPpVQ8WR983Q_Fc" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3261,6 +3481,7 @@
       "texto" : "¿Qué comprobaciones semánticas ha de hacer LOOS en la expresión BNF\nProcedure identificador <DecParametres> ?\n"
     },
     "-LxQkQyh6oOf5ykzTjge" : {
+      "cercanas" : [ "-LxQkQyh6oOf5ykzTjge", "-LxRKwtSFnoye8QXMFbU", "-LvVyTeFItFnm-QDGVhh", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3287,6 +3508,7 @@
       "texto" : "¿De dónde saca el compilador de LOOS el tipo de datos de la expresión A[i] donde A es Var A:array [5] of array[10] of integer?"
     },
     "-LxQkZ2bMp9x2Ky2N4R3" : {
+      "cercanas" : [ "-LxQkZ2bMp9x2Ky2N4R3", "-LxIAUwbNXEZgkKiQy4p", "-LxfXozOkRl2lvJWEvyx", "-LxQr6Eu_xKKGwmQMS4D", "-LvWBQibq1W4HaIQnNyB", "-LxN90hgJyixncWNCSjy" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3313,6 +3535,7 @@
       "texto" : "¿Qué estructura se ha de añadir a la tabla de símbolos para poder compilar un lenguaje orientado a objeto?"
     },
     "-LxQr6Eu_xKKGwmQMS4D" : {
+      "cercanas" : [ "-LxQr6Eu_xKKGwmQMS4D", "-LxfXozOkRl2lvJWEvyx", "-LxQkZ2bMp9x2Ky2N4R3", "-LvWBQibq1W4HaIQnNyB", "-LxIAUwbNXEZgkKiQy4p", "-LxN90hgJyixncWNCSjy" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3339,6 +3562,7 @@
       "texto" : "¿La búsqueda por nombre en la tabla de símbolos de LOOS puede retornar?"
     },
     "-LxRIs38j555BUKsAqs5" : {
+      "cercanas" : [ "-LxRIs38j555BUKsAqs5", "-LxNNnSrKFdSJUZGPWW1", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3361,10 +3585,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 0
+      },
       "tema" : "ORGANIZACION DE MEMORIA",
       "texto" : "¿Cuál es la estructura de un objeto en memoria?"
     },
     "-LxRIyhGV0dmPBs-Wn3h" : {
+      "cercanas" : [ "-LxRIyhGV0dmPBs-Wn3h", "-LxhHo1IXnIr3COApfGg", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3391,6 +3620,7 @@
       "texto" : "En un programa LOOS donde se han declarado 2 variables globales, 3 variables locales, 7 clases y 11 funciones, ¿Cuántas direcciones simbólicas genera el compilador cómo mínimo?"
     },
     "-LxRKwtSFnoye8QXMFbU" : {
+      "cercanas" : [ "-LxRKwtSFnoye8QXMFbU", "-LxkrVf-0GLVbc8buO1f", "-LxNLaejyeHW_FctXRKa", "-LuYKEj3uDOqrnzy6SAL", "-LxQkQyh6oOf5ykzTjge", "-Lxh6sZO2n1KxrxOdCkz" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3413,10 +3643,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ORGANIZACION DE MEMORIA",
       "texto" : "¿Cuál es el número máximo de elementos que tendremos a la vez en la pila al evaluar el compilador de LOOS la expresión a[1] = 20 + 30*5, siendo a: array[2] of integer?"
     },
     "-LxRLF-ba8f74BULyJEp" : {
+      "cercanas" : [ "-LxRLF-ba8f74BULyJEp", "-Lxh77saoTHGZVOPK0-k", "-LxhAuEo7t6seXKUeyOf", "-Lxkqv_OzoMWMJxPw1Gz", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3443,6 +3678,7 @@
       "texto" : "En la llamada desde la función G a la función F de LOOS cuyo valor de retorno es un objeto …"
     },
     "-LxRLLsNmWSiRbwleyRq" : {
+      "cercanas" : [ "-LxRLLsNmWSiRbwleyRq", "-LxhPiZvwYY_sKIkiVi4", "-LxkbF6FRH0YNtdsyvv_", "-LxhP-j_9mLcSmcO1klz", "-LxhOjRqdlSzknINYBY4", "-LxgsmZJoidqVAfS7-Vo" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3469,6 +3705,7 @@
       "texto" : "En la generación de código de expresiones, el compilador de LOOS necesita dos códigos en generación para generar el código de…"
     },
     "-LxRLVp2fyJP7vATB0Pi" : {
+      "cercanas" : [ "-LxRLVp2fyJP7vATB0Pi", "-LxkaieAjJhhodismdQZ", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3495,6 +3732,7 @@
       "texto" : "¿Por qué es necesaria una representación intermedia de las direcciones en el compilador de LOOS?"
     },
     "-LxfOQvi8ff60HBdveLe" : {
+      "cercanas" : [ "-LxfOQvi8ff60HBdveLe", "-LxQkGjvnuGckODJfFgv", "-Lxgocacujsb9-AVgCGr", "-LvWB4rVu4E0GriC8FR7", "-LxI0BjXTmK-LqVfnKrM", "-LvWBwnFIssO5y2Y2I4G" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3521,6 +3759,7 @@
       "texto" : "¿Qué comprobaciones semánticas se han de hacer en la regla BNF Var identificador : <tipus> \";\" ?"
     },
     "-LxfOqwLqlKq5zqVxkJz" : {
+      "cercanas" : [ "-LxfOqwLqlKq5zqVxkJz", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "img" : "img/1578054938480_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3548,6 +3787,7 @@
       "texto" : "¿Qué información ha de retornar por parámetros la regla <DecParametres>?"
     },
     "-LxfP1mtu04RkUE8n9S0" : {
+      "cercanas" : [ "-LxfP1mtu04RkUE8n9S0", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3574,6 +3814,7 @@
       "texto" : "Cuándo el compilador sale de un ámbito …"
     },
     "-LxfRFRXjaMoXOY2DbcX" : {
+      "cercanas" : [ "-LxfRFRXjaMoXOY2DbcX", "-Lxgq3A_Joo9ACCN5EAF", "-Lv_GRiOXsRK66u4B881", "-Lv_GbLL-ZNnuTkQiPHn", "-LvW-1CRLxNLi_geyTii", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "img" : "img/1578055567230_Capture0.PNG",
@@ -3600,6 +3841,7 @@
       "texto" : "¿Cuál de las siguientes reglas BNF analiza correctamente un bucle while en LOOS?"
     },
     "-LxfSnw112lmPqIo624M" : {
+      "cercanas" : [ "-LxfSnw112lmPqIo624M", "-LxgsmZJoidqVAfS7-Vo", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "img" : "img/1578055974745_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3627,6 +3869,7 @@
       "texto" : "¿Cuál de las siguientes comprobaciones de tipo es correcta para completar los puntos suspensivos de la siguiente regla?"
     },
     "-LxfXozOkRl2lvJWEvyx" : {
+      "cercanas" : [ "-LxfXozOkRl2lvJWEvyx", "-LxQr6Eu_xKKGwmQMS4D", "-LxQkZ2bMp9x2Ky2N4R3", "-LvWBQibq1W4HaIQnNyB", "-LxIAUwbNXEZgkKiQy4p", "-LxN90hgJyixncWNCSjy" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3653,6 +3896,7 @@
       "texto" : "¿La búsqueda por nombre de una función en la tabla de símbolos retorna?"
     },
     "-LxfYmYpr4rl_TWua159" : {
+      "cercanas" : [ "-LxfYmYpr4rl_TWua159", "-Lv_CO-ttbGSuzTxyYgt", "-LvVvauBLyFEfrUNsubl", "-Lv_ksMXQtPAk8HgjEGf", "-LvVwh3rRZv2QMeeBY1Z", "-LvWKP74g5_36EyYv9zQ" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3679,6 +3923,7 @@
       "texto" : "¿Cuándo un autómata acepta una secuencia de caracteres de entrada? "
     },
     "-LxfZ0OWpv1OZvYA_vW8" : {
+      "cercanas" : [ "-LxfZ0OWpv1OZvYA_vW8", "-LuYKEj3uDOqrnzy6SAL", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3705,6 +3950,7 @@
       "texto" : "¿Cuándo un autómata que se utiliza para implementar un scanner ha leído un símbolo?"
     },
     "-LxfZ9AJE8jtehOGEZa0" : {
+      "cercanas" : [ "-LxfZ9AJE8jtehOGEZa0", "-Lv_CDwh3FIjkvSOCQ9B", "-LxQVikGGHerAvgL1DrV", "-LvWJVdOuqwzZ4DF25je", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3731,6 +3977,7 @@
       "texto" : "¿Cuál es la principal diferencia entre un autómata finito determinista (AFD) y uno no determinista (AFND)? "
     },
     "-LxfZOTWtdhxwmqxPmnl" : {
+      "cercanas" : [ "-LxfZOTWtdhxwmqxPmnl", "-LvVxFU9mEwfq8ysyAAV", "-LvWK1HcCfWgMq_Xn6BH", "-LuljJhNY7z-yJlOQCAW", "-Lv_EB4NDANftvaOAw57", "-LvWL03wBmW6Mw9jWwMi" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3753,10 +4000,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuáles son las transiciones del autómata determinista de a*-aa y su conjunto de estados finales?"
     },
     "-LxfZbPbT4yPGeee5GRr" : {
+      "cercanas" : [ "-LxfZbPbT4yPGeee5GRr", "-Lv_FC0SYymGe50-Z3_L", "-Lv_In4EaX-9AbJKxy1P", "-LvVxwN7K1TC3mg7A6sy", "-Lv_ksMXQtPAk8HgjEGf", "-LvWKP74g5_36EyYv9zQ" ],
       "img" : "img/1578057758454_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3780,10 +4032,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "Dado el autómata de un scanner que lee el símbolo igual (=) y el símbolo implica (==>), ¿Cuántas llamadas hay que hacer al scanner para leer ===># y que caracteres lee en cada llamada? Estados finales: 2, 4."
     },
     "-LxfZj4KdffcN8IFXcnj" : {
+      "cercanas" : [ "-LxfZj4KdffcN8IFXcnj", "-LvWKe8IpILQN28J98ov", "-Lv_kf9PAWEDbuCi79Jc", "-Lv_IwnxqoTb6YOdYR2i", "-Lv_kUihPLj-yUTk0wru", "-Lv_FL93wSUIanUwLjwb" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3806,10 +4063,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS LEXICOGRÁFICO",
       "texto" : "¿Cuál es el número mínimo de estados necesarios para implementar un autómata determinista que lee como separador el espacio y como símbolos identificador (l(l|d)*) y la palabra clave DO ? ¿Cuántos estados serán finales?  "
     },
     "-Lxf_-CO8EdW3AghdR9i" : {
+      "cercanas" : [ "-Lxf_-CO8EdW3AghdR9i", "-LvVvxDVeBAmLvduyPQK", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -3836,6 +4098,7 @@
       "texto" : "¿Qué pasos sigue el algoritmo que pasa una expresión regular a autómata finito determinista?"
     },
     "-Lxf_65vJB_6J0EyxWkL" : {
+      "cercanas" : [ "-Lv_Fd6Qeqvi2HP-is94", "-Lxf_65vJB_6J0EyxWkL", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3862,6 +4125,7 @@
       "texto" : "En un autómata finito no determinista, una flecha de un estado A a uno B etiquetada con λ significa que "
     },
     "-LxfaA5Bvnm3J1YbQIA1" : {
+      "cercanas" : [ "-Lv_NHRO-HQAUN2PZ0rL", "-Lv_FxaIj9wEfsFv4l1N", "-LxfaA5Bvnm3J1YbQIA1", "-LvVzkLfZm3joWt34rfM", "-LxgojiM5RCwwOg4A9rw", "-Lv_HyDm8L_zp7LSPsPy" ],
       "img" : "img/1578058166745_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3885,10 +4149,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Dada la gramática siguiente, ¿Cuáles son los símbolos terminales y no terminales?"
     },
     "-LxfaI4964fBiupZiCMO" : {
+      "cercanas" : [ "-LxfaI4964fBiupZiCMO", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -3915,6 +4184,7 @@
       "texto" : "Un lenguaje de programación es"
     },
     "-LxfauNjfPfEtzOHpQQ_" : {
+      "cercanas" : [ "-LxfauNjfPfEtzOHpQQ_", "-Lv_j63AcGFWaPzwa5Co", "-LvW-eZiLttpdxJDs-JF", "-Lv_HfARG6r4C5exEWep", "-LuYIvkKVu_uyO-XUYsh", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578058360440_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3942,6 +4212,7 @@
       "texto" : "¿Cuáles son los primeros de las reglas BNF de la siguiente gramática? "
     },
     "-LxgmnyLUcF0Q1dxXhfm" : {
+      "cercanas" : [ "-LxgmnyLUcF0Q1dxXhfm", "-Lv_jS4CgA0dybSpCspn", "-LvW0bmWh45txa2ynwgb", "-Lv_mMzzvLCAg_BqrGXQ", "-Lxl-ehtU7Mylo14MRBO", "-Lxl-QWoDA3iEhqETVXB" ],
       "img" : "img/1578078257119_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3965,10 +4236,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Dada la siguiente gramática de expresiones, queremos añadir el operador de expresión condicional de C condición? valor si se cumple : valor si no se cumple. Ejemplo: a>b ? a+10 : b+10 ¿Cuál sería la ampliación correcta de la gramática? "
     },
     "-Lxgn-UnIt4W7gvfhFfA" : {
+      "cercanas" : [ "-Lxgn-UnIt4W7gvfhFfA", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "img" : "img/1578078308516_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -3996,6 +4272,7 @@
       "texto" : "Dada la siguiente gramática, ¿Cuántos árboles puede generar para la expresión a=b+c=d+e?"
     },
     "-Lxgn6sTzzftlVmKaM05" : {
+      "cercanas" : [ "-Lxgn6sTzzftlVmKaM05", "-LvWL_8zRuLU8UZ3w5BB", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4022,6 +4299,7 @@
       "texto" : "La asociatividad por la derecha --- a+(b+c) --- se expresa en BNF con"
     },
     "-LxgnIrjElP0yBaG6Vws" : {
+      "cercanas" : [ "-LxgnIrjElP0yBaG6Vws", "-LxQgxX4KGirTRsmYYHs", "-LxQk3X3eh1d83HcJCrR", "-LxQkZ2bMp9x2Ky2N4R3", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4044,10 +4322,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "La decisión de qué paso de derivación hay que hacer durante el análisis sintáctico con una gramática LL(1) expresada en producciones depende de"
     },
     "-LxgnWHKFpIip_1r16bE" : {
+      "cercanas" : [ "-LxgnWHKFpIip_1r16bE", "-Lv_FxaIj9wEfsFv4l1N", "-LvVzkLfZm3joWt34rfM", "-LxfaA5Bvnm3J1YbQIA1", "-Lv_NHRO-HQAUN2PZ0rL", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578078442822_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4071,10 +4354,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 2
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "Dada la siguiente gramática"
     },
     "-Lxgnu4TjyTrXqF2HTsa" : {
+      "cercanas" : [ "-Lxgnu4TjyTrXqF2HTsa", "-LxkqU3lCEyzSV7ByPvJ", "-Lv_HyDm8L_zp7LSPsPy", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4097,10 +4385,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 2,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Para qué se utiliza el conjunto de símbolos anulables en el cálculo de primeros?"
     },
     "-Lxgo1_5eIP-CQQt8EXw" : {
+      "cercanas" : [ "-Lxgo1_5eIP-CQQt8EXw", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -4123,10 +4416,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 2,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SINTÁCTICO",
       "texto" : "¿Cuántas funciones o procedimientos tendrá un parser descendente de una gramática BNF?"
     },
     "-Lxgocacujsb9-AVgCGr" : {
+      "cercanas" : [ "-Lxgocacujsb9-AVgCGr", "-LvWB4rVu4E0GriC8FR7", "-LxfOQvi8ff60HBdveLe", "-LxQkGjvnuGckODJfFgv", "-LvWBwnFIssO5y2Y2I4G", "-Lxgq3A_Joo9ACCN5EAF" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -4153,6 +4451,7 @@
       "texto" : "¿Qué comprobaciones semánticas se han de hacer en la regla BNF\n       <inst>::=if <exp> then <inst> [else <inst>]  de LOOS?"
     },
     "-LxgojiM5RCwwOg4A9rw" : {
+      "cercanas" : [ "-LxgojiM5RCwwOg4A9rw", "-LvVzkLfZm3joWt34rfM", "-Lv_FxaIj9wEfsFv4l1N", "-Lv_HyDm8L_zp7LSPsPy", "-LxfaA5Bvnm3J1YbQIA1", "-Lv_NHRO-HQAUN2PZ0rL" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -4175,10 +4474,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SEMÁNTICO",
       "texto" : "¿Cuál es la diferencia de procesamiento semántico entre los símbolos terminales y no terminales?"
     },
     "-LxgoqTtA36bRXBoZ_1U" : {
+      "cercanas" : [ "-LxgoqTtA36bRXBoZ_1U", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4205,6 +4509,7 @@
       "texto" : "¿Qué afirmación es cierta?"
     },
     "-LxgowQw92q9JM_WisPa" : {
+      "cercanas" : [ "-LxgowQw92q9JM_WisPa", "-LxN90hgJyixncWNCSjy", "-LxfXozOkRl2lvJWEvyx", "-LxQkZ2bMp9x2Ky2N4R3", "-LxQr6Eu_xKKGwmQMS4D", "-LvWBQibq1W4HaIQnNyB" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4231,6 +4536,7 @@
       "texto" : "¿Qué tipos de datos contiene la pila de la tabla de símbolos de LOOS?"
     },
     "-Lxgq3A_Joo9ACCN5EAF" : {
+      "cercanas" : [ "-Lxgq3A_Joo9ACCN5EAF", "-LxfRFRXjaMoXOY2DbcX", "-Lv_GRiOXsRK66u4B881", "-Lv_GbLL-ZNnuTkQiPHn", "-Lxgocacujsb9-AVgCGr", "-LvW-1CRLxNLi_geyTii" ],
       "respuestas" : {
         "respuesta1" : {
           "img" : "img/1578079110046_Capture0.PNG",
@@ -4253,10 +4559,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 1
+      },
       "tema" : "ANÁLISIS SEMÁNTICO",
       "texto" : "¿Cuál de las siguientes reglas BNF analiza correctamente la declaración de tipos de datos en LOOS?"
     },
     "-Lxgqtr0X-ZdCFKEdDAE" : {
+      "cercanas" : [ "-Lxgqtr0X-ZdCFKEdDAE", "-Lv_lyCWsk0tGRyj8Xtg", "-LxQkZ2bMp9x2Ky2N4R3", "-LxQr6Eu_xKKGwmQMS4D", "-LxfXozOkRl2lvJWEvyx", "-LvWBQibq1W4HaIQnNyB" ],
       "img" : "img/1578079329913_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4284,6 +4595,7 @@
       "texto" : "Dado el siguiente código y la tabla de símbolos impresa, ¿En qué posición se ha impreso?"
     },
     "-LxgrpQ-cu_0O2yu8a5j" : {
+      "cercanas" : [ "-LxgrpQ-cu_0O2yu8a5j", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "img" : "img/1578079573879_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4307,10 +4619,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 2,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SEMÁNTICO",
       "texto" : "En la regla de expresión, ¿qué significan sus parámetros?"
     },
     "-LxgruXv7Kt5fmDlwXgR" : {
+      "cercanas" : [ "-LxgruXv7Kt5fmDlwXgR", "-LxNDAfSu51FL71BE3q9", "-LvWBfztOZXl_SmJcyCI", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4337,6 +4654,7 @@
       "texto" : "¿Cuantas comprobaciones de tipos de datos hace el compilador de LOOS en la expresión a = 20*3.0?"
     },
     "-Lxgs0-J1To2ijk-6eoj" : {
+      "cercanas" : [ "-Lxgs0-J1To2ijk-6eoj", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4363,6 +4681,7 @@
       "texto" : "Respecto a la declaración de funciones: ¿Qué información tenemos que guardar en la Tabla de Símbolos?"
     },
     "-LxgsU3KB7tkwz2H1IVJ" : {
+      "cercanas" : [ "-LxgsU3KB7tkwz2H1IVJ", "-LxgsmZJoidqVAfS7-Vo", "-LvWAEP1iToPGC-LZZuW", "-LvWAP9-X3tbbEtM4Grf", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "img" : "img/1578079744451_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4386,10 +4705,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ANÁLISIS SEMÁNTICO",
       "texto" : "Respecto al siguiente código simplificado que realiza el análisis semántico de llamadas a funciones y teniendo en cuenta que en la Tabla de Símbolos simplificada se guarda la siguiente información de la función: nombre, lista de tipos de parámetros, tipo de valor de retorno...\n¿Cuáles son TODAS las acciones semánticas que hemos de realizar dentro del bloque marcado con B1?"
     },
     "-LxgsmZJoidqVAfS7-Vo" : {
+      "cercanas" : [ "-LxgsmZJoidqVAfS7-Vo", "-LxgsU3KB7tkwz2H1IVJ", "-LxRLLsNmWSiRbwleyRq", "-LulrTQ0dWldVhtMYKNw", "-LxfSnw112lmPqIo624M", "-LxgojiM5RCwwOg4A9rw" ],
       "img" : "img/1578079824324_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4417,6 +4741,7 @@
       "texto" : "Respecto al siguiente código simplificado que realiza el análisis semántico de llamadas a funciones y teniendo en cuenta que en la Tabla de Símbolos simplificada se guarda la siguiente información de la función: nombre, lista de tipos de parámetros, tipo de valor de retorno:\n\nDe los siguientes códigos propuestos, ¿cuál es el que ha ir dentro de la zona de código delimitada con B2?"
     },
     "-LxgtiY0ATJSQPuexbpp" : {
+      "cercanas" : [ "-LxgtiY0ATJSQPuexbpp", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "img" : "img/1578080070000_Capture0.PNG",
@@ -4443,6 +4768,7 @@
       "texto" : "Respecto a la operación aritmética de la división entera, ¿cuál de las siguientes comprobaciones de tipo es correcta?"
     },
     "-Lxh5NRizVPUCoKighJR" : {
+      "cercanas" : [ "-Lxh5NRizVPUCoKighJR", "-LxksK1luQHCU1-P0xN-", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4465,10 +4791,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 1
+      },
       "tema" : "ORGANIZACION DE MEMORIA",
       "texto" : "¿Para qué declaraciones el compilador genera direcciones simbólicas?"
     },
     "-Lxh5Uej5ll5luX9Q5Oh" : {
+      "cercanas" : [ "-Lxh5Uej5ll5luX9Q5Oh", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4495,6 +4826,7 @@
       "texto" : "¿Qué resultado podemos esperar de la instrucción sizeof (struct A)?"
     },
     "-Lxh5omTTMtcoavvxt1_" : {
+      "cercanas" : [ "-Lxh5omTTMtcoavvxt1_", "-LxQVikGGHerAvgL1DrV", "-Lv_mMzzvLCAg_BqrGXQ", "-Lxh6R8S8frb4BjRwzvI", "-LxNKeI84bTHoN1IQmxi", "-LuYIvkKVu_uyO-XUYsh" ],
       "img" : "img/1578083503448_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4522,6 +4854,7 @@
       "texto" : "¿Qué espacio de memoria ocupará la siguiente estructura suponiendo que queremos optimizar el tiempo de acceso a sus campos? Suponemos que los caracteres ocupan 1 byte, los enteros ocupan 4 bytes y están alineados a 4 y los doubles ocupan 8 bytes y están alineados a 8."
     },
     "-Lxh6R8S8frb4BjRwzvI" : {
+      "cercanas" : [ "-Lxh6R8S8frb4BjRwzvI", "-LxkaRm_EmGNmVYnp9B7", "-Lxh5omTTMtcoavvxt1_", "-Lv_jS4CgA0dybSpCspn", "-Lxl-QWoDA3iEhqETVXB", "-Lxl-ehtU7Mylo14MRBO" ],
       "img" : "img/1578083664662_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4549,6 +4882,7 @@
       "texto" : "¿Cuál es la representación correcta de la siguiente estructura de datos? Considerar alineamiento de datos (char 1 byte alineado a 1, int 4 bytes alineado a 1, real 8 bytes y alineados a 8)."
     },
     "-Lxh6b-ZbYOyjH8L_g86" : {
+      "cercanas" : [ "-Lxh6b-ZbYOyjH8L_g86", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4575,6 +4909,7 @@
       "texto" : "¿Por qué los lenguajes actuales guardan los elementos de los arrays por filas?"
     },
     "-Lxh6iPpVQ8WR983Q_Fc" : {
+      "cercanas" : [ "-Lxh6iPpVQ8WR983Q_Fc", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4601,6 +4936,7 @@
       "texto" : "¿Cuántas multiplicaciones necesita un acceso indexado a un array?"
     },
     "-Lxh6sZO2n1KxrxOdCkz" : {
+      "cercanas" : [ "-Lxh6sZO2n1KxrxOdCkz", "-LxkrexHybfogwa0X502", "-LxNLaejyeHW_FctXRKa", "-Lxkqa-2Ztp5l7HltYkY", "-LxRKwtSFnoye8QXMFbU", "-LxkrVf-0GLVbc8buO1f" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4627,6 +4963,7 @@
       "texto" : "¿Cuál es el tamaño mínimo de la pila necesario para evaluar la expresión a*b+c*d?"
     },
     "-Lxh7-LnFuMd52Hwjxxw" : {
+      "cercanas" : [ "-Lxh7-LnFuMd52Hwjxxw", "-Lxh7FXt12uT4cdEyFWX", "-Lxh77saoTHGZVOPK0-k", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4649,10 +4986,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ORGANIZACION DE MEMORIA",
       "texto" : "Durante la ejecución de un programa LOOS, los bloques de activación de las funciones"
     },
     "-Lxh77saoTHGZVOPK0-k" : {
+      "cercanas" : [ "-Lxh77saoTHGZVOPK0-k", "-Lxh7FXt12uT4cdEyFWX", "-LxRLF-ba8f74BULyJEp", "-Lxh7-LnFuMd52Hwjxxw", "-Lxh9iojXAHVibDNLoA3", "-LxkL54k2e18rMK4rk-0" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4679,6 +5021,7 @@
       "texto" : "En LOOS, ¿Cuál es el contenido de un bloque de activación de una función declarada en el ámbito global cuyo valor de retorno es un objeto de una clase?"
     },
     "-Lxh7FXt12uT4cdEyFWX" : {
+      "cercanas" : [ "-Lxh7FXt12uT4cdEyFWX", "-LxNTiWWZH16gUwTKSrR", "-Lxh77saoTHGZVOPK0-k", "-Lxh7-LnFuMd52Hwjxxw", "-Lxh9iojXAHVibDNLoA3", "-LxkL54k2e18rMK4rk-0" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4705,6 +5048,7 @@
       "texto" : "En LOOS, ¿Cuál es el contenido de un bloque de activación de un método de una clase declarado como procedimiento?"
     },
     "-Lxh7MOnDuZhrHo4qIlF" : {
+      "cercanas" : [ "-Lxh7MOnDuZhrHo4qIlF", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -4731,6 +5075,7 @@
       "texto" : "¿Cuál es el número de apuntadores que contendrá el display de una función?"
     },
     "-Lxh8nt3sOOmw-D-1Nt0" : {
+      "cercanas" : [ "-Lxh8nt3sOOmw-D-1Nt0", "-LxkauCjvh1-TU5FM3aV", "-LxkzZDQYGV9ouk_LIFR", "-Lxh9iojXAHVibDNLoA3", "-LxkL54k2e18rMK4rk-0", "-Lxh77saoTHGZVOPK0-k" ],
       "img" : "img/1578084286211_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4758,6 +5103,7 @@
       "texto" : "¿Cuál es el bloque de activación correcto para la función f1?"
     },
     "-Lxh9iojXAHVibDNLoA3" : {
+      "cercanas" : [ "-Lxh9iojXAHVibDNLoA3", "-Lxh8nt3sOOmw-D-1Nt0", "-LxkauCjvh1-TU5FM3aV", "-LxkzZDQYGV9ouk_LIFR", "-LxkL54k2e18rMK4rk-0", "-Lxh77saoTHGZVOPK0-k" ],
       "img" : "img/1578084527600_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4785,6 +5131,7 @@
       "texto" : "¿Cuál es el bloque de activación correcto para la función f3?"
     },
     "-Lxh9sN4fPYDkkgcO-fV" : {
+      "cercanas" : [ "-Lxh9sN4fPYDkkgcO-fV", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4811,6 +5158,7 @@
       "texto" : "Durante la compilación de una función en LOOS, ¿Cuándo se  sabe el valor que tendrá el parámetro de ILink?"
     },
     "-LxhAuEo7t6seXKUeyOf" : {
+      "cercanas" : [ "-LxhAuEo7t6seXKUeyOf", "-Lxkrtgla16Y6mxmHbww", "-LxhPEaM7ohxTTg4WRzw", "-LxhPThjEjn3prdLnBrv", "-LxRLF-ba8f74BULyJEp", "-LxkyaQuNlJ3AU5iIaPY" ],
       "img" : "img/1578084836530_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4838,6 +5186,7 @@
       "texto" : "Dado el siguiente código, ¿cuál es el código correcto para realizar la llamada a la función p2 desde p3?"
     },
     "-LxhFYbZKk_TBACAai1A" : {
+      "cercanas" : [ "-LxhFYbZKk_TBACAai1A", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4864,6 +5213,7 @@
       "texto" : " La generación de código de las instrucciones de control de flujo se basa en"
     },
     "-LxhFkAiBjJpdZhIDSFZ" : {
+      "cercanas" : [ "-LxhFkAiBjJpdZhIDSFZ", "-Lxkt6pbGhp5UxgJjaTG", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4890,6 +5240,7 @@
       "texto" : "¿Cuantos saltos (ya sean condicionales o incondicionales) se necesitan en la generación de código de la instrucción if (condición) instrucción else instrucción?"
     },
     "-LxhFxZYlz0WnAvz3MLW" : {
+      "cercanas" : [ "-LxhFxZYlz0WnAvz3MLW", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -4916,6 +5267,7 @@
       "texto" : "En LOOS, al analizar un identificador de una variable en una expresión, ¿Cuándo se genera el código para acceder a la variable?"
     },
     "-LxhGr8k1_YFDexgwAE2" : {
+      "cercanas" : [ "-LxhGr8k1_YFDexgwAE2", "-LxkzooFo-l7iGfzXaSM", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578086396725_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4943,6 +5295,7 @@
       "texto" : "Respecto al fragmento generación de código del bucle while que se muestra en el siguiente cuadro, elegir la respuesta que complete mejor dicha implementación"
     },
     "-LxhH5qPt0aj83GF4PJZ" : {
+      "cercanas" : [ "-LxhH5qPt0aj83GF4PJZ", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "img" : "img/1578086461027_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -4970,6 +5323,7 @@
       "texto" : "¿Cuál es el número total de instrucciones de salto condicional e incondicional que se ejecutan en el siguiente código de LOOS?"
     },
     "-LxhHMxXJvbBwt5I6ob5" : {
+      "cercanas" : [ "-LxhHMxXJvbBwt5I6ob5", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -4996,6 +5350,7 @@
       "texto" : "La generación del código de una suma (ej. a+b) en LOOS necesita"
     },
     "-LxhHhOsg3TyUaQ8r_ko" : {
+      "cercanas" : [ "-LxhHhOsg3TyUaQ8r_ko", "-LxktCp9rnET32imJhZm", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5022,6 +5377,7 @@
       "texto" : "¿Qué instrucciones se encuentran al final del código de una función?"
     },
     "-LxhHo1IXnIr3COApfGg" : {
+      "cercanas" : [ "-LxhHo1IXnIr3COApfGg", "-LxRIyhGV0dmPBs-Wn3h", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5048,6 +5404,7 @@
       "texto" : "¿Cuántas conversiones de tipos generará el compilador de LOOS para la expresión a+b*c+d donde las variables se han declarado como a:integer, b:integer, c:integer, i d:real?"
     },
     "-LxhHtwSc8czLgJeSb-I" : {
+      "cercanas" : [ "-LxhHtwSc8czLgJeSb-I", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5074,6 +5431,7 @@
       "texto" : "¿Qué ventajas aporta la generación de código de expresiones basada en variables temporales?"
     },
     "-LxhOjRqdlSzknINYBY4" : {
+      "cercanas" : [ "-LxhOjRqdlSzknINYBY4", "-LxhP-j_9mLcSmcO1klz", "-LxkbF6FRH0YNtdsyvv_", "-LxhPiZvwYY_sKIkiVi4", "-LxRLLsNmWSiRbwleyRq", "-LxgrpQ-cu_0O2yu8a5j" ],
       "img" : "img/1578088462331_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5101,6 +5459,7 @@
       "texto" : "¿Cuál es el trozo de código que debería generar el compilador para la instrucción c= 10*b + a del siguiente código? "
     },
     "-LxhP-j_9mLcSmcO1klz" : {
+      "cercanas" : [ "-LxhP-j_9mLcSmcO1klz", "-LxhOjRqdlSzknINYBY4", "-LxkbF6FRH0YNtdsyvv_", "-LxhPiZvwYY_sKIkiVi4", "-LxRLLsNmWSiRbwleyRq", "-LxgrpQ-cu_0O2yu8a5j" ],
       "img" : "img/1578088533169_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5128,6 +5487,7 @@
       "texto" : "¿Cuál es el trozo de código que debería generar el compilador para la instrucción d= a/(a+10) del siguiente código? "
     },
     "-LxhPEaM7ohxTTg4WRzw" : {
+      "cercanas" : [ "-LxhPEaM7ohxTTg4WRzw", "-Lxl-t755M1WNjKZgGcd", "-LxhPThjEjn3prdLnBrv", "-LxkyaQuNlJ3AU5iIaPY", "-LxhAuEo7t6seXKUeyOf", "-Lxl-BN2nlcVyR_HMTJB" ],
       "img" : "img/1578088594024_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5155,6 +5515,7 @@
       "texto" : "Respecto al código del main, ¿cuál sería el código correcto para la llamada \nc=f(a,b)?"
     },
     "-LxhPThjEjn3prdLnBrv" : {
+      "cercanas" : [ "-LxhPThjEjn3prdLnBrv", "-Lxl-ehtU7Mylo14MRBO", "-LxhPEaM7ohxTTg4WRzw", "-Lxl-t755M1WNjKZgGcd", "-LxkyaQuNlJ3AU5iIaPY", "-LxhAuEo7t6seXKUeyOf" ],
       "img" : "img/1578088655931_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5182,6 +5543,7 @@
       "texto" : "Respecto al código de la función f, ¿cuál sería el código correcto para realizar return a*b[0]?"
     },
     "-LxhPiZvwYY_sKIkiVi4" : {
+      "cercanas" : [ "-LxhPiZvwYY_sKIkiVi4", "-LxhP-j_9mLcSmcO1klz", "-LxhOjRqdlSzknINYBY4", "-LxRLLsNmWSiRbwleyRq", "-LxkbF6FRH0YNtdsyvv_", "-LxgrpQ-cu_0O2yu8a5j" ],
       "img" : "img/1578088720906_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5209,6 +5571,7 @@
       "texto" : "Indicar el código que generaría el compilador para la instrucción a4[1] = a+10;"
     },
     "-LxhQ-dqIQLfOt09Tabd" : {
+      "cercanas" : [ "-LxhQ-dqIQLfOt09Tabd", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "img" : "img/1578088794952_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5236,6 +5599,7 @@
       "texto" : "¿Cuál es el código necesario para realizar la llamada b = f(a)?"
     },
     "-LxkL54k2e18rMK4rk-0" : {
+      "cercanas" : [ "-LxkL54k2e18rMK4rk-0", "-LxkrexHybfogwa0X502", "-Lxh8nt3sOOmw-D-1Nt0", "-Lxh6sZO2n1KxrxOdCkz", "-Lxh9iojXAHVibDNLoA3", "-LxkM8MM2u3Y7ExYXapq" ],
       "img" : "img/1578137836470_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5263,6 +5627,7 @@
       "texto" : "¿Cuál es el tamaño del bloque de activación de la función h en LOOS?"
     },
     "-LxkM8MM2u3Y7ExYXapq" : {
+      "cercanas" : [ "-LxkM8MM2u3Y7ExYXapq", "-Lxkrtgla16Y6mxmHbww", "-LxkL54k2e18rMK4rk-0", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5289,6 +5654,7 @@
       "texto" : "¿Cuántas conversiones de tipos de datos se han de realizar en LOOS dentro del código de la función h de la pregunta 8?"
     },
     "-LxkMK4G6b13RMj5dKEe" : {
+      "cercanas" : [ "-LxkMK4G6b13RMj5dKEe", "-Lxks4NgqKIrAZTsiX2K", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578138160025_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5316,6 +5682,7 @@
       "texto" : "¿cuál será el contenido de los displays de los siguientes procedimientos en LOOS?"
     },
     "-LxkN50-DxK38NSaMed4" : {
+      "cercanas" : [ "-LxkN50-DxK38NSaMed4", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5338,10 +5705,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "GENERACIÓN DE CÓDIGO",
       "texto" : "Al salir de un <bloc> ( {  decvar, instrucción1, instrucción2,… }) …"
     },
     "-LxkNG9PwayB30-3T0aH" : {
+      "cercanas" : [ "-LxkNG9PwayB30-3T0aH", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5368,6 +5740,7 @@
       "texto" : "La instrucción return genera… "
     },
     "-Lxka7dFIYzkYb6-lgAF" : {
+      "cercanas" : [ "-Lxka7dFIYzkYb6-lgAF", "-LxktKSKYb-b7FJqgioT", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5394,6 +5767,7 @@
       "texto" : "¿En qué casos el compilador de LOOS llama al constructor por copia de forma implícita? "
     },
     "-LxkaGR8dvPiuEUj-Vwu" : {
+      "cercanas" : [ "-LxkaGR8dvPiuEUj-Vwu", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5420,6 +5794,7 @@
       "texto" : "¿En qué situación el display de una función tendrá más elementos que el display de la función que la llama?"
     },
     "-LxkaMvRieR4dASXXO0g" : {
+      "cercanas" : [ "-LxkaMvRieR4dASXXO0g", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5446,6 +5821,7 @@
       "texto" : "¿Cuál es la representación de la dirección de una variable local? "
     },
     "-LxkaRm_EmGNmVYnp9B7" : {
+      "cercanas" : [ "-LxkaRm_EmGNmVYnp9B7", "-Lv_jS4CgA0dybSpCspn", "-Lxl-BN2nlcVyR_HMTJB", "-Lxh6R8S8frb4BjRwzvI", "-Lxl-ehtU7Mylo14MRBO", "-Lxl-QWoDA3iEhqETVXB" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5468,10 +5844,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "GENERACIÓN DE CÓDIGO",
       "texto" : "Al salir de una función se ejecuta la instrucción IRet, ¿Cuál es la siguiente instrucción que se ejecuta?"
     },
     "-LxkaXDrqnHSCiVn7uiJ" : {
+      "cercanas" : [ "-LxkaXDrqnHSCiVn7uiJ", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5498,6 +5879,7 @@
       "texto" : "La creación del display se hace … "
     },
     "-LxkaieAjJhhodismdQZ" : {
+      "cercanas" : [ "-LxkaieAjJhhodismdQZ", "-LxRLVp2fyJP7vATB0Pi", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5524,6 +5906,7 @@
       "texto" : "¿Por qué el compilador de LOOS utiliza representaciones de direcciones (cod.adreca)?"
     },
     "-LxkauCjvh1-TU5FM3aV" : {
+      "cercanas" : [ "-Lxh8nt3sOOmw-D-1Nt0", "-LxkauCjvh1-TU5FM3aV", "-LxkzZDQYGV9ouk_LIFR", "-Lxh9iojXAHVibDNLoA3", "-LxkL54k2e18rMK4rk-0", "-Lxh77saoTHGZVOPK0-k" ],
       "img" : "img/1578142244281_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5551,6 +5934,7 @@
       "texto" : "¿Cuál es el bloque de activación correcto para la función f1?"
     },
     "-LxkbF6FRH0YNtdsyvv_" : {
+      "cercanas" : [ "-LxkbF6FRH0YNtdsyvv_", "-LxhOjRqdlSzknINYBY4", "-LxhP-j_9mLcSmcO1klz", "-LxhPiZvwYY_sKIkiVi4", "-LxRLLsNmWSiRbwleyRq", "-LxgrpQ-cu_0O2yu8a5j" ],
       "img" : "img/1578142333994_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5578,6 +5962,7 @@
       "texto" : "¿Cuál es el trozo de código que debería generar el compilador para la función f2 del siguiente código?"
     },
     "-Lxkpddr85syF8fNdLt6" : {
+      "cercanas" : [ "-Lxkpddr85syF8fNdLt6", "-Lv_kJct9dhpSOK2d5-6", "-LxkppNe26Q2S5zEdmGy", "-LulrTQ0dWldVhtMYKNw", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5600,10 +5985,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 0
+      },
       "tema" : "ORGANIZACION DE MEMORIA",
       "texto" : "¿Cuál de las siguientes afirmaciones es cierta?"
     },
     "-LxkpjP7Qkp10YKh31f5" : {
+      "cercanas" : [ "-LxkpjP7Qkp10YKh31f5", "-LxNHnGBJ0Vl2hGOD4cG", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5630,6 +6020,7 @@
       "texto" : "¿Qué estructuras de memoria forman la máquina abstracta para la ejecución de programas imperativos?"
     },
     "-LxkppNe26Q2S5zEdmGy" : {
+      "cercanas" : [ "-LxkppNe26Q2S5zEdmGy", "-LulrTQ0dWldVhtMYKNw", "-Lv_kJct9dhpSOK2d5-6", "-Lxkpddr85syF8fNdLt6", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5656,6 +6047,7 @@
       "texto" : "¿Cuál de las siguientes afirmaciones es cierta si no hay alineación?"
     },
     "-LxkpxYxnKiTXieoAsVS" : {
+      "cercanas" : [ "-LxkpxYxnKiTXieoAsVS", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5682,6 +6074,7 @@
       "texto" : "¿Cuál es la alineación que ha de cumplir una estructura? "
     },
     "-LxkqU3lCEyzSV7ByPvJ" : {
+      "cercanas" : [ "-LxkqU3lCEyzSV7ByPvJ", "-Lxgnu4TjyTrXqF2HTsa", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5708,6 +6101,7 @@
       "texto" : "¿Para qué se utiliza la pila?"
     },
     "-Lxkqa-2Ztp5l7HltYkY" : {
+      "cercanas" : [ "-Lxkqa-2Ztp5l7HltYkY", "-Lxh6sZO2n1KxrxOdCkz", "-LxkL54k2e18rMK4rk-0", "-LxkrexHybfogwa0X502", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5734,6 +6128,7 @@
       "texto" : "¿Cuál es el tamaño del display de un procedimiento? "
     },
     "-LxkqnZr9R5iusn16AB7" : {
+      "cercanas" : [ "-LxkqnZr9R5iusn16AB7", "-LxNTCzCCGK2kruygxzA", "-Lxkqv_OzoMWMJxPw1Gz", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -5760,6 +6155,7 @@
       "texto" : "¿A que apunta el enlace dinámico del bloque de activación de una función f? "
     },
     "-Lxkqv_OzoMWMJxPw1Gz" : {
+      "cercanas" : [ "-Lxkqv_OzoMWMJxPw1Gz", "-Lxh77saoTHGZVOPK0-k", "-LxRLF-ba8f74BULyJEp", "-LxkqnZr9R5iusn16AB7", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5786,6 +6182,7 @@
       "texto" : "¿Dónde se guarda el valor de retorno de una función f? "
     },
     "-LxkrPXLx3BLHfeO-N_s" : {
+      "cercanas" : [ "-LxkrPXLx3BLHfeO-N_s", "-LxNLRFvElgGnfYH5V0h", "-LxNKeI84bTHoN1IQmxi", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE" ],
       "img" : "img/1578146571006_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5813,6 +6210,7 @@
       "texto" : "¿Cuántos bytes ocupa la siguiente estructura struct a? Tenemos definidas la estructura a y la unión b como se ve a continuación:"
     },
     "-LxkrVf-0GLVbc8buO1f" : {
+      "cercanas" : [ "-LxkrVf-0GLVbc8buO1f", "-LxNLaejyeHW_FctXRKa", "-LxRKwtSFnoye8QXMFbU", "-LuYKEj3uDOqrnzy6SAL", "-Lxh6sZO2n1KxrxOdCkz", "-LuYIvkKVu_uyO-XUYsh" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5839,6 +6237,7 @@
       "texto" : "¿Cuál es el número máximo de elementos que llegaremos a tener en la pila al evaluar la expresión 10*2 + 3*4*5*6 en LOOS? "
     },
     "-LxkrexHybfogwa0X502" : {
+      "cercanas" : [ "-LxkrexHybfogwa0X502", "-LxkL54k2e18rMK4rk-0", "-Lxh8nt3sOOmw-D-1Nt0", "-Lxh6sZO2n1KxrxOdCkz", "-Lxh9iojXAHVibDNLoA3", "-Lxh7FXt12uT4cdEyFWX" ],
       "img" : "img/1578146638267_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5866,6 +6265,7 @@
       "texto" : "¿Cuál es el tamaño del bloque de activación de la función f en LOOS?"
     },
     "-Lxkrtgla16Y6mxmHbww" : {
+      "cercanas" : [ "-Lxkrtgla16Y6mxmHbww", "-LxkM8MM2u3Y7ExYXapq", "-LxhAuEo7t6seXKUeyOf", "-LuYIvkKVu_uyO-XUYsh", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578146698649_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5893,6 +6293,7 @@
       "texto" : "¿Cuántas conversiones de tipos de datos se han de realizar en LOOS dentro del código de la siguiente expresión?"
     },
     "-Lxks4NgqKIrAZTsiX2K" : {
+      "cercanas" : [ "-LxkMK4G6b13RMj5dKEe", "-Lxks4NgqKIrAZTsiX2K", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578146746518_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5916,10 +6317,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "ORGANIZACION DE MEMORIA",
       "texto" : "¿cuál será el contenido de los displays de los siguientes procedimientos en LOOS?"
     },
     "-LxksK1luQHCU1-P0xN-" : {
+      "cercanas" : [ "-LxksK1luQHCU1-P0xN-", "-Lxh5NRizVPUCoKighJR", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578146810651_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -5947,6 +6353,7 @@
       "texto" : "¿Cuántas direcciones simbólicas (sólo definiciones) genera el siguiente código?"
     },
     "-LxksTh3xvgFxNR7jWA5" : {
+      "cercanas" : [ "-LxksTh3xvgFxNR7jWA5", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5973,6 +6380,7 @@
       "texto" : "¿Qué código genera la regla <bloc>?"
     },
     "-Lxks_GnGauTJBJz1C6y" : {
+      "cercanas" : [ "-Lxks_GnGauTJBJz1C6y", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -5999,6 +6407,7 @@
       "texto" : "En la generación de código de una expresión aritmética …"
     },
     "-LxksgmLZ7qDxf03ds2F" : {
+      "cercanas" : [ "-LxksgmLZ7qDxf03ds2F", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -6025,6 +6434,7 @@
       "texto" : "Las posibles representaciones de direcciones son"
     },
     "-Lxkt-oC_KJSIuA8mlFv" : {
+      "cercanas" : [ "-Lxkt-oC_KJSIuA8mlFv", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -6051,6 +6461,7 @@
       "texto" : "¿El resultado de una expresión se guarda? "
     },
     "-Lxkt6pbGhp5UxgJjaTG" : {
+      "cercanas" : [ "-Lxkt6pbGhp5UxgJjaTG", "-LxhFkAiBjJpdZhIDSFZ", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -6077,6 +6488,7 @@
       "texto" : "La generación de código de if <expressio> then <instruccio> else <instruccio> "
     },
     "-LxktCp9rnET32imJhZm" : {
+      "cercanas" : [ "-LxktCp9rnET32imJhZm", "-LxhHhOsg3TyUaQ8r_ko", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -6103,6 +6515,7 @@
       "texto" : "¿Qué instrucciones se generan para crear un display?"
     },
     "-LxktKSKYb-b7FJqgioT" : {
+      "cercanas" : [ "-LxktKSKYb-b7FJqgioT", "-Lxka7dFIYzkYb6-lgAF", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -6129,6 +6542,7 @@
       "texto" : "¿En que casos se llama al constructor por copia?"
     },
     "-LxktPMasKT5GO2sSPhX" : {
+      "cercanas" : [ "-LxktPMasKT5GO2sSPhX", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : false,
@@ -6151,10 +6565,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 1
+      },
       "tema" : "GENERACIÓN DE CÓDIGO",
       "texto" : "¿Cuántos códigos en generación se necesitan para compilar las operaciones aritméticas de suma y resta?"
     },
     "-LxkyaQuNlJ3AU5iIaPY" : {
+      "cercanas" : [ "-LxkyaQuNlJ3AU5iIaPY", "-Lxl-t755M1WNjKZgGcd", "-LxhPThjEjn3prdLnBrv", "-LxhPEaM7ohxTTg4WRzw", "-LxhAuEo7t6seXKUeyOf", "-Lxl-BN2nlcVyR_HMTJB" ],
       "img" : "img/Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6182,6 +6601,7 @@
       "texto" : "¿Cuál es el código correcto que ha de generar el compilador de LOOS para el procedimiento main?"
     },
     "-LxkzZDQYGV9ouk_LIFR" : {
+      "cercanas" : [ "-Lxh8nt3sOOmw-D-1Nt0", "-LxkauCjvh1-TU5FM3aV", "-LxkzZDQYGV9ouk_LIFR", "-Lxh9iojXAHVibDNLoA3", "-LxkL54k2e18rMK4rk-0", "-Lxh77saoTHGZVOPK0-k" ],
       "img" : "img/1578148707851_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6209,6 +6629,7 @@
       "texto" : "¿Cuál es el bloque de activación correcto para la función f1?"
     },
     "-LxkzooFo-l7iGfzXaSM" : {
+      "cercanas" : [ "-LxkzooFo-l7iGfzXaSM", "-LxhGr8k1_YFDexgwAE2", "-LuYIvkKVu_uyO-XUYsh", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa" ],
       "img" : "img/1578148775809_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6236,6 +6657,7 @@
       "texto" : "Respecto al fragmento generación de código del bucle while que se muestra en el siguiente cuadro, elegir la respuesta que complete mejor dicha implementación:"
     },
     "-Lxl-BN2nlcVyR_HMTJB" : {
+      "cercanas" : [ "-Lxl-BN2nlcVyR_HMTJB", "-Lxl-ehtU7Mylo14MRBO", "-Lxl-QWoDA3iEhqETVXB", "-Lv_jS4CgA0dybSpCspn", "-LxkaRm_EmGNmVYnp9B7", "-LxgmnyLUcF0Q1dxXhfm" ],
       "img" : "img/1578148872312_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6259,10 +6681,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 1,
+        "incorrecta" : 2
+      },
       "tema" : "GENERACIÓN DE CÓDIGO",
       "texto" : "Respecto al siguiente código...\n¿Cuál sería el código correcto en LOOS para la instrucción b[0] = 1.0?"
     },
     "-Lxl-QWoDA3iEhqETVXB" : {
+      "cercanas" : [ "-Lxl-QWoDA3iEhqETVXB", "-Lxl-ehtU7Mylo14MRBO", "-Lxl-BN2nlcVyR_HMTJB", "-Lv_jS4CgA0dybSpCspn", "-Lxl-t755M1WNjKZgGcd", "-LxkaRm_EmGNmVYnp9B7" ],
       "img" : "img/1578148934374_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6286,10 +6713,15 @@
           "texto" : "Ninguna de las anteriores"
         }
       },
+      "stats" : {
+        "correcta" : 0,
+        "incorrecta" : 2
+      },
       "tema" : "GENERACIÓN DE CÓDIGO",
       "texto" : "Respecto al siguiente código ...\n¿Cuál sería el código correcto en LOOS para la llamada f(b[0]+a)?"
     },
     "-Lxl-ehtU7Mylo14MRBO" : {
+      "cercanas" : [ "-Lxl-ehtU7Mylo14MRBO", "-Lxl-QWoDA3iEhqETVXB", "-Lxl-BN2nlcVyR_HMTJB", "-Lv_jS4CgA0dybSpCspn", "-LxhPThjEjn3prdLnBrv", "-LxkaRm_EmGNmVYnp9B7" ],
       "img" : "img/1578148996587_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6317,6 +6749,7 @@
       "texto" : "Respecto al siguiente código ...\n¿Cuál sería el código correcto en LOOS para la instrucción return r?"
     },
     "-Lxl-t755M1WNjKZgGcd" : {
+      "cercanas" : [ "-Lxl-t755M1WNjKZgGcd", "-Lxl-QWoDA3iEhqETVXB", "-LxhPEaM7ohxTTg4WRzw", "-LxhPThjEjn3prdLnBrv", "-LxkyaQuNlJ3AU5iIaPY", "-LxhAuEo7t6seXKUeyOf" ],
       "img" : "img/1578149055608_Capture.PNG",
       "respuestas" : {
         "respuesta1" : {
@@ -6344,6 +6777,7 @@
       "texto" : "¿Cuál sería el código correcto para la llamada P3()? "
     },
     "-Lxl0-w6RBqTP7hSZA-Q" : {
+      "cercanas" : [ "-Lxl0-w6RBqTP7hSZA-Q", "-LxgnIrjElP0yBaG6Vws", "-LxgnWHKFpIip_1r16bE", "-Lxgnu4TjyTrXqF2HTsa", "-Lxgo1_5eIP-CQQt8EXw", "-Lxgocacujsb9-AVgCGr" ],
       "respuestas" : {
         "respuesta1" : {
           "respuesta_correcta" : true,
@@ -6371,26 +6805,14 @@
     }
   },
   "puntuaciones" : {
-    "4etyrjJuBDOqnsprv0wVenGSFb22" : {
-      "email" : "jorgedamemihamburguesa@gmail.com",
-      "score" : 0
-    },
-    "JYFPN3rl7lYkNOiqKNSyr8WwrJG3" : {
-      "email" : "holi@h.com",
-      "score" : 1650
-    },
-    "TLg9WVsCRGaLX8W32sZUotOvc112" : {
-      "email" : "mymail@mail.com",
-      "score" : 0
-    },
-    "Y642Q7eoOONAnbxiOPSxsnp1gyq2" : {
-      "email" : "quieromihamburguesa@gmail.com",
-      "score" : 0
-    },
     "aFxNa7LfFIgFKKxTRIXBaAqLJDR2" : {
       "email" : "user@server.com",
-      "score" : 650
+      "score" : 1350
     }
+  },
+  "roles" : {
+    "JYFPN3rl7lYkNOiqKNSyr8WwrJG3" : "profesor",
+    "aFxNa7LfFIgFKKxTRIXBaAqLJDR2" : "profesor"
   },
   "temas" : [ null, "ANÁLISIS LEXICOGRÁFICO", "ANÁLISIS SEMÁNTICO", "ANÁLISIS SINTÁCTICO", "GENERACIÓN DE CÓDIGO", "ORGANIZACION DE MEMORIA" ]
 }

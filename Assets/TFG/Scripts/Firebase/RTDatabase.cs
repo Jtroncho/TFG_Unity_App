@@ -22,6 +22,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TFG.Events;
 using TFG.Authentification;
+using TFG.UI;
 
 
 // Handler for UI buttons on the scene.  Also performs some
@@ -35,6 +36,7 @@ namespace TFG.Database
     public class RTDatabase : Singleton<RTDatabase>
     {
         Auth _auth;
+        UI_Manager _uiManager;
         ArrayList leaderBoard = new ArrayList();
         public IEnumerable<DataSnapshot> questions;
         public IEnumerable<DataSnapshot> temas;
@@ -67,6 +69,7 @@ namespace TFG.Database
             //DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
 
             _auth = AppManager.Instance.UserAuthentification;
+            _uiManager = UI_Manager.Instance;
 
             FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
                 dependencyStatus = task.Result;
@@ -607,6 +610,55 @@ namespace TFG.Database
                       }
                   }
               });
+        }
+
+        public void UpdateQuestionStats(string key, bool correct)
+        {
+            long correctTimes = 0, incorrectTimes = 0;
+            Dictionary<string, object> statsQuestion;
+            if(correct && _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)].ContainsKey("stats"))
+            {
+                statsQuestion = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)]["stats"] as Dictionary<string, object>;
+                correctTimes = (long)statsQuestion["correcta"];
+                correctTimes++;
+                UpdateQuestionCorrect(key, correctTimes);
+            }
+            else if (!correct && _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)].ContainsKey("stats"))
+            {
+                statsQuestion = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)]["stats"] as Dictionary<string, object>;
+                incorrectTimes = (long)statsQuestion["incorrecta"];
+                incorrectTimes++;
+                UpdateQuestionIncorrect(key, incorrectTimes);
+            }
+            else
+            {
+                StartQuestionStats(key, correct);
+            }
+        }
+
+        void UpdateQuestionCorrect(string key, long number)
+        {
+            Dictionary<string, object> childUpdates = new Dictionary<string, object>();
+            childUpdates["correcta"] = number;
+
+            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key + "/stats").UpdateChildrenAsync(childUpdates);
+        }
+
+        void UpdateQuestionIncorrect(string key, long number)
+        {
+            Dictionary<string, object> childUpdates = new Dictionary<string, object>();
+            childUpdates["incorrecta"] = number;
+
+            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key + "/stats").UpdateChildrenAsync(childUpdates);
+        }
+
+        void StartQuestionStats(string key, bool correct)
+        {
+            Dictionary<string, object> childUpdates = new Dictionary<string, object>();
+            childUpdates["correcta"] = correct ? 1 : 0;
+            childUpdates["incorrecta"] = !correct ? 0 : 1;
+
+            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key + "/stats").UpdateChildrenAsync(childUpdates);
         }
     }
 }

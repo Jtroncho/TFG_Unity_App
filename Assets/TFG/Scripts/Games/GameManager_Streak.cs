@@ -28,6 +28,7 @@ namespace TFG.Games
         Dictionary<string, object> answer = new Dictionary<string, object>();
         string answerText;
         string lastQuestionKey;
+        [SerializeField] TMP_Text responseRatio;
 
         //List<int> basicList = new List<int>(new int[5] { 0, 1, 2, 3, 4 });
         [SerializeField] LeaderboardEntry userScore = new LeaderboardEntry();
@@ -87,6 +88,7 @@ namespace TFG.Games
                 lastQuestionKey = _uiManager._questionsIDs[Random.Range(0, _uiManager._questionsIDs.Count)];
                 Debug.Log("Seleccionada Pregunta Random");
             }
+
             assingRandom = new List<int>(new int[5] { 0, 1, 2, 3, 4 });
 
             //La ultima respuesta se queda en el sitio.
@@ -103,6 +105,20 @@ namespace TFG.Games
             _uiManager.gameQuestion.text = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["texto"] as string;
             _uiManager.gameScore.text = _score.ToString();
             _uiManager.gameStreak.text = _streak.ToString();
+
+            if (_uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)].ContainsKey("stats"))
+            {
+                responseRatio.text = "Correct/Incorrect : ";
+                var stats = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["stats"] as Dictionary<string, object>;
+                var statNum = (long)stats["correcta"];
+                responseRatio.text += statNum.ToString() + "/";
+                statNum = (long)stats["incorrecta"];
+                responseRatio.text += statNum.ToString();
+            }
+            else
+            {
+                responseRatio.text = "No stats yet.";
+            }
 
             //Debug.Log("N:" + randomAssingment.Length.ToString());
 
@@ -143,12 +159,18 @@ namespace TFG.Games
                 _questionsACorrect += 1;
                 _parcialScore = (int)((float)(_basicScore * 4) * _streakIncrements);
                 _lastQuestionCorrect = true;
+
+                //_uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["respuestas"]
+                _database.UpdateQuestionStats(lastQuestionKey, isCorrect[isResponseCorrect]);
             }
             else
             {
                 _questionsAIncorrect += 1;
                 _parcialScore = -_basicScore;
                 _lastQuestionCorrect = false;
+
+                //_uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["respuestas"]
+                _database.UpdateQuestionStats(lastQuestionKey, isCorrect[isResponseCorrect]);
             }
             _score += _parcialScore;
             userScore.score = _parcialScore;

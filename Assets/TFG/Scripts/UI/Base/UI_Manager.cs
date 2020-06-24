@@ -69,7 +69,7 @@ namespace TFG.UI
         public List<string> _themesIDs = new List<string>();
         public List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
         List<string> _themesValues = new List<string>();
-        [SerializeField] TMP_Text actionText;
+        [SerializeField] TMP_Text actionText, respondedRatio;
         #endregion
 
         #region showScores
@@ -306,6 +306,20 @@ namespace TFG.UI
             answer = answers["respuesta5"] as Dictionary<string, object>;
             _answer5.text = answer["texto"] as string;
             _toggle5.isOn = answer["respuesta_correcta"].ToString() == "True";
+
+            if(_selectedQuestionValues.ContainsKey("stats"))
+            {
+                respondedRatio.text = "Correct/Incorrect : ";
+                var stats = _selectedQuestionValues["stats"] as Dictionary<string, object>;
+                var statNum = (long)stats["correcta"];
+                respondedRatio.text += statNum.ToString() + "/";
+                statNum = (long)stats["incorrecta"];
+                respondedRatio.text += statNum.ToString();
+            }
+            else
+            {
+                respondedRatio.text = "No stats yet.";
+            }
 
             actionText.text = "";
             Debug.Log("Action text cleared.");

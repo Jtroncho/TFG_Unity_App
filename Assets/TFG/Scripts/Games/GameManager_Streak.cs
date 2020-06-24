@@ -19,7 +19,7 @@ namespace TFG.Games
         Auth _auth;
         //bool isCorrect_1, isCorrect_2, isCorrect_3, isCorrect_4, isCorrect_5;
         bool[] isCorrect = new bool [5];
-        bool _lastQuestion;
+        bool _lastQuestionCorrect;
         List<int> assingRandom = new List<int>();
         int[] randomAssingment = new int[5];
         //string[] answerStrings = new string[5];
@@ -27,6 +27,7 @@ namespace TFG.Games
         List<Button> buttonsArray = new List<Button>();
         Dictionary<string, object> answer = new Dictionary<string, object>();
         string answerText;
+        string lastQuestionKey;
 
         //List<int> basicList = new List<int>(new int[5] { 0, 1, 2, 3, 4 });
         [SerializeField] LeaderboardEntry userScore = new LeaderboardEntry();
@@ -49,14 +50,14 @@ namespace TFG.Games
 
         void OnEnable()
         {
-            Debug.Log("Game Enabling");
+            //Debug.Log("Game Enabling");
 
             _questionsAnswered = 0;
             _questionsACorrect = 0;
             _questionsAIncorrect = 0;
             _score = 0;
             _streakIncrements = 1f;
-            _lastQuestion = false;
+            _lastQuestionCorrect = false;
             _streak = 0;
             userScore.score = 0;
             _parcialScore = 0;
@@ -67,15 +68,25 @@ namespace TFG.Games
             _uiManager.Answer_4.onClick.AddListener(() => answerPressed(3));
             _uiManager.Answer_5.onClick.AddListener(() => answerPressed(4));
 
-            Debug.Log("Game Enabled");
+            //Debug.Log("Game Enabled");
 
-            loadQuestion();
+            loadQuestion(true);
         }
 
-        void loadQuestion()
+        void loadQuestion(bool lastCorrect)
         {
-            Debug.Log("Loading Game Question");
-            int randomQuestion = Random.Range(0, _uiManager._questionsIDs.Count);
+            //Debug.Log("Loading Game Question");
+            if (!lastCorrect && _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)].ContainsKey("cercanas"))
+            {
+                var questionCercanas = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["cercanas"] as List<object>;
+                lastQuestionKey = questionCercanas[Random.Range(0, 6)] as string;
+                Debug.Log("Seleccionada Pregunta Cercana");
+            }
+            else
+            {
+                lastQuestionKey = _uiManager._questionsIDs[Random.Range(0, _uiManager._questionsIDs.Count)];
+                Debug.Log("Seleccionada Pregunta Random");
+            }
             assingRandom = new List<int>(new int[5] { 0, 1, 2, 3, 4 });
 
             //La ultima respuesta se queda en el sitio.
@@ -89,56 +100,34 @@ namespace TFG.Games
             _uiManager.questionNumber.text = _questionsAnswered.ToString();
             _uiManager.questionsCorrect.text = _questionsACorrect.ToString();
             _uiManager.questionsIncorrect.text = _questionsAIncorrect.ToString();
-            _uiManager.gameQuestion.text = _uiManager._questionsValues[randomQuestion]["texto"] as string;
+            _uiManager.gameQuestion.text = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["texto"] as string;
             _uiManager.gameScore.text = _score.ToString();
             _uiManager.gameStreak.text = _streak.ToString();
 
             //Debug.Log("N:" + randomAssingment.Length.ToString());
 
-            var answers = _uiManager._questionsValues[randomQuestion]["respuestas"] as Dictionary<string, object>;
+            var answers = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["respuestas"] as Dictionary<string, object>;
             
             for (int i = 0; i < 5; i++)
             {
                 //Debug.Log("iter: " + i.ToString() + ", item: " + randomAssingment[i].ToString() + " : " + answerStrings.Length.ToString() + ", " + buttonsArray.Count.ToString() + " : " + randomAssingment.Length.ToString());
-                Debug.Log("Iter: " + i.ToString() + ", Random Number: " + randomAssingment[i].ToString() + ", " + "Respuesta: " + answerStrings[randomAssingment[i]]);
+                //Debug.Log("Iter: " + i.ToString() + ", Random Number: " + randomAssingment[i].ToString() + ", " + "Respuesta: " + answerStrings[randomAssingment[i]]);
                 answer = answers[answerStrings[randomAssingment[i]]] as Dictionary<string, object>;
                 isCorrect[i] = answer["respuesta_correcta"].ToString() == "True";
                 answerText = answer["texto"] as string;
                 buttonsArray[i].GetComponentInChildren<TMP_Text>().text = answerText;
-                Debug.Log(i.ToString() + " : " + answerText);
+                //Debug.Log(i.ToString() + " : " + answerText);
                 //Debug.Log(buttonsArray[i].gameObject.name);
                 //Debug.Log(buttonsArray[i].GetComponentInChildren<TMP_Text>().text);
                 //Debug.Log(i.ToString() + " Answer " + answerStrings[randomAssingment[i]]);
             }
-            Debug.Log("--------------------");
-
-            /*
-            _uiManager.Answer_1.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            //isCorrect_1 = answer["respuesta_correcta"].ToString() == "True";
-            isCorrect[randomAssingment[0]] = answer["respuesta_correcta"].ToString() == "True";
-            answer = answers["respuesta2"] as Dictionary<string, object>;
-            _uiManager.Answer_2.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            //isCorrect_2 = answer["respuesta_correcta"].ToString() == "True";
-            isCorrect[randomAssingment[1]] = answer["respuesta_correcta"].ToString() == "True";
-            answer = answers["respuesta3"] as Dictionary<string, object>;
-            _uiManager.Answer_3.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            //isCorrect_3 = answer["respuesta_correcta"].ToString() == "True";
-            isCorrect[randomAssingment[2]] = answer["respuesta_correcta"].ToString() == "True";
-            answer = answers["respuesta4"] as Dictionary<string, object>;
-            _uiManager.Answer_4.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            //isCorrect_4 = answer["respuesta_correcta"].ToString() == "True";
-            isCorrect[randomAssingment[3]] = answer["respuesta_correcta"].ToString() == "True";
-            answer = answers["respuesta5"] as Dictionary<string, object>;
-            _uiManager.Answer_5.GetComponentInChildren<TMP_Text>().text = answer["texto"] as string;
-            //isCorrect_5 = answer["respuesta_correcta"].ToString() == "True";
-            isCorrect[randomAssingment[4]] = answer["respuesta_correcta"].ToString() == "True";
-            */
+            //Debug.Log("--------------------");
         }
 
         void answerPressed(int isResponseCorrect) //(bool isAnswerCorrect)
         {
             _questionsAnswered += 1;
-            if (_lastQuestion)
+            if (_lastQuestionCorrect)
             {
                 _streak += 1;
                 _streakIncrements += 0.25f;
@@ -153,30 +142,30 @@ namespace TFG.Games
             {
                 _questionsACorrect += 1;
                 _parcialScore = (int)((float)(_basicScore * 4) * _streakIncrements);
-                _lastQuestion = true;
+                _lastQuestionCorrect = true;
             }
             else
             {
                 _questionsAIncorrect += 1;
                 _parcialScore = -_basicScore;
-                _lastQuestion = false;
+                _lastQuestionCorrect = false;
             }
             _score += _parcialScore;
             userScore.score = _parcialScore;
             _database.AddScore(userScore);
 
-            loadQuestion();
+            loadQuestion(isCorrect[isResponseCorrect]);
         }
 
         private void OnDisable()
         {
-            Debug.Log("Game About To Disable");
+            //Debug.Log("Game About To Disable");
             _uiManager.Answer_1.onClick.RemoveAllListeners();
             _uiManager.Answer_2.onClick.RemoveAllListeners();
             _uiManager.Answer_3.onClick.RemoveAllListeners();
             _uiManager.Answer_4.onClick.RemoveAllListeners();
             _uiManager.Answer_5.onClick.RemoveAllListeners();
-            Debug.Log("Game Disabled");
+            //Debug.Log("Game Disabled");
         }
     }
 }

@@ -67,7 +67,9 @@ namespace TFG.UI
         public List<string> _questionsIDs = new List<string>();
         //public List<string> _questionsCercanas = new List<string>();
         public List<string> _themesIDs = new List<string>();
+        public List<string> _statsIDs = new List<string>();
         public List<Dictionary<string, object>> _questionsValues = new List<Dictionary<string, object>>();
+        public List<Dictionary<string, object>> _statsValues = new List<Dictionary<string, object>>();
         List<string> _themesValues = new List<string>();
         [SerializeField] TMP_Text actionText, respondedRatio;
         #endregion
@@ -115,6 +117,7 @@ namespace TFG.UI
             DatabaseEvents.dataRetrieved.AddListener(UpdateScores);
             deleteQuestion.onClick.AddListener(DeleteQuestionDB);
             UserEvents.userRoleChanged.AddListener(ShowButtonsForRole);
+            DatabaseEvents.dataRetrieved.AddListener(UpdateStats);
         }
 
         private void OnDisable()
@@ -135,6 +138,7 @@ namespace TFG.UI
             DatabaseEvents.dataRetrieved.RemoveListener(UpdateScores);
             deleteQuestion.onClick.RemoveListener(DeleteQuestionDB);
             UserEvents.userRoleChanged.RemoveListener(ShowButtonsForRole);
+            DatabaseEvents.dataRetrieved.RemoveListener(UpdateStats);
         }
         #endregion
 
@@ -281,7 +285,7 @@ namespace TFG.UI
             //[SerializeField] Toggle _toggle1, _toggle2, _toggle3, _toggle4, _toggle5;
             var themeID = _selectedQuestionValues["tema"] as string;
             ////Debug.Log("Tema de la pregunta: " + themeID + "; ");// + _themesValues[_themesValues.IndexOf(themeID)]);
-            if(_dropdownShowThemes.options.Contains(new TMP_Dropdown.OptionData(themeID)))
+            if( _themesValues.Contains(themeID))//_dropdownShowThemes.options.Contains(new TMP_Dropdown.OptionData(themeID)))
             {
                 int index = _themesValues.IndexOf(themeID);
                 _dropdownShowThemes.value = index;
@@ -307,13 +311,13 @@ namespace TFG.UI
             _answer5.text = answer["texto"] as string;
             _toggle5.isOn = answer["respuesta_correcta"].ToString() == "True";
 
-            if(_selectedQuestionValues.ContainsKey("stats"))
+            if (_statsIDs.Contains(_selectedQuestionID) && _statsIDs != null)
             {
                 respondedRatio.text = "Correct/Incorrect : ";
-                var stats = _selectedQuestionValues["stats"] as Dictionary<string, object>;
-                var statNum = (long)stats["correcta"];
+                var statsQuestion = _statsValues[_statsIDs.IndexOf(_selectedQuestionID)] as Dictionary<string, object>;
+                var statNum = (long)statsQuestion["correcta"];
                 respondedRatio.text += statNum.ToString() + "/";
-                statNum = (long)stats["incorrecta"];
+                statNum = (long)statsQuestion["incorrecta"];
                 respondedRatio.text += statNum.ToString();
             }
             else
@@ -454,6 +458,24 @@ namespace TFG.UI
             }
         }
 
+        void UpdateStats(string retrieved)
+        {
+            if (retrieved.Equals("stats"))
+            {
+                _statsIDs.Clear();
+                _statsValues.Clear();
+                foreach (var statDictionary in _database.stats)
+                {
+                    var stat = statDictionary.Value as Dictionary<string, object>;
+                    _statsValues.Add(stat);
+                    _statsIDs.Add(statDictionary.Key.ToString());
+                    //Debug.Log("Stat: " + statDictionary.Key + "C: " + stat["correcta"] + "I: " + stat["incorrecta"]);
+                }
+                //UpdateSelectedThemeDropdown(0);
+                ////Debug.Log("Themes Dropdown Updated, n of Themes: " + _dropdownShowThemes.options.Count);
+            }
+            ////Debug.Log("Temas Dropdown Invoked");
+        }
 
         #endregion
     }

@@ -80,7 +80,8 @@ namespace TFG.Games
             if (!lastCorrect && _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)].ContainsKey("cercanas"))
             {
                 var questionCercanas = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["cercanas"] as List<object>;
-                lastQuestionKey = questionCercanas[Random.Range(0, 6)] as string;
+                Debug.Log(questionCercanas.Count + " cercanas.");
+                lastQuestionKey = questionCercanas[Random.Range(0, questionCercanas.Count)] as string;
                 Debug.Log("Seleccionada Pregunta Cercana");
             }
             else
@@ -106,10 +107,10 @@ namespace TFG.Games
             _uiManager.gameScore.text = _score.ToString();
             _uiManager.gameStreak.text = _streak.ToString();
 
-            if (_uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)].ContainsKey("stats"))
+            if (_uiManager._statsIDs.Contains(lastQuestionKey))
             {
                 responseRatio.text = "Correct/Incorrect : ";
-                var stats = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(lastQuestionKey)]["stats"] as Dictionary<string, object>;
+                var stats = _uiManager._statsValues[_uiManager._statsIDs.IndexOf(lastQuestionKey)] as Dictionary<string, object>;
                 var statNum = (long)stats["correcta"];
                 responseRatio.text += statNum.ToString() + "/";
                 statNum = (long)stats["incorrecta"];

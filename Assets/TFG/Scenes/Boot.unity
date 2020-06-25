@@ -204,3 +204,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb81413f25827e40afa67ae690a5389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questionCercanas: []

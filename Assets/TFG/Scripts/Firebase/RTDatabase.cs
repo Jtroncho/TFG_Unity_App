@@ -41,6 +41,7 @@ namespace TFG.Database
         public IEnumerable<DataSnapshot> questions;
         public IEnumerable<DataSnapshot> temas;
         public IEnumerable<DataSnapshot> puntuaciones;
+        public IEnumerable<DataSnapshot> stats;
 
         public Dictionary<string, long> questionStats;
         public List<string> questionCercanas = new List<string>();
@@ -96,15 +97,17 @@ namespace TFG.Database
         private void OnEnable()
         {
             FirebaseDatabase.DefaultInstance
-              .GetReference("preguntas")
-              .ValueChanged += HandledChangedQuestions;
-            FirebaseDatabase.DefaultInstance
               .GetReference("temas")
-              .ValueChanged
-                += HandledChangedThemes;
+              .OrderByValue().ValueChanged += HandledChangedThemes;
             FirebaseDatabase.DefaultInstance
               .GetReference("puntuaciones")
               .OrderByChild("score").ValueChanged += HandledChangedScores;
+            FirebaseDatabase.DefaultInstance
+              .GetReference("stats")
+              .ValueChanged += HandleChangedStats;
+            FirebaseDatabase.DefaultInstance
+              .GetReference("preguntas")
+              .ValueChanged += HandledChangedQuestions;
 
             UserEvents.userSignIn.AddListener(HandleChangedRoles);
         }
@@ -112,15 +115,18 @@ namespace TFG.Database
         private void OnDisable()
         {
             FirebaseDatabase.DefaultInstance
-              .GetReference("preguntas")
-              .ValueChanged -= HandledChangedQuestions;
-            FirebaseDatabase.DefaultInstance
               .GetReference("temas")
-              .ValueChanged -= HandledChangedThemes;
+              .OrderByValue().ValueChanged -= HandledChangedThemes;
             FirebaseDatabase.DefaultInstance
               .GetReference("puntuaciones")
               .OrderByChild("score").ValueChanged -= HandledChangedScores;
-              
+            FirebaseDatabase.DefaultInstance
+              .GetReference("stats")
+              .ValueChanged -= HandleChangedStats;
+            FirebaseDatabase.DefaultInstance
+              .GetReference("preguntas")
+              .OrderByChild("tema").ValueChanged -= HandledChangedQuestions;
+
             UserEvents.userSignIn.RemoveListener(HandleChangedRoles);
         }
         /*protected void StartListener()
@@ -309,147 +315,49 @@ namespace TFG.Database
               });
         }
 
-        // A realtime database transaction receives MutableData which can be modified
-        // and returns a TransactionResult which is either TransactionResult.Success(data) with
-        // modified data or TransactionResult.Abort() which stops the transaction with no changes.
-        /*
-        TransactionResult AddScoreTransaction(MutableData mutableData)
+        void HandleChangedStats(object sender, ValueChangedEventArgs args)
         {
-            
-            //List<object> leaders = mutableData.Value as List<object>;
-            Dictionary<string, int> leaders = mutableData.Value as Dictionary<string, int>;
+            string dataFetch = "stats";
+            bool wrongData = false;
 
-            if (leaders == null)
+            if (args.DatabaseError != null)
             {
-                leaders = new Dictionary<string, int>();
+                Debug.LogError(args.DatabaseError.Message);
+                return;
             }
-            else if (mutableData.ChildrenCount >= MaxScores)
+            Debug.Log("Received values for stats.");
+            if (args.Snapshot != null && args.Snapshot.ChildrenCount > 0)
             {
-                // If the current list of scores is greater or equal to our maximum allowed number,
-                // we see if the new score should be added and remove the lowest existing score.
-                long minScore = long.MaxValue;
-                object minVal = null;
-                foreach (var child in leaders)
+                foreach (var childSnapshot in args.Snapshot.Children)
                 {
-                    if (!(child is Dictionary<string, object>))
-                        continue;
-                    long childScore = (long)((Dictionary<string, object>)child)["score"];
-                    if (childScore < minScore)
+                    if (childSnapshot == null
+                      || childSnapshot.Value == null)
                     {
-                        minScore = childScore;
-                        minVal = child;
+                        Debug.LogError("Bad data in sample.  Did you forget to call SetEditorDatabaseUrl with your project id?");
+                        wrongData = true;
+                        break;
+                    }
+                    else
+                    {
+                        //Debug.Log("Stat: " + childSnapshot.Key.ToString() + ";");
                     }
                 }
-                // If the new score is lower than the current minimum, we abort.
-                if (minScore > score)
+                if (!wrongData)
                 {
-                    return TransactionResult.Abort();
+                    stats = args.Snapshot.Children;
+                    //Debug.Log("Stats correct;");
                 }
-                // Otherwise, we remove the current lowest to be replaced with the new score.
-                leaders.Remove(minVal);
-            }
-            // Now we add the new score as a new entry that contains the email address and score.
-            
-            if(!leaders.ContainsKey(userScore.uid)) // !mutableData.HasChild(userScore.uid))
-            {
-                leaders[userScore.uid] = userScore.score;
             }
             else
             {
-                leaders[userScore.uid] = leaders[userScore.uid] + userScore.score;
+                Debug.Log("No stats Received from Database");
             }
-            // You must set the Value to indicate data at that location has changed.
-            //leaders.Add(newScoreMap);
-            //mutableData.Value = leaders;
-            //return TransactionResult.Success(mutableData);
-
-            //Dictionary<string, object> scores = mutableData; // as Dictionary<string, object>;
-            mutableData.Value = leaders as object;
-            return TransactionResult.Success(mutableData);
-        }*/
-
-        /*
-
-        private void AddScoreToLeaders(string email,
-                           long score,
-                           DatabaseReference leaderBoardRef)
-        {
-
-            leaderBoardRef.RunTransaction(mutableData => {
-                List<object> leaders = mutableData.Value as List<object>
-        
-                if (leaders == null)
-                {
-                    leaders = new List<object>();
-                }
-                else if (mutableData.ChildrenCount >= MaxScores)
-                {
-                    long minScore = long.MaxValue;
-                    object minVal = null;
-                    foreach (var child in leaders)
-                    {
-                        if (!(child is Dictionary<string, object>)) continue;
-                        long childScore = (long)
-                                    ((Dictionary<string, object>)child)["score"];
-                        if (childScore < minScore)
-                        {
-                            minScore = childScore;
-                            minVal = child;
-                        }
-                    }
-                    if (minScore > score)
-                    {
-                        // The new score is lower than the existing 5 scores, abort.
-                        return TransactionResult.Abort();
-                    }
-
-                    // Remove the lowest score.
-                    leaders.Remove(minVal);
-                }
-
-                // Add the new high score.
-                Dictionary<string, object> newScoreMap =
-                                 new Dictionary<string, object>();
-                newScoreMap["score"] = score;
-                newScoreMap["email"] = email;
-                leaders.Add(newScoreMap);
-                mutableData.Value = leaders;
-                return TransactionResult.Success(mutableData);
-            });
-        }
-        */
-
-
-        /*
-        public void AddScore(LeaderboardEntry scoreEntry)
-        {
-            if (scoreEntry.score == 0 || string.IsNullOrEmpty(scoreEntry.uid))
+            if (DatabaseEvents.dataRetrieved != null)
             {
-                DebugLog("invalid score or email.");
-                return;
+                DatabaseEvents.dataRetrieved.Invoke(dataFetch);
             }
-            DebugLog(String.Format("Attempting to add score {0} {1}",
-              scoreEntry.uid, scoreEntry.score.ToString()));
-            userScore = scoreEntry;
 
-            DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("puntuaciones");
-
-            DebugLog("Running Transaction...");
-            // Use a transaction to ensure that we do not encounter issues with
-            // simultaneous updates that otherwise might create more than MaxScores top scores.
-            reference.RunTransaction(AddScoreTransaction)
-              .ContinueWithOnMainThread(task => {
-                  if (task.Exception != null)
-                  {
-                      DebugLog(task.Exception.ToString());
-                  }
-                  else if (task.IsCompleted)
-                  {
-                      DebugLog("Transaction complete.");
-                  }
-              });
         }
-        */
 
         public string AddQuestionToDatabase(QuestionEntry entry)
         {
@@ -616,16 +524,16 @@ namespace TFG.Database
         {
             long correctTimes = 0, incorrectTimes = 0;
             Dictionary<string, object> statsQuestion;
-            if(correct && _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)].ContainsKey("stats"))
+            if(correct && _uiManager._statsIDs.Contains(key))
             {
-                statsQuestion = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)]["stats"] as Dictionary<string, object>;
+                statsQuestion = _uiManager._statsValues[_uiManager._statsIDs.IndexOf(key)] as Dictionary<string, object>;
                 correctTimes = (long)statsQuestion["correcta"];
                 correctTimes++;
                 UpdateQuestionCorrect(key, correctTimes);
             }
-            else if (!correct && _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)].ContainsKey("stats"))
+            else if (!correct && _uiManager._statsIDs.Contains(key))
             {
-                statsQuestion = _uiManager._questionsValues[_uiManager._questionsIDs.IndexOf(key)]["stats"] as Dictionary<string, object>;
+                statsQuestion = _uiManager._statsValues[_uiManager._statsIDs.IndexOf(key)] as Dictionary<string, object>;
                 incorrectTimes = (long)statsQuestion["incorrecta"];
                 incorrectTimes++;
                 UpdateQuestionIncorrect(key, incorrectTimes);
@@ -641,7 +549,7 @@ namespace TFG.Database
             Dictionary<string, object> childUpdates = new Dictionary<string, object>();
             childUpdates["correcta"] = number;
 
-            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key + "/stats").UpdateChildrenAsync(childUpdates);
+            FirebaseDatabase.DefaultInstance.RootReference.Child("stats/" + key).UpdateChildrenAsync(childUpdates);
         }
 
         void UpdateQuestionIncorrect(string key, long number)
@@ -649,16 +557,16 @@ namespace TFG.Database
             Dictionary<string, object> childUpdates = new Dictionary<string, object>();
             childUpdates["incorrecta"] = number;
 
-            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key + "/stats").UpdateChildrenAsync(childUpdates);
+            FirebaseDatabase.DefaultInstance.RootReference.Child("stats/" + key).UpdateChildrenAsync(childUpdates);
         }
 
         void StartQuestionStats(string key, bool correct)
         {
             Dictionary<string, object> childUpdates = new Dictionary<string, object>();
             childUpdates["correcta"] = correct ? 1 : 0;
-            childUpdates["incorrecta"] = !correct ? 0 : 1;
+            childUpdates["incorrecta"] = correct ? 0 : 1;
 
-            FirebaseDatabase.DefaultInstance.RootReference.Child("preguntas/" + key + "/stats").UpdateChildrenAsync(childUpdates);
+            FirebaseDatabase.DefaultInstance.RootReference.Child("stats/" + key).UpdateChildrenAsync(childUpdates);
         }
     }
 }

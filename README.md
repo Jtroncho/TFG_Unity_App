@@ -31,3 +31,4 @@ Builds for Android can be found under *Builds*.
 * [Unity UI Demo](https://assetstore.unity.com/packages/essentials/unity-samples-ui-25468)
 
 
+[Youtube Video with Funcitionalities](https://youtu.be/0-Tmxz881bc)
